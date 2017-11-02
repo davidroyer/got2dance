@@ -12,7 +12,12 @@
 </template>
 
 <script>
+import Hero from '@/components/Hero.vue'
+
 export default {
+  components: {
+    Hero
+  },
   name: 'header',
   data () {
     return {
@@ -22,8 +27,12 @@ export default {
           link: '/'
         },
         {
-          name: 'About',
-          link: '/about'
+          name: 'Lessons',
+          link: '/lessons'
+        },
+        {
+          name: 'Classes',
+          link: '/classes'
         },
         {
           name: 'Contact',
