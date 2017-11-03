@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-starter-2",
+  "name": "got2dance",
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "David Royer <droyer01@gmail.com>",
@@ -28,9 +28,5 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "tailwindcss": "^0.1.3"
-  },
-  "engines": {
-    "node": "8.7.0",
-    "yarn": "1.1.0"
   }
 }
