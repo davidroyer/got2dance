@@ -1,7 +1,6 @@
 <template>
   <section class="container">
-    <hero heading="Lessons" image="/hero-lessons.jpg"></hero>
-
+    <hero heading="Lessons" :image="require('~/assets/images/hero-lessons.jpg')"></hero>
     <div class="content">
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
