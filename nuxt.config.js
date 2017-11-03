@@ -12,8 +12,10 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css'},
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'},
+      // { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css'},
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'},
+      { rel: 'preload', as: 'style', href: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css' },
+      // { rel: 'preload', as: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Vollkorn:400,700' }
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Vollkorn:400,700'}
     ]
   },
