@@ -68,3 +68,11 @@ h6 {
   opacity: 0;
   transform: translate(10px, 0);
 }
+
+.slide-enter-active, .slide-leave-active {
+  transition: all .3s ease;
+
+}
+.slide-enter, .slide-leave-active {
+  transform: translateX(230px);
+}

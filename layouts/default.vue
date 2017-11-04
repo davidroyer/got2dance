@@ -3,6 +3,9 @@
     <site-header></site-header>
     <nuxt/>
     <site-footer></site-footer>
+    <transition name="slide">
+      <navigation-drawer v-if="$store.state.navigationDrawerOpen"></navigation-drawer>
+    </transition>
   </div>
 </template>
 
@@ -11,7 +14,8 @@
 export default {
   components: {
     SiteHeader: () => import('~/components/Header'),
-    SiteFooter: () => import('~/components/Footer')
+    SiteFooter: () => import('~/components/Footer'),
+    NavigationDrawer: () => import('~/components/NavigationDrawer')
   }
 }
 </script>

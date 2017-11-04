@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Our Dance Instructors</h1>
+    <h1>Weddings</h1>
 
     <div class="content">
       <div class="links">
