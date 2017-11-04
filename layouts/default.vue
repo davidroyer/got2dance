@@ -1,11 +1,13 @@
 <template>
   <div class="siteWrapper">
     <site-header></site-header>
-    <nuxt/>
-    <site-footer></site-footer>
     <transition name="slide">
       <navigation-drawer v-if="$store.state.navigationDrawerOpen"></navigation-drawer>
     </transition>
+    <main>
+      <nuxt/>
+    </main>
+    <site-footer></site-footer>
   </div>
 </template>
 

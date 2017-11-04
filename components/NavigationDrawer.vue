@@ -2,22 +2,16 @@
   <div class="navigationDrawer"
     :aria-hidden="$store.state.navigationDrawerOpen ? 'false' : 'true'"
     :class="{active: $store.state.navigationDrawerOpen}">
-    <nav>
-      <ul>
-        <li><nuxt-link to="/">Link</nuxt-link></li>
-        <li><nuxt-link to="/">Link</nuxt-link></li>
-        <li><nuxt-link to="/">Link</nuxt-link></li>
-        <li><nuxt-link to="/">Link</nuxt-link></li>
-        <li><nuxt-link to="/">Link</nuxt-link></li>
-        <li><nuxt-link to="/">Link</nuxt-link></li>
-        <li><nuxt-link to="/">Link</nuxt-link></li>
-      </ul>
-    </nav>
+  <navigation></navigation>
   </div>
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
 export default {
+  components: {
+    Navigation
+  },
   computed: {
     activeDrawer () {
       return this.$store.state.navigationDrawerOpen

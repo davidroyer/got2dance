@@ -44,6 +44,9 @@ module.exports = {
       }
     }
   },
+  router: {
+    middleware: 'menu'
+  },
   modules: [
     '@nuxtjs/pwa',
     // ['@nuxtjs/google-analytics', { ua: 'UA-56060335-5' }],
