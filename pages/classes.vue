@@ -1,6 +1,7 @@
 <template>
   <section class="container">
-    <hero heading="Group Dance Classes" :image="require('~/assets/images/hero-classes.jpg')"></hero>
+    <!-- <hero heading="Group Dance Classes" :image="require('~/assets/images/hero-classes.jpg')"></hero> -->
+    <hero heading="Group Dance Classes" image="/hero-classes.jpg"></hero>
 
     <div class="content">
       <div class="links">
