@@ -1,5 +1,5 @@
 import WpApi from '@/services/wpapi'
-const apiBaseUrl = process.env.apiBaseUrl
+// const apiBaseUrl = process.env.apiBaseUrl
 
 /**
  * Set `$wp` on the `app` instance
@@ -7,8 +7,15 @@ const apiBaseUrl = process.env.apiBaseUrl
  */
 export default async ({ app }, inject) => {
   const wp = await new WpApi({
-    wpSiteUrl: apiBaseUrl
+    wpSiteUrl: process.env.apiBaseUrl
   })
+  // const wp = await new WpApi(options)
   app.$wp = wp
   inject('wp', wp)
 }
+
+// const wp = new wpApi(<%= serialize(options) %>)
+//
+// export default function (ctx, inject) {
+//   inject('wp', wp)
+// }

@@ -23,4 +23,7 @@ export default {
 </script>
 
 <style>
+section.container {
+  margin-top: 4.5em;
+}
 </style>

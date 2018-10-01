@@ -40,7 +40,8 @@ module.exports = {
     ]
   },
 
-  plugins: ['~/plugins/wp'],
+  plugins: [{ src: '~/plugins/vue-full-calendar', ssr: false }],
+  // modules: ['~/modules/wp.module.js'],
 
   env: {
     apiBaseUrl: wpUrl
@@ -96,7 +97,8 @@ module.exports = {
   // },
   //
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '~/modules/wp.module.js'
     // ['@nuxtjs/google-analytics', { ua: 'UA-56060335-5' }],
   ]
 }
