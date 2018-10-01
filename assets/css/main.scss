@@ -5,6 +5,16 @@ $headings: #40404c
 
 @import 'nav.scss';
 
+.page-title {
+  flex-basis: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+p {
+  max-width: 36rem;
+}
 footer,
 header {
   background: #40526b;

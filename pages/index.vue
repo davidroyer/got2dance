@@ -16,6 +16,12 @@
 import Hero from '@/components/Hero.vue'
 
 export default {
+  async asyncData({ app, payload, params }) {
+    let main = await app.$wp.menu('main')
+    return {
+      main
+    }
+  },
   components: {
     Hero
   }
