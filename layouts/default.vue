@@ -12,10 +12,10 @@
 </template>
 
 <script>
-
+import SiteHeader from '@/components/Header.vue'
 export default {
   components: {
-    SiteHeader: () => import('~/components/Header'),
+    SiteHeader,
     SiteFooter: () => import('~/components/Footer'),
     NavigationDrawer: () => import('~/components/NavigationDrawer')
   }
@@ -23,7 +23,8 @@ export default {
 </script>
 <style lang="scss">
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -33,9 +34,10 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
 }
-
 </style>

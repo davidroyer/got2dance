@@ -1,90 +1,81 @@
-importScripts('workbox-sw.prod.v1.3.0.js');
+importScripts('/_nuxt/workbox.5c678697.js')
 
-/**
- * DO NOT EDIT THE FILE MANIFEST ENTRY
- *
- * The method precache() does the following:
- * 1. Cache URLs in the manifest to a local cache.
- * 2. When a network request is made for any of these URLs the response
- *    will ALWAYS comes from the cache, NEVER the network.
- * 3. When the service worker changes ONLY assets with a revision change are
- *    updated, old cache entries are left as is.
- *
- * By changing the file manifest manually, your users may end up not receiving
- * new versions of files because the revision hasn't changed.
- *
- * Please use workbox-build or some other tool / approach to generate the file
- * manifest which accounts for changes to local files and update the revision
- * accordingly.
- */
-const fileManifest = [
+
+
+workbox.precaching.precacheAndRoute([
   {
-    "url": "/_nuxt/11.9ec2f0db3f6cbb32506c.js",
-    "revision": "5018db96a4d4d16dd2194bc9f319e5ee"
+    "url": "/_nuxt/00c0ae877e2b2ec767bc.js",
+    "revision": "92fb4f631d89f59a832648833b2274de"
   },
   {
-    "url": "/_nuxt/12.6c101121dcb9f4a103ac.js",
-    "revision": "b22326b22d56fb57c07ba38ac933c51e"
+    "url": "/_nuxt/128d0fb074965d32682f.js",
+    "revision": "c870505acbd133b3fa3df28d1a78dfb8"
   },
   {
-    "url": "/_nuxt/13.a5c53f3bdf7b5d1c9339.js",
-    "revision": "27f45edd90febc22066acd773a763bc5"
+    "url": "/_nuxt/442e91201164fb0a5f56.js",
+    "revision": "80e68243eadc69bd2792a13449fa7174"
   },
   {
-    "url": "/_nuxt/app.a1e775018c651e060c30.js",
-    "revision": "5171c7148d0d7367addce72cff641a45"
+    "url": "/_nuxt/455cbca1be3499be106c.js",
+    "revision": "cd79ce3c7ff5402714b081cb3c5c1250"
   },
   {
-    "url": "/_nuxt/common.dc54eaf2978c6c58a274.js",
-    "revision": "ab0c6f88c914956ac1b960be6ec4dc23"
+    "url": "/_nuxt/550ef82ddc689194f27e.js",
+    "revision": "932b00f28e0c734d53053555f93d03a6"
   },
   {
-    "url": "/_nuxt/layouts/default.50757d9222e211d3720e.js",
-    "revision": "6a418bb907a789cb354fd4d6509ca4a1"
+    "url": "/_nuxt/58d23ae1244281f54ea1.js",
+    "revision": "5166be45cc93babd1ecadac7586d658d"
   },
   {
-    "url": "/_nuxt/manifest.aa1d437c0678b7e44893.js",
-    "revision": "a6893975e35d11b14319b7862ce24336"
+    "url": "/_nuxt/5cd24ca726cb8de23d75.js",
+    "revision": "71d6bd21d7789fc1d2934f8e504b246a"
   },
   {
-    "url": "/_nuxt/pages/about.3acc0b9bea3d26b1f165.js",
-    "revision": "755dd616a10444ec85192d5686826bd3"
+    "url": "/_nuxt/63b74287a30d56c6f7f5.js",
+    "revision": "1dc649e2a66059464a249cbbb62ad63a"
   },
   {
-    "url": "/_nuxt/pages/calendar.933679bc0ccfd834852b.js",
-    "revision": "968a7e8b8d22734b39d71f9be4c348cd"
+    "url": "/_nuxt/64b6815eec398c3be59e.js",
+    "revision": "5e9205efa9ac9d5254d31ca2bb72e5ba"
   },
   {
-    "url": "/_nuxt/pages/classes.2108363b6a9b93cfda28.js",
-    "revision": "007ebf89f641cc3db611277a325b4e15"
+    "url": "/_nuxt/751ea26b6977628fc072.js",
+    "revision": "bf65dea8ab60bf5e9231157ae07200aa"
   },
   {
-    "url": "/_nuxt/pages/contact.f844c97e66fe8dce961a.js",
-    "revision": "d298cb0845369dc295d2afd013ccb61f"
+    "url": "/_nuxt/92d5de2f85f501d9dc54.js",
+    "revision": "c026eaade08e2b991b9f07ca98e9d9f1"
   },
   {
-    "url": "/_nuxt/pages/index.949fc5e2f6821a496a9e.js",
-    "revision": "4ce653821e739aa4f7ee7bb29d79888d"
+    "url": "/_nuxt/a43cbcf526f8f30c001d.js",
+    "revision": "05c06d0137fde381b7298ac16c3ea507"
   },
   {
-    "url": "/_nuxt/pages/instructors.5283d357a98588956c82.js",
-    "revision": "b0877b99bf56496ace97d4e157f92aa5"
+    "url": "/_nuxt/d302e0f747305f38f420.js",
+    "revision": "71873a99ed202a0da0b48ddc566d551b"
   },
   {
-    "url": "/_nuxt/pages/lessons.d6edbbf9727831378527.js",
-    "revision": "197062243481b393fdf4586bb86c32a4"
-  },
-  {
-    "url": "/_nuxt/pages/weddings.2d779b524a29774ed3a7.js",
-    "revision": "c99823ce86768e981e6c1804f0b8e84f"
+    "url": "/_nuxt/f67d0133804065f93219.js",
+    "revision": "da2e4df2d276f7277e88cf56242dc96e"
   }
-];
+], {
+  "cacheId": "got2dance",
+  "directoryIndex": "/",
+  "cleanUrls": false
+})
 
-const workboxSW = new self.WorkboxSW({
-  "cacheId": "got2dance_1.0.0",
-  "clientsClaim": true,
-  "directoryIndex": "/"
-});
-workboxSW.precache(fileManifest);
-workboxSW.router.registerRoute('/**', workboxSW.strategies.networkFirst({}), 'GET');
-workboxSW.router.registerRoute('/_nuxt/**', workboxSW.strategies.cacheFirst({}), 'GET');
+
+
+workbox.clientsClaim()
+workbox.skipWaiting()
+
+
+workbox.routing.registerRoute(new RegExp('/_nuxt/.*'), workbox.strategies.cacheFirst({}), 'GET')
+
+workbox.routing.registerRoute(new RegExp('/.*'), workbox.strategies.networkFirst({}), 'GET')
+
+
+
+
+

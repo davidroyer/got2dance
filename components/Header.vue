@@ -3,7 +3,7 @@
     <img class="logo" src="~/assets/images/logo-white.png" alt="Got2Dance Logo">
     <button class="drawerToggle" @click="$store.commit('toggleDrawer')">Menu</button>
 
-    <nav class="nav--desktop" role="navigation">
+    <nav class="nav nav--desktop" role="navigation">
       <ul>
         <template  v-for="(item, index) in mainNav" >
           <nuxt-link :to="item.link" :key="index">{{item.name}}</nuxt-link>
@@ -20,8 +20,8 @@ export default {
   components: {
     Hero
   },
-  name: 'header',
-  data () {
+  name: 'SiteHeader',
+  data() {
     return {
       mainNav: [
         {
@@ -69,7 +69,7 @@ export default {
   border: none;
   font-size: 1em;
   font-weight: 400;
-  font-family: Vollkorn,sans-serif;
+  font-family: Vollkorn, sans-serif;
   position: relative;
   z-index: 9;
   @media (min-width: 900px) {
@@ -90,7 +90,7 @@ header {
 nav {
   a {
     color: white;
-    margin: .25em .75em;
+    margin: 0.25em 0.75em;
     font-size: 1.1em;
   }
 }
