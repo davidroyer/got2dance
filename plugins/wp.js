@@ -6,11 +6,9 @@ const apiBaseUrl = process.env.apiBaseUrl
  * This way we can use it in middleware and pages `asyncData`/`fetch`
  */
 export default async ({ app }, inject) => {
-  const wp = new WpApi({
+  const wp = await new WpApi({
     wpSiteUrl: apiBaseUrl
   })
-
-  await wp.createCustomPostRoutes()
   app.$wp = wp
   inject('wp', wp)
 }

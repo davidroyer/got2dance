@@ -13,8 +13,15 @@ export default class WpApi {
     /**
      * Set up predefined resources methods.
      */
-    this.createDefaultResourceRoutes(Resources)
-    this.createCustomPostRoutes()
+    return new Promise(async (resolve, reject) => {
+      try {
+        await this._createDefaultResourceRoutes(Resources)
+        await this._createCustomPostRoutes()
+      } catch (ex) {
+        return reject(ex)
+      }
+      resolve(this)
+    })
   }
 
   /**
@@ -34,6 +41,7 @@ export default class WpApi {
     return `${this.options.wpSiteUrl}/wp-json/wp/v2/`
   }
 
+  _setupRoutes () {}
   /**
    * Generate config for axios request
    */
@@ -70,7 +78,7 @@ export default class WpApi {
     return { name, description, url, home, gmt_offset, timezone_string }
   }
 
-  async createDefaultResourceRoutes (Resources) {
+  async _createDefaultResourceRoutes (Resources) {
     Resources.forEach(({ collectionName, singleName }) => {
       this[collectionName] = async options => {
         const { data } = await this.axios.get(
@@ -96,7 +104,7 @@ export default class WpApi {
     })
   }
 
-  async createCustomPostRoutes () {
+  async _createCustomPostRoutes () {
     const PostTypes = await this.postTypes()
 
     Object.entries(PostTypes).forEach(([key, postObject]) => {
