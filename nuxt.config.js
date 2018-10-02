@@ -96,12 +96,10 @@ module.exports = {
   //   }
   // },
   //
-  modules: [
-    '@nuxtjs/pwa',
-    ['~/modules/wp.module.js', { op1: 'VAL1', wpSiteUrl: wpUrl }]
-  ]
+  modules: ['@nuxtjs/pwa', 'wpapi'],
 
-  // wp: {
-  //   wpSiteUrl: 'NEW'
-  // }
+  wp: {
+    wpSiteUrl: 'https://got2dance.wpapi.app'
+    // wpSiteUrl: 'https://demo1.wpapi.app'
+  }
 }

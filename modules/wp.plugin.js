@@ -1,4 +1,5 @@
-import WpApi from '@/services/wpapi'
+import WpApi from '@/modules/core/index.js'
+// import WpApi from '@/services/wpapi'
 const apiBaseUrl = process.env.apiBaseUrl
 
 /**
@@ -6,8 +7,10 @@ const apiBaseUrl = process.env.apiBaseUrl
  * This way we can use it in middleware and pages `asyncData`/`fetch`
  */
 export default async (ctx, inject) => {
+  const moduleOptions = <%= serialize(options) %>;
+  console.log('moduleOptions: ', moduleOptions);
   const wp = await new WpApi({
-    wpSiteUrl: apiBaseUrl
+    wpSiteUrl: moduleOptions.wpSiteUrl
   })
   // const wp = await new WpApi(options)
   ctx.$wp = wp
