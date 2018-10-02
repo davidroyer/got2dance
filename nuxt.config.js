@@ -96,10 +96,9 @@ module.exports = {
   //   }
   // },
   //
-  modules: ['@nuxtjs/pwa', 'wpapi'],
+  modules: ['@nuxtjs/pwa', ['wpapi-js', {url: 'https://got2dance.wpapi.app'}] ]
 
-  wp: {
-    wpSiteUrl: 'https://got2dance.wpapi.app'
-    // wpSiteUrl: 'https://demo1.wpapi.app'
-  }
+  // wpapi: {
+  //   url: 'https://got2dance.wpapi.app'
+  // }
 }
