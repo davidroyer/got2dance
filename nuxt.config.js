@@ -96,9 +96,9 @@ module.exports = {
   //   }
   // },
   //
-  modules: [
-    '@nuxtjs/pwa',
-    '~/modules/wp.module.js'
-    // ['@nuxtjs/google-analytics', { ua: 'UA-56060335-5' }],
-  ]
+  modules: ['@nuxtjs/pwa', ['~/modules/wp.module.js', { op1: 'VAL1' }]]
+
+  // wp: {
+  //   wpSiteUrl: 'NEW'
+  // }
 }

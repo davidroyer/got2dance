@@ -1,16 +1,16 @@
 import WpApi from '@/services/wpapi'
-// const apiBaseUrl = process.env.apiBaseUrl
+const apiBaseUrl = process.env.apiBaseUrl
 
 /**
  * Set `$wp` on the `app` instance
  * This way we can use it in middleware and pages `asyncData`/`fetch`
  */
-export default async ({ app }, inject) => {
+export default async (ctx, inject) => {
   const wp = await new WpApi({
-    wpSiteUrl: process.env.apiBaseUrl
+    wpSiteUrl: apiBaseUrl
   })
   // const wp = await new WpApi(options)
-  app.$wp = wp
+  ctx.$wp = wp
   inject('wp', wp)
 }
 

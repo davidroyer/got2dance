@@ -5,8 +5,9 @@
 
     <nav class="nav nav--desktop" role="navigation">
       <ul>
-        <template  v-for="(item, index) in mainNav" >
-          <nuxt-link :to="item.link" :key="index">{{item.name}}</nuxt-link>
+        <template  v-for="(item, index) in menuItems" >
+          <nuxt-link role="menuitem" :to="handleSlug(item)" :key="index">{{item.title}}</nuxt-link>
+          <!-- <nuxt-link :to="item.link" :key="index">{{item.title}}</nuxt-link> -->
         </template>
       </ul>
     </nav>
@@ -49,6 +50,20 @@ export default {
           link: '/contact'
         }
       ]
+    }
+  },
+
+  computed: {
+    menuItems() {
+      return this.$store.getters.menuItems
+    }
+  },
+  methods: {
+    handleSlug(menuItem) {
+      const { url } = menuItem
+      const siteUrl = `${this.$store.state.siteData.home}/`
+      if (url === this.$store.state.siteData.url) return '/'
+      else return url.replace(siteUrl, '/')
     }
   }
 }
