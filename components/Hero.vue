@@ -23,7 +23,7 @@ export default {
   height: 350px;
   background-size: cover;
   background-position: top center;
-  position: absolute;
+  position: relative;
   // background: url('~assets/hero-home.jpg';
 
   &__heading {

@@ -96,7 +96,10 @@ module.exports = {
   //   }
   // },
   //
-  modules: ['@nuxtjs/pwa', ['~/modules/wp.module.js', { op1: 'VAL1' }]]
+  modules: [
+    '@nuxtjs/pwa',
+    ['~/modules/wp.module.js', { op1: 'VAL1', wpSiteUrl: wpUrl }]
+  ]
 
   // wp: {
   //   wpSiteUrl: 'NEW'

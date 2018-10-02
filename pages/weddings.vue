@@ -1,12 +1,9 @@
 <template>
   <section class="container">
-    <h1>Weddings</h1>
+    <h1 class="page-title">Weddings</h1>
 
     <div class="content">
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
+      <pre>{{page}}</pre>
     </div>
   </section>
 </template>
@@ -15,11 +12,24 @@
 import Hero from '@/components/Hero.vue'
 
 export default {
+  async asyncData({ app }) {
+    const page = await app.$wp.page('weddings')
+    return {
+      page
+    }
+  },
   components: {
     Hero
   }
 }
 </script>
 
-<style>
+<style scoped>
+.page-title {
+  text-align: center;
+}
+.siteWrapper .container {
+  text-align: left;
+  justify-content: left;
+}
 </style>

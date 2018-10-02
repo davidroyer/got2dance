@@ -19,12 +19,9 @@ import Hero from '@/components/Hero.vue'
 
 export default {
   async asyncData({ app, payload, params }) {
-    if (payload) return { page: payload }
-    else {
-      let instructors = await app.$wp.instructors()
-      return {
-        instructors
-      }
+    const instructors = await app.$wp.instructors()
+    return {
+      instructors
     }
   },
   components: {

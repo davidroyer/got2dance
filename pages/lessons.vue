@@ -1,12 +1,13 @@
 <template>
   <section class="container">
-    <!-- <hero heading="Lessons" image="/hero-lessons.jpg"></hero> -->
-    <hero heading="Lessons" :image="require('~/assets/images/hero-lessons.jpg')"></hero>
+    <hero :heading="page.acf.page_title" :image="require('~/assets/images/hero-lessons.jpg')"></hero>
 
     <div class="content">
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+      <div class="packages">
+        <div class="package" v-for="(lessonPackage, index) in page.acf.packages" :key="index">
+          <h3 v-html="lessonPackage.name"></h3>
+          <div>${{lessonPackage.amount}}/Lesson</div>
+        </div>
       </div>
     </div>
   </section>
@@ -16,11 +17,17 @@
 import Hero from '@/components/Hero.vue'
 
 export default {
+  async asyncData({ app }) {
+    const page = await app.$wp.page('lessons')
+    return {
+      page
+    }
+  },
   components: {
     Hero
   }
 }
 </script>
 
-<style>
+<style scoped>
 </style>
