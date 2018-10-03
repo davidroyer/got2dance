@@ -1,11 +1,8 @@
 <template lang="html">
   <nav class="nav" aria-label="Website Main Navigation" role="navigation">
-    <ul role="menubar">
-      <!-- <li v-for="(item, index) in mainNav" >
-        <nuxt-link role="menuitem" :to="item.link" :key="index">{{item.name}}</nuxt-link>
-      </li> -->
-      <li v-for="(item, index) in menuItems" >
-        <nuxt-link role="menuitem" :to="handleSlug(item)" :key="index">{{item.title}}</nuxt-link>
+    <ul class="nav-list" role="menubar">
+      <li class="nav-item" v-for="(item, index) in menuItems" >
+        <nuxt-link role="menuitem" class="nav-link" :to="handleSlug(item)" :key="index">{{item.title}}</nuxt-link>
       </li>
     </ul>
   </nav>
@@ -78,6 +75,16 @@ nav {
         }
       }
     }
+  }
+}
+.nav {
+  &-list {
+    text-align: right;
+    margin-right: 5px;
+  }
+
+  &-link {
+    font-size: 20px;
   }
 }
 </style>

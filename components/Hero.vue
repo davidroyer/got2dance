@@ -20,21 +20,24 @@ export default {
 .hero {
   width: 100%;
   align-self: flex-start;
-  height: 350px;
+  height: 250px;
   background-size: cover;
   background-position: top center;
   position: relative;
-  // background: url('~assets/hero-home.jpg';
-
+  @media (min-width: 800px) {
+    height: 375px;
+  }
   &__heading {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(228, 228, 228, 0.71);
+    background: rgba(232, 232, 232, 0.8);
     margin: 0;
     padding: 0.5em;
     color: #40404c;
+    font-size: 2.5rem;
+    line-height: 1.1;
   }
 }
 </style>

@@ -5,9 +5,11 @@
     <div class="content">
       <div class="instructors">
         <div class="instructor" v-for="(instructor, index) in instructors" :key="index">
-          <h3 v-html="instructor.title.rendered"></h3>
-          <img :src="instructor.acf.headshot" alt="">
-          <div v-html="instructor.acf.bio"></div>
+          <img class="instructor-headshot" :src="instructor.acf.headshot" alt="">
+          <div class="instructor-info">
+            <h3 class="instructor-name" v-html="instructor.title.rendered"></h3>
+            <div v-html="instructor.acf.bio"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -30,5 +32,33 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.instructor {
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 5em;
+
+  @media (min-width: 680px) {
+    display: flex;
+  }
+  &-headshot {
+    max-width: 300px;
+    border-radius: 400px;
+    border: 2px solid lightgray;
+    flex: 0 1 300px;
+    height: auto;
+    align-self: flex-start;
+  }
+
+  &-info {
+    text-align: left;
+    margin-left: auto;
+    flex: 0 1 calc(100% - 350px);
+  }
+
+  &-name {
+    font-size: 2em;
+    font-weight: 700;
+  }
+}
 </style>
