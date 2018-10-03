@@ -35,6 +35,12 @@ module.exports = {
         as: 'style',
         onload: 'this.rel = "stylesheet"',
         href: 'https://fonts.googleapis.com/css?family=Vollkorn:400,700'
+      },
+      {
+        rel: 'preload',
+        as: 'style',
+        onload: 'this.rel = "stylesheet"',
+        href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,700'
       }
     ]
   },
