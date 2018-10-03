@@ -1,0 +1,128 @@
+.media {
+  width: 100%;
+  // max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 2px 5px 0 rgba(40, 31, 31, 0.56),
+    0 2px 10px 0 rgba(32, 32, 32, 0.52);
+  // background-color: white;
+  border-radius: 3px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+
+  &__link {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+      background-color: #3f516c36;
+    }
+  }
+}
+@media only screen and (min-width: 680px) {
+  .media {
+    width: initial;
+    box-shadow: none;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    margin: 0 4px;
+    vertical-align: top;
+  }
+  .media__row--flex {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .media__link {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    box-shadow: 0 2px 5px 0 rgba(40, 31, 31, 0.56),
+      0 2px 10px 0 rgba(32, 32, 32, 0.52);
+    margin: 0 15px;
+
+    max-width: 300px;
+  }
+}
+.media__heading {
+  margin: 0;
+  display: inline-block;
+}
+@media only screen and (min-width: 680px) {
+  .media__heading {
+    display: block;
+    font-size: 2em;
+    line-height: 1.1;
+  }
+}
+.media__content__cover {
+  display: none;
+}
+@media only screen and (min-width: 680px) {
+  .media__content__cover {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 1em;
+  }
+}
+.media__image {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  border-radius: 50%;
+  width: 55px;
+}
+@media only screen and (min-width: 680px) {
+  .media__image {
+    position: static;
+    border-radius: 50%;
+    width: 300px;
+    margin-top: 1em;
+  }
+}
+.media i {
+  vertical-align: text-bottom;
+  position: absolute;
+  right: 20px;
+  font-size: 33px;
+  background-color: #40526b;
+  color: white;
+  padding: 2px;
+  box-shadow: 0 2px 5px 0 rgba(40, 31, 31, 0.3),
+    0 2px 10px 0 rgba(32, 32, 32, 0.4);
+  border-radius: 50%;
+  top: 15px;
+  font-family: 'Material Icons';
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 680px) {
+  .media i {
+    display: none;
+  }
+}
+.media.classes {
+  width: 48%;
+  display: inline-block;
+}
+.media__list {
+  margin-top: 20px;
+}
+.media__list-item {
+  padding: 20px 0;
+}

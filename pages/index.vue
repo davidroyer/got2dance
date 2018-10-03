@@ -1,20 +1,38 @@
 <template>
-  <section class="container">
-    <hero heading="Dance Lessons & Classes" :image="require('~/assets/images/hero-home.jpg')"></hero>
-    <!-- <hero heading="Dance Lessons & Classes" image="hero-home.jpg"></hero> -->
+<section class="container block">
+  <hero heading="Dance Lessons & Classes" :image="require('~/assets/images/hero-home.jpg')"></hero>
 
-  </section>
+  <div class="content">
+    <div class="row media__row--flex">
+      <nuxt-link role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link" class="media__link">
+        <div class="media">
+          <h3 class="media__heading" v-text="card.title"></h3>
+          <img :src="require(`~/assets/images/${card.img}`)" alt="Dance Lessons" class="media__image">
+          <h4 class="media__content__cover" v-text="card.text"></h4>
+          <i class="material-icons" style="font-size:24px; color:white;">arrow_forward_ios</i>
+        </div>
+      </nuxt-link>
+    </div>
+  </div>
+</section>
 </template>
 
 <script>
 import Hero from '@/components/Hero.vue'
-
+import content from '@/content/home.json'
+console.log(content)
 export default {
+  asyncData() {
+    return {
+      content,
+      cards: content.cards
+    }
+  },
   components: {
     Hero
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped src="@/assets/css/media.scss">
 </style>

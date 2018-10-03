@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <h1 class="page-title">Our Dance Instructors</h1>
-
     <div class="content">
       <div class="instructors">
         <div class="instructor" v-for="(instructor, index) in instructors" :key="index">

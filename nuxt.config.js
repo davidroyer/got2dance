@@ -41,6 +41,11 @@ module.exports = {
         as: 'style',
         onload: 'this.rel = "stylesheet"',
         href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,700'
+      },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
       }
     ]
   },

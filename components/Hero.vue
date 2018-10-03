@@ -34,10 +34,14 @@ export default {
     right: 0;
     background: rgba(232, 232, 232, 0.8);
     margin: 0;
-    padding: 0.5em;
+    padding: 8px 5px 0px;
     color: #40404c;
     font-size: 2.5rem;
     line-height: 1.1;
+    @media (min-width: 800px) {
+      font-size: 3em;
+      padding: 0.25em;
+    }
   }
 }
 </style>

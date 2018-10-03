@@ -29,7 +29,8 @@ pre {
 main {
 }
 
-section.container {
+section.container.flex {
+  display: flex;
 }
 
 img {
@@ -90,7 +91,10 @@ h6 {
     text-align: center;
     width: 100%;
     margin-top: 80px;
-    // padding: 2em;
+
+    &.block {
+      display: block;
+    }
   }
 
   .content {
