@@ -38,6 +38,7 @@ export default {
     color: #40404c;
     font-size: 1.75rem;
     line-height: 1.1;
+    text-align: center;
     @media (min-width: 680px) {
       font-size: 2.25em;
       padding: 0.15em;
