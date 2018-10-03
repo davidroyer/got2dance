@@ -1,9 +1,9 @@
 import WpApi from './services/wpapi'
 const wpUrl = 'https://got2dance.wpapi.app'
 
-const wp = new WpApi({
-  wpSiteUrl: wpUrl
-})
+// const wp = new WpApi({
+//   wpSiteUrl: wpUrl
+// })
 
 module.exports = {
   /*
@@ -24,34 +24,18 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: wpUrl },
       {
         rel: 'preload',
         as: 'style',
+        onload: 'this.rel = "stylesheet"',
         href:
-          'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css'
-      },
-      {
-        rel: 'preload',
-        as: 'style',
-        onload: 'this.rel = "stylesheet"',
-        href: 'https://fonts.googleapis.com/css?family=Vollkorn:400,700'
-      },
-      {
-        rel: 'preload',
-        as: 'style',
-        onload: 'this.rel = "stylesheet"',
-        href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,700'
-      },
-      {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+          'https://fonts.googleapis.com/css?family=Vollkorn:400,700|Open+Sans:400,700|Material+Icons'
       }
     ]
   },
 
   plugins: [{ src: '~/plugins/vue-full-calendar', ssr: false }],
-  // modules: ['~/modules/wp.module.js'],
 
   env: {
     apiBaseUrl: wpUrl
@@ -106,7 +90,7 @@ module.exports = {
   //   }
   // },
   //
-  modules: ['@nuxtjs/pwa', ['wpapi-js', { url: 'https://got2dance.wpapi.app' }]]
+  modules: ['@nuxtjs/pwa', ['wpapi-js', { url: wpUrl }]]
 
   // wpapi: {
   //   url: 'https://got2dance.wpapi.app'

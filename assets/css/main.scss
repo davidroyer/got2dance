@@ -83,7 +83,7 @@ h6 {
   min-height: 100%;
 
   .container {
-    min-height: 85vh;
+    min-height: 65vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -98,7 +98,11 @@ h6 {
   }
 
   .content {
-    padding: 2em;
+    padding: 2em 0.75em;
+
+    @media (min-width: 980px) {
+      padding: 5em 0.75em;
+    }
   }
 }
 

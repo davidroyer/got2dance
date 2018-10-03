@@ -1,6 +1,8 @@
 <template lang="html">
   <header>
-    <img class="logo" src="~/assets/images/logo-white.png" alt="Got2Dance Logo">
+    <nuxt-link to="/">
+      <img class="logo" src="~/assets/images/logo-white.png" alt="Got2Dance Logo">
+    </nuxt-link>
     <button class="drawerToggle" @click="$store.commit('toggleDrawer')">Menu</button>
 
     <nav class="nav nav--desktop" role="navigation">

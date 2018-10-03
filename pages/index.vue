@@ -20,7 +20,7 @@
 <script>
 import Hero from '@/components/Hero.vue'
 import content from '@/content/home.json'
-console.log(content)
+
 export default {
   asyncData() {
     return {
