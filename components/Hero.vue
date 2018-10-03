@@ -34,7 +34,7 @@ export default {
     right: 0;
     background: rgba(232, 232, 232, 0.8);
     margin: 0;
-    padding: 8px 5px 0;
+    padding: 8px 5px 4px;
     color: #40404c;
     font-size: 1.75rem;
     line-height: 1.1;
@@ -45,7 +45,7 @@ export default {
 
     @media (min-width: 980px) {
       font-size: 3em;
-      padding: 0.15em;
+      padding: 0.25em;
     }
   }
 }
