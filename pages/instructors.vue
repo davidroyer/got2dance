@@ -20,7 +20,7 @@ import Hero from '@/components/Hero.vue'
 
 export default {
   async asyncData({ app, payload, params }) {
-    const instructors = await app.$wp.instructors()
+    const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
     return {
       instructors
     }
