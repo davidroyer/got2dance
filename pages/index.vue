@@ -22,7 +22,7 @@ import Hero from '@/components/Hero.vue'
 import content from '@/content/home.json'
 
 export default {
-  asyncData() {
+  asyncData () {
     return {
       content,
       cards: content.cards
@@ -34,5 +34,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped src="@/assets/css/media.scss">
+<style lang="scss" scoped src="@/assets/styles/media.scss">
 </style>

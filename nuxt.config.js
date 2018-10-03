@@ -52,7 +52,7 @@ module.exports = {
   /*
   ** Build configuration
   */
-  css: [{ src: '~/assets/css/main.scss', lang: 'scss' }],
+  css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
   build: {
     /*
     ** Run ESLint on save

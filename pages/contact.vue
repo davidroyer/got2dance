@@ -1,10 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="title">
-      Contact
-    </h1>
+    <h1 class="page-title">Contact</h1>
     <div class="content">
-      <form name="contact" action="/thank-you" netlify-honeypot="bot-field" method="post" netlify>
+      <form name="contact" class="pure-form pure-form-stacked" action="/thank-you" netlify-honeypot="bot-field" method="post" netlify>
         <input type="hidden" name="form-name" value="contact" />
         <p class="hidden">     
           <label>Don’t fill this out: <input name="bot-field"></label>   
@@ -20,7 +18,8 @@
         <label class="form-label" for="message">
           Message:
         </label>
-        <textarea class="form-field" name="message" id="message"></textarea>
+        <!-- <textarea class="pure-input-1-2" placeholder="Your Message..."></textarea> -->
+        <textarea class="form-field pure-input-1-2" name="message" id="message"  placeholder="Your Message..."></textarea>
         <input class="form-button" type="submit" value="Send message" />
       </form>
     </div>
@@ -28,8 +27,25 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head () {
+    return {
+      link: [
+        {rel: 'stylesheet', href: '//cdn.jsdelivr.net/combine/npm/purecss@1.0.0/build/base-min.css,npm/purecss@1.0.0/build/grids-min.css,npm/purecss@1.0.0/build/forms-min.css'}
+      ]
+    }
+  }
+}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+input, textarea {
+  min-width: 300px;
+}
+label {
+  margin-top: 1.5em;
+}
+.form-button {
+  margin-top: 2em;
+}
 </style>

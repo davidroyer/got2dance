@@ -12,7 +12,7 @@
 import Hero from '@/components/Hero.vue'
 
 export default {
-  async asyncData({ app }) {
+  async asyncData ({ app }) {
     const page = await app.$wp.page('weddings')
     return {
       page
@@ -25,9 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.page-title {
-  text-align: center;
-}
+
 .siteWrapper .container {
   text-align: left;
   justify-content: left;

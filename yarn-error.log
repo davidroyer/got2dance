@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/droyer/.nvm/versions/node/v8.10.0/bin/node /Users/droyer/.yarn/bin/yarn.js add vue-full-calendar
+  /Users/droyer/.nvm/versions/node/v8.10.0/bin/node /Users/droyer/.yarn/bin/yarn.js add normalize.css
 
 PATH: 
   /Users/droyer/.yarn/bin:/Users/droyer/.nvm/versions/node/v8.10.0/bin:/users/droyer/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,11 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/vue-full-calendar: ETIMEDOUT
-      at Timeout._onTimeout (/Users/droyer/.yarn/lib/cli.js:138076:19)
-      at ontimeout (timers.js:482:11)
-      at tryOnTimeout (timers.js:317:5)
-      at Timer.listOnTimeout (timers.js:277:5)
+  Error: connect EPERM 104.16.23.35:443 - Local (0.0.0.0:0)
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at internalConnect (net.js:976:16)
+      at defaultTriggerAsyncIdScope (internal/async_hooks.js:283:19)
+      at emitLookup (net.js:1122:9)
+      at /Users/droyer/.yarn/lib/cli.js:95860:29
+      at /Users/droyer/.yarn/lib/cli.js:95706:25
+      at RawTask.module.exports.RawTask.call (/Users/droyer/.yarn/lib/cli.js:77344:19)
+      at flush (/Users/droyer/.yarn/lib/cli.js:77426:29)
+      at _combinedTickCallback (internal/process/next_tick.js:131:7)
 
 npm manifest: 
   {
@@ -42,7 +48,9 @@ npm manifest:
       "axios": "^0.18.0",
       "node-sass": "^4.5.3",
       "nuxt": "^2.1.0",
-      "sass-loader": "^6.0.6"
+      "sass-loader": "^6.0.6",
+      "vue-full-calendar": "^2.7.0",
+      "wpapi-js": "^0.0.2"
     },
     "devDependencies": {
       "babel-eslint": "^7.2.3",
@@ -54,6 +62,7 @@ npm manifest:
       "eslint-plugin-node": "^5.1.1",
       "eslint-plugin-promise": "^3.5.0",
       "eslint-plugin-standard": "^3.0.1",
+      "lodash": "^4.17.11",
       "tailwindcss": "^0.1.3"
     }
   }
@@ -1533,6 +1542,12 @@ Lockfile:
     dependencies:
       babel-plugin-syntax-object-rest-spread "^6.8.0"
       babel-runtime "^6.26.0"
+  
+  babel-plugin-transform-runtime@^6.23.0:
+    version "6.23.0"
+    resolved "https://registry.yarnpkg.com/babel-plugin-transform-runtime/-/babel-plugin-transform-runtime-6.23.0.tgz#88490d446502ea9b8e7efb0fe09ec4d99479b1ee"
+    dependencies:
+      babel-runtime "^6.22.0"
   
   babel-plugin-transform-vue-jsx@^4.0.1:
     version "4.0.1"
@@ -3601,6 +3616,13 @@ Lockfile:
       mkdirp ">=0.5 0"
       rimraf "2"
   
+  fullcalendar@^3.4.0:
+    version "3.9.0"
+    resolved "https://registry.yarnpkg.com/fullcalendar/-/fullcalendar-3.9.0.tgz#b608a9989f3416f0b1d526c6bdfeeaf2ac79eda5"
+    dependencies:
+      jquery "2 - 3"
+      moment "^2.20.1"
+  
   function-bind@^1.1.0, function-bind@^1.1.1:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -4471,6 +4493,10 @@ Lockfile:
     version "0.3.4"
     resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.4.tgz#dc2ba501ee3d58b7bb893c5d1fab47294917e7e7"
   
+  "jquery@2 - 3":
+    version "3.3.1"
+    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+  
   js-base64@^2.1.8, js-base64@^2.1.9:
     version "2.4.9"
     resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.9.tgz#748911fb04f48a60c4771b375cac45a80df11c03"
@@ -4729,6 +4755,10 @@ Lockfile:
   lodash.debounce@^4.0.8:
     version "4.0.8"
     resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  
+  lodash.defaultsdeep@^4.6.0:
+    version "4.6.0"
+    resolved "https://registry.yarnpkg.com/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.0.tgz#bec1024f85b1bd96cbea405b23c14ad6443a6f81"
   
   lodash.isplainobject@^4.0.6:
     version "4.0.6"
@@ -5065,6 +5095,10 @@ Lockfile:
     resolved "http://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
     dependencies:
       minimist "0.0.8"
+  
+  moment@^2.20.1:
+    version "2.22.2"
+    resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   
   move-concurrently@^1.0.1:
     version "1.0.1"
@@ -8187,6 +8221,14 @@ Lockfile:
     dependencies:
       indexof "0.0.1"
   
+  vue-full-calendar@^2.7.0:
+    version "2.7.0"
+    resolved "https://registry.yarnpkg.com/vue-full-calendar/-/vue-full-calendar-2.7.0.tgz#1963d6612b5459633e30763e7bdf1d6acc304883"
+    dependencies:
+      babel-plugin-transform-runtime "^6.23.0"
+      fullcalendar "^3.4.0"
+      lodash.defaultsdeep "^4.6.0"
+  
   vue-hot-reload-api@^2.3.0:
     version "2.3.1"
     resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
@@ -8500,6 +8542,12 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/worker-farm/-/worker-farm-1.6.0.tgz#aecc405976fab5a95526180846f0dba288f3a4a0"
     dependencies:
       errno "~0.1.7"
+  
+  wpapi-js@^0.0.2:
+    version "0.0.2"
+    resolved "https://registry.yarnpkg.com/wpapi-js/-/wpapi-js-0.0.2.tgz#acb838ce573dc5b014be4907c170694de8b745de"
+    dependencies:
+      axios "^0.18.0"
   
   wrap-ansi@^2.0.0:
     version "2.1.0"
