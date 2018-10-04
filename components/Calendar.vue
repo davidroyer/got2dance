@@ -27,11 +27,20 @@ export default {
     const self = this
     const calendarEl = this.$refs.calendar
     var calendar = new Calendar(calendarEl, {
+      defaultView: 'listYear',
+
+      views: {
+        month: { buttonText: 'Month' },
+        // listWeek: { buttonText: 'list week' },
+        listYear: { buttonText: 'List' }
+      },
+
       header: {
-        left: 'prev,next today',
-        center: 'title',
+        left: 'title',
+        center: '',
         right: 'month,listYear'
       },
+      // defaultView: 'listYear',
       displayEventTime: false, // don't show the time column in list view
       googleCalendarApiKey: ApiKey,
       // US Holidays
@@ -55,5 +64,9 @@ export default {
 #calendar {
   min-width: 100%;
   min-height: 300px;  
+}
+.fc-scroller {
+    min-width: 100% !important;
+    min-height: 300px !important;
 }
 </style>
