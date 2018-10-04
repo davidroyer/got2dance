@@ -27,18 +27,18 @@ export default {
     const self = this
     const calendarEl = this.$refs.calendar
     var calendar = new Calendar(calendarEl, {
-      defaultView: 'listYear',
+      defaultView: 'listWeek',
 
       views: {
         month: { buttonText: 'Month' },
         // listWeek: { buttonText: 'list week' },
-        listYear: { buttonText: 'List' }
+        listWeek: { buttonText: 'List' }
       },
 
       header: {
         left: 'title',
         center: '',
-        right: 'month,listYear'
+        right: 'month,listWeek'
       },
       // defaultView: 'listYear',
       displayEventTime: false, // don't show the time column in list view
