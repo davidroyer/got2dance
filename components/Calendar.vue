@@ -31,17 +31,15 @@ export default {
 
       views: {
         month: { buttonText: 'Month' },
-        // listWeek: { buttonText: 'list week' },
         listWeek: { buttonText: 'List' }
       },
 
       header: {
-        left: 'title',
-        center: '',
+        left: 'prev,next',
+        center: 'title',
         right: 'month,listWeek'
       },
-      // defaultView: 'listYear',
-      displayEventTime: false, // don't show the time column in list view
+
       googleCalendarApiKey: ApiKey,
       // US Holidays
       events: EventsId,
