@@ -17,6 +17,7 @@
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
     "axios": "^0.18.0",
+    "fullcalendar": "^4.0.0-alpha.2",
     "node-sass": "^4.5.3",
     "nuxt": "^2.1.0",
     "sass-loader": "^6.0.6",

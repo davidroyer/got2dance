@@ -1,5 +1,4 @@
 <template lang="html">
-  <!-- <div class="hero" :style="{ backgroundImage: `url(~/assets/${image})` }"> -->
   <div class="hero" :style="{ 'background-image': 'url(' + image + ')' }">
 
     <h1 class="hero__heading" v-text="heading"></h1>

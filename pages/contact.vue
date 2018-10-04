@@ -18,7 +18,6 @@
         <label class="form-label" for="message">
           Message:
         </label>
-        <!-- <textarea class="pure-input-1-2" placeholder="Your Message..."></textarea> -->
         <textarea class="form-field pure-input-1-2" name="message" id="message"  placeholder="Your Message..." required></textarea>
         <input class="form-button" type="submit" value="Send message" />
       </form>
@@ -28,7 +27,7 @@
 
 <script>
 export default {
-  head() {
+  head () {
     return {
       link: [
         {

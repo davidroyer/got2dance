@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/droyer/.nvm/versions/node/v8.10.0/bin/node /Users/droyer/.yarn/bin/yarn.js add normalize.css
+  /Users/droyer/.nvm/versions/node/v8.10.0/bin/node /Users/droyer/.yarn/bin/yarn.js add fullcalendar@alpha
 
 PATH: 
   /Users/droyer/.yarn/bin:/Users/droyer/.nvm/versions/node/v8.10.0/bin:/users/droyer/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
