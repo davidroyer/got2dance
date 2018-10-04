@@ -64,7 +64,7 @@ export default {
   min-height: 300px;  
 }
 .fc-scroller {
-    min-width: 100% !important;
+    min-width: 92% !important;
     min-height: 300px !important;
 }
 </style>
