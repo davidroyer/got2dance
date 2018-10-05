@@ -19,7 +19,7 @@
 import Hero from '@/components/Hero.vue'
 
 export default {
-  async asyncData({ app, payload, params }) {
+  async asyncData ({ app, payload, params }) {
     const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
     return {
       instructors
@@ -44,9 +44,18 @@ export default {
     max-width: 300px;
     border-radius: 400px;
     border: 2px solid lightgray;
-    flex: 0 1 300px;
+    flex: 1 1 300px;
     height: auto;
     align-self: flex-start;
+    max-width: 200px;
+    justify-content: center;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+
+    @media (min-width: 980px) {
+      max-width: 250px;
+    }
   }
 
   &-info {
@@ -56,8 +65,12 @@ export default {
   }
 
   &-name {
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 1.7em;
+    margin-bottom: 0.25em;
+    @media (max-width: 679px) {
+      margin-bottom: 0.75em;
+      text-align: center;
+    }
   }
 }
 </style>
