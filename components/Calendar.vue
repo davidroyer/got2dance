@@ -6,7 +6,7 @@
 </template>
 
 <script>
-const ApiKey = 'AIzaSyBEDQhf7itA6iAPJ-p0ENiVrO4B6E4xXSU'
+const ApiKey = process.env.GOOGLE_API_KEY
 const EventsId = '5hgkoqu9stlv78k7tguskqpdsc@group.calendar.google.com'
 let Calendar
 let Gcal

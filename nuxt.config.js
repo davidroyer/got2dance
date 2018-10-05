@@ -13,7 +13,7 @@ module.exports = {
     title: 'Got 2 Dance',
     env: {
       GOOGLE_API_KEY: process.env.GOOGLE_API_KEY
-    }
+    },
     // titleTemplate: '%s - David Royer - Front End Web Developer',
     meta: [
       { charset: 'utf-8' },
