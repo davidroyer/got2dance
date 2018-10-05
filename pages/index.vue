@@ -13,7 +13,9 @@
         </div>
       </nuxt-link>
     </div>
-    <section class="section-map">
+    <section class="location-section">
+      <h3 class="location-heading">Our Location</h3>
+      <address class="location-address">107 S. Hurstbourne Pkwy Louisville, KY </address>     
       <iframe width="600" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${key}`" allowfullscreen></iframe>
     </section>
   </div>
@@ -39,13 +41,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section-map {
-    margin-top: 3.5em;
-    margin-bottom: 3.5em;
-    margin-left: auto;
-    display: flex;
-    justify-content: center;
+.location {
+    &-section {
+      margin-top: 3.5em;
+      margin-bottom: 3.5em;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  &-heading {
+    font-size: 2em;
+  }
+  &-address {
+      margin-top: -.5em;
+      margin-bottom: 1.5em;
+      font-size: 1.25em;
+  }
 }
+
 </style>
 
 <style lang="scss" scoped src="@/assets/styles/media.scss">

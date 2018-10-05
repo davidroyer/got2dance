@@ -6,24 +6,8 @@ export const state = () => ({
 })
 
 export const mutations = {
-  toggleMenuState (state) {
-    state.menuIsActive = !state.menuIsActive
-  },
-
-  toggleSidebar (state) {
-    state.sidebarOpen = !state.sidebarOpen
-  },
-
-  setMenuState (state, payload) {
-    state.menuIsActive = !state.menuIsActive
-  },
-
   setCurrentPost (state, post) {
     state.post = post
-  },
-
-  setTestValue (state, payload) {
-    state.testValue = payload
   },
 
   setSiteData (state, payload) {
@@ -46,11 +30,6 @@ export const actions = {
     const menu = await app.$wp.menu('main')
     commit('setSiteData', siteData)
     commit('setMenu', menu)
-  },
-
-  async promiseTest ({ commit }, payload) {
-    await delay(1200)
-    commit('setTestValue', 'New Value')
   }
 }
 
