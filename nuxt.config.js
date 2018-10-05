@@ -40,7 +40,7 @@ module.exports = {
     ]
   },
 
-  plugins: [{ src: '~/plugins/vue-full-calendar', ssr: false }],
+  plugins: [],
 
   env: {
     apiBaseUrl: wpUrl
