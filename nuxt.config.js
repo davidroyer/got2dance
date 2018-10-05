@@ -96,7 +96,7 @@ module.exports = {
   //   }
   // },
   //
-  modules: ['@nuxtjs/pwa', ['wpapi-js', { url: wpUrl }]]
+  modules: ['@nuxtjs/dotenv', '@nuxtjs/pwa', ['wpapi-js', { url: wpUrl }]]
 
   // wpapi: {
   //   url: 'https://got2dance.wpapi.app'

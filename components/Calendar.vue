@@ -6,6 +6,7 @@
 </template>
 
 <script>
+console.log(process.env.GOOGLE_API_KEY)
 const ApiKey = process.env.GOOGLE_API_KEY
 const EventsId = '5hgkoqu9stlv78k7tguskqpdsc@group.calendar.google.com'
 let Calendar
