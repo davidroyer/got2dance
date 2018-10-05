@@ -27,7 +27,7 @@ export default {
     const self = this
     const calendarEl = this.$refs.calendar
     var calendar = new Calendar(calendarEl, {
-      defaultView: 'listWeek',
+      defaultView: 'month',
 
       views: {
         month: { buttonText: 'Month' },

@@ -1,4 +1,3 @@
-import WpApi from './services/wpapi'
 require('dotenv').config()
 const wpUrl = 'https://got2dance.wpapi.app'
 
