@@ -13,7 +13,7 @@
         </div>
       </nuxt-link>
     </div>
-    <section>
+    <section class="map">
       <iframe width="600" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${key}`" allowfullscreen></iframe>
     </section>
   </div>
@@ -37,6 +37,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.section-map {
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+</style>
 
 <style lang="scss" scoped src="@/assets/styles/media.scss">
 </style>
