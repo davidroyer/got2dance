@@ -27,20 +27,18 @@
 <script>
 import Hero from '@/components/Hero.vue'
 import content from '@/content/home.json'
-import config from '@@/site.config.js'
-// const MapsApiKey = process.env.MAPS_API_KEY
-const MapsApiKey = 'AIzaSyBjs7S-6IDTch4E5jqQG8J58HQeKrOD-O0'
+// import config from '@@/site.config.js'
+const MapsApiKey = process.env.MAPS_API_KEY
+
 export default {
   asyncData () {
     return {
       content,
       cards: content.cards,
+      key: MapsApiKey,
       mapWidth: '100%'
     }
   },
-  data: () => ({
-    key: MapsApiKey
-  }),
   components: {
     Hero
   },
