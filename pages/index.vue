@@ -16,7 +16,9 @@
     <section class="location-section">
       <h3 class="location-heading">Our Location</h3>
       <address class="location-address">107 S. Hurstbourne Pkwy Louisville, KY </address>     
-      <iframe width="600" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${key}`" allowfullscreen></iframe>
+      <div class="map-wrapper">
+        <iframe class="map-iframe" :width="mapWidth" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${key}`" allowfullscreen></iframe>        
+      </div>
     </section>
   </div>
 </section>
@@ -31,11 +33,22 @@ export default {
     return {
       content,
       cards: content.cards,
-      key: process.env.MAPS_API_KEY
+      key: process.env.MAPS_API_KEY,
+      mapWidth: '100%'
     }
   },
   components: {
     Hero
+  },
+  mounted () {
+    if (window.matchMedia('(min-width: 610px)').matches) this.mapWidth = '600px'
+    // else this.mapWidth = '100%'
+  },
+  computed: {
+    // mapWidth () {
+    //   if (window.matchMedia('(min-width: 610)').matches) return '600px'
+    //   else return '100%'
+    // }
   }
 }
 </script>
@@ -59,6 +72,22 @@ export default {
       font-size: 1.25em;
   }
 }
+
+// .map-wrapper {
+// 	height: 0;
+// 	overflow: hidden;
+// 	padding-bottom: 60%; /* aspect ratio */
+// 	position: relative;
+// }
+
+// .map-iframe {
+// 	border: 0;
+// 	height: 100%;
+// 	left: 0;
+// 	position: absolute;
+// 	top: 0;
+// 	width: 100%;
+// }
 
 </style>
 
