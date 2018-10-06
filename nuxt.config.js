@@ -1,10 +1,6 @@
 require('dotenv').config()
 const wpUrl = 'https://got2dance.wpapi.app'
 
-// const wp = new WpApi({
-//   wpSiteUrl: wpUrl
-// })
-
 module.exports = {
   /*
   ** Headers of the page
@@ -12,7 +8,8 @@ module.exports = {
   head: {
     title: 'Got 2 Dance',
     env: {
-      GOOGLE_API_KEY: process.env.GOOGLE_API_KEY
+      GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+      MAPS_API_KEY: process.env.MAPS_API_KEY
     },
     // titleTemplate: '%s - David Royer - Front End Web Developer',
     meta: [

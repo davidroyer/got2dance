@@ -28,13 +28,14 @@
 import Hero from '@/components/Hero.vue'
 import content from '@/content/home.json'
 import config from '@@/site.config.js'
-console.log(config)
+const MapsApiKey = process.env.MAPS_API_KEY
+
 export default {
   asyncData () {
     return {
       content,
       cards: content.cards,
-      key: process.env.MAPS_API_KEY,
+      key: MapsApiKey,
       mapWidth: '100%'
     }
   },
@@ -43,13 +44,6 @@ export default {
   },
   mounted () {
     if (window.matchMedia('(min-width: 610px)').matches) this.mapWidth = '600px'
-    // else this.mapWidth = '100%'
-  },
-  computed: {
-    // mapWidth () {
-    //   if (window.matchMedia('(min-width: 610)').matches) return '600px'
-    //   else return '100%'
-    // }
   }
 }
 </script>
