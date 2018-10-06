@@ -40,5 +40,5 @@ export const getters = {
   siteHome: state => state.siteData.home,
   siteTitle: state => state.siteData.name,
   siteDescription: state => state.siteData.description,
-  drawer: state => state.navigationDrawerOpen
+  navigationDrawerOpen: state => state.navigationDrawerOpen
 }

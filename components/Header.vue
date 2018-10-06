@@ -3,8 +3,14 @@
     <nuxt-link to="/">
       <img class="logo" src="~/assets/images/logo-white.png" alt="Got2Dance Logo">
     </nuxt-link>
-    <button class="drawerToggle" @click="$store.commit('toggleDrawer')">Menu</button>
-
+    <!-- <button class="drawerToggle" @click="$store.commit('toggleDrawer')">Menu</button> -->
+      <v-menu-button
+        @click="$store.commit('toggleDrawer')"
+        :checked="mobileMenuIsActive"
+        :aria-label="navButtonText"
+        :aria-expanded="mobileMenuIsActive ? 'true' : 'false'"
+        aria-controls="nav-mobile">
+      </v-menu-button>
     <nav class="nav nav--desktop" role="navigation">
       <ul>
         <template  v-for="(item, index) in menuItems" >
@@ -18,50 +24,30 @@
 
 <script>
 import Hero from '@/components/Hero.vue'
+import VMenuButton from '@/components/VMenuButton.vue'
 
 export default {
   components: {
-    Hero
+    Hero,
+    VMenuButton
   },
   name: 'SiteHeader',
-  data() {
-    return {
-      mainNav: [
-        {
-          name: 'Home',
-          link: '/'
-        },
-        {
-          name: 'Lessons',
-          link: '/lessons'
-        },
-        {
-          name: 'Classes',
-          link: '/classes'
-        },
-        {
-          name: 'Instructors',
-          link: '/instructors'
-        },
-        {
-          name: 'Calendar',
-          link: '/calendar'
-        },
-        {
-          name: 'Contact',
-          link: '/contact'
-        }
-      ]
-    }
-  },
 
   computed: {
-    menuItems() {
+    navButtonText () {
+      return this.mobileMenuIsActive ? 'Close' : 'Menu'
+    },
+
+    menuItems () {
       return this.$store.getters.menuItems
+    },
+
+    mobileMenuIsActive () {
+      return this.$store.getters.navigationDrawerOpen
     }
   },
   methods: {
-    handleSlug(menuItem) {
+    handleSlug (menuItem) {
       const { url } = menuItem
       const siteUrl = `${this.$store.state.siteData.home}/`
       if (url === this.$store.state.siteData.url) return '/'
@@ -89,10 +75,12 @@ export default {
   font-family: Vollkorn, sans-serif;
   position: relative;
   z-index: 9;
-  @media (min-width: 900px) {
-    display: none;
-  }
 }
+  @media (min-width: 900px) {
+    .drawerToggle, .v-menu-button {
+      display: none;
+    }
+  }
 header {
   display: flex;
   align-items: center;
