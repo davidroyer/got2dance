@@ -93,7 +93,7 @@ input[type=submit], .form-button {
   border: none;
   // margin: 0;
   text-decoration: none;
-  background: #1c3e69;
+  background: #40526b;
   color: #ffffff;
   cursor: pointer;
   text-align: center;
