@@ -27,7 +27,8 @@
 <script>
 import Hero from '@/components/Hero.vue'
 import content from '@/content/home.json'
-
+import config from '@@/site.config.js'
+console.log(config)
 export default {
   asyncData () {
     return {

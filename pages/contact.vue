@@ -18,7 +18,7 @@
         <label class="form-label" for="message">
           Message:
         </label>
-        <textarea class="form-field pure-input-1-2" name="message" id="message"  placeholder="Your Message..." required></textarea>
+        <textarea class="form-field pure-input-1-2" rows="6" name="message" id="message"  placeholder="Your Message..." required></textarea>
         <input class="form-button" type="submit" value="Send message" />
       </form>
     </div>
@@ -30,11 +30,11 @@ export default {
   head () {
     return {
       link: [
-        {
-          rel: 'stylesheet',
-          href:
-            '//cdn.jsdelivr.net/combine/npm/purecss@1.0.0/build/base-min.css,npm/purecss@1.0.0/build/grids-min.css,npm/purecss@1.0.0/build/forms-min.css'
-        }
+        // {
+        //   rel: 'stylesheet',
+        //   href:
+        //     '//cdn.jsdelivr.net/combine/npm/purecss@1.0.0/build/base-min.css,npm/purecss@1.0.0/build/grids-min.css,npm/purecss@1.0.0/build/forms-min.css'
+        // }
       ]
     }
   }
@@ -48,8 +48,69 @@ textarea {
 }
 label {
   margin-top: 1.5em;
+  display: block;
+  font-size: 1.3rem;
 }
+label, input, button {
+  font-family: 'Vollkorn', sans-serif;
+}
+
 .form-button {
   margin-top: 2em;
+  font-size: 1.4em !important;
+  // font-weight: 500;
+
+}
+.hidden {
+  display: none;
+}
+input:not([type="submit"]), input:not([name="bot-field"]), textarea {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 500;
+  background: #fff;
+  // color: #1c3e69;
+  border: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  // padding-right: 90px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(220, 220, 220, 0.5);
+}
+
+input[type=submit], .form-button {
+  /* height: 100% !important; */
+  min-height: 50px;
+  display: block;
+  margin-top: 1.5em;
+  padding: .5em 1em;
+  width: 100% !important;
+  display: block;
+  border: none;
+  // margin: 0;
+  text-decoration: none;
+  background: #1c3e69;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+      font-size: 1.4em !important;
+    padding: 0 !important;
+    min-width: 140px;
+    width: 100% !important;
+    max-width: 300px;
+    margin-left: auto;
+    display: block;
+}
+.content {
+  width: 500px;
+  padding-top: 0;
 }
 </style>

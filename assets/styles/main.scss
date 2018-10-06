@@ -65,6 +65,7 @@ footer {
   padding: 3em 1.618em;
   width: 100%;
   text-align: center;
+  flex: 0;
 }
 
 h1,
@@ -77,11 +78,17 @@ h6 {
   font-weight: 400;
 }
 
+main {
+  position: relative;
+  flex: 1;
+}
 .siteWrapper {
   // display: flex;
   flex-flow: row wrap;
   min-height: 100%;
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   .container {
     min-height: 65vh;
     display: flex;
