@@ -17,7 +17,7 @@
       <h3 class="location-heading">Our Location</h3>
       <address class="location-address">107 S. Hurstbourne Pkwy Louisville, KY </address>     
       <div class="map-wrapper">
-        <iframe class="map-iframe" :width="mapWidth" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${key}`" allowfullscreen></iframe>        
+        <iframe title="Map of Got 2 Dance's Location" class="map-iframe" :width="mapWidth" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${key}`" allowfullscreen></iframe>        
       </div>
     </section>
   </div>
@@ -27,7 +27,7 @@
 <script>
 import Hero from '@/components/Hero.vue'
 import content from '@/content/home.json'
-// import config from '@@/site.config.js'
+// import config from '@@/site.config.js's
 const MapsApiKey = process.env.MAPS_API_KEY
 
 export default {
