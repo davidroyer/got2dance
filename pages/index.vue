@@ -35,10 +35,12 @@ export default {
     return {
       content,
       cards: content.cards,
-      key: MapsApiKey,
       mapWidth: '100%'
     }
   },
+  data: () => ({
+    key: MapsApiKey
+  }),
   components: {
     Hero
   },
