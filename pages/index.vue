@@ -1,27 +1,29 @@
 <template>
-<section class="container block">
+<div class="home">
   <hero heading="Dance Lessons & Classes" :image="require('~/assets/images/hero-home.jpg')"></hero>
 
-  <div class="content">
-    <div class="row media__row--flex">
-      <nuxt-link role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link" class="media__link">
-        <div class="media">
-          <h3 class="media__heading" v-text="card.title"></h3>
-          <img :src="require(`~/assets/images/${card.img}`)" alt="Dance Lessons" class="media__image">
-          <h4 class="media__content__cover" v-text="card.text"></h4>
-          <i class="material-icons" style="font-size:24px; color:white;">arrow_forward_ios</i>
+  <div class="container">
+    <div class="content">
+        <div class="row media__row--flex">
+          <nuxt-link role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link" class="media__link">
+            <div class="media">
+              <h3 class="media__heading" v-text="card.title"></h3>
+              <img :src="require(`~/assets/images/${card.img}`)" alt="Dance Lessons" class="media__image">
+              <h4 class="media__content__cover" v-text="card.text"></h4>
+              <i class="material-icons" style="font-size:24px; color:white;">arrow_forward_ios</i>
+            </div>
+          </nuxt-link>
         </div>
-      </nuxt-link>
-    </div>
-    <section class="location-section">
-      <h3 class="location-heading">Our Location</h3>
-      <address class="location-address">107 S. Hurstbourne Pkwy Louisville, KY </address>     
-      <div class="map-wrapper">
-        <iframe title="Map of Got 2 Dance's Location" class="map-iframe" :width="mapWidth" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${key}`" allowfullscreen></iframe>        
-      </div>
-    </section>
+        <section class="location-section">
+          <h3 class="location-heading">Our Location</h3>
+          <address class="location-address">107 S. Hurstbourne Pkwy Louisville, KY </address>     
+          <div class="map-wrapper">
+            <iframe title="Map of Got 2 Dance's Location" class="map-iframe" :width="mapWidth" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${key}`" allowfullscreen></iframe>        
+          </div>
+        </section>
+      </div>    
   </div>
-</section>
+</div>
 </template>
 
 <script>
