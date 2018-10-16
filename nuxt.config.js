@@ -1,4 +1,6 @@
+
 require('dotenv').config()
+const nodeExternals = require('webpack-node-externals')
 const wpUrl = 'https://got2dance.wpapi.app'
 
 module.exports = {
@@ -30,7 +32,8 @@ module.exports = {
         as: 'style',
         onload: 'this.rel = "stylesheet"',
         href:
-          'https://fonts.googleapis.com/css?family=Vollkorn:400,700|Open+Sans:400,700|Material+Icons'
+          'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons'
+          // 'https://fonts.googleapis.com/css?family=Vollkorn:400,700|Open+Sans:400,700|Material+Icons'
       }
       // {
       //   rel: 'preload',
@@ -65,6 +68,14 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      } else if (ctx.isServer) {
+        config.externals = [
+          nodeExternals({
+            // default value for `whitelist` is
+            // [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i]
+            whitelist: [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i, /^typeface-vollkorn/]
+          })
+        ]
       }
     }
   },

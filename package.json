@@ -27,6 +27,7 @@
     "typeface-open-sans": "^0.0.54",
     "typeface-vollkorn": "^0.0.54",
     "typography": "^0.16.17",
+    "webpack-node-externals": "^1.7.2",
     "wpapi-js": "^0.0.4"
   },
   "devDependencies": {

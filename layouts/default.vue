@@ -14,6 +14,7 @@
 <script>
 import typography from '@/utils/typography'
 import SiteHeader from '@/components/Header.vue'
+
 export default {
   components: {
     SiteHeader,

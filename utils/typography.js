@@ -1,8 +1,10 @@
 import Typography from 'typography'
 
 import theme from '@@/theme'
-// require('typeface-vollkorn')
-// require('typeface-open-sans')
+if (process.client) {
+  require('typeface-vollkorn')
+  require('typeface-open-sans')
+}
 
 const options = {
   headerFontFamily: [`Vollkorn`, `sans-serif`],
