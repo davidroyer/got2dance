@@ -97,7 +97,7 @@ main {
     align-items: center;
     // text-align: center;
     width: 100%;
-    margin-top: 80px;
+    // margin-top: 80px;
 
     &.block {
       display: block;
@@ -131,4 +131,52 @@ main {
 .slide-enter,
 .slide-leave-active {
   transform: translateX(230px);
+}
+
+.section {
+  &-heading {
+    color: #40404c;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+.packages {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.package {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 30px 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  border: 1px solid gray;
+  border-radius: 5px;
+
+  @media (min-width: 680px) {
+    // display: inline-block;
+    // width: 32%;
+    // float: left;
+    // margin: 0 4px;
+  }
+
+  &-heading {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  width: 100%;
 }
