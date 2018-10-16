@@ -32,8 +32,8 @@ module.exports = {
         as: 'style',
         onload: 'this.rel = "stylesheet"',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons'
-          // 'https://fonts.googleapis.com/css?family=Vollkorn:400,700|Open+Sans:400,700|Material+Icons'
+          // 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons'
+          'https://fonts.googleapis.com/css?family=Vollkorn:400|Open+Sans:400,700|Material+Icons'
       }
       // {
       //   rel: 'preload',

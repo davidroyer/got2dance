@@ -2,8 +2,8 @@ import Typography from 'typography'
 
 import theme from '@@/theme'
 if (process.client) {
-  require('typeface-vollkorn')
-  require('typeface-open-sans')
+  // require('typeface-vollkorn')
+  // require('typeface-open-sans')
 }
 
 const options = {
