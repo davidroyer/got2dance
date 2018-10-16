@@ -33,7 +33,9 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  // color: white;
+  .flexWrapper {
+    
+  }
 }
 a {
   // color: white;
@@ -46,9 +48,13 @@ a {
 
 .flexItem {
   flex: 1 1 30%;
-
+  min-width: 400px;
+  margin-bottom: .75rem;
+  margin-top: .75rem;
+  // max-width: 100%;
   &-heading {
     color: white;
+    margin-bottom: .15rem;
   }
   &-link {
   display: block;
