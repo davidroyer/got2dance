@@ -69,13 +69,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       } else if (ctx.isServer) {
-        config.externals = [
-          nodeExternals({
-            // default value for `whitelist` is
-            // [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i]
-            whitelist: [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i, /^typeface-vollkorn/]
-          })
-        ]
+        // config.externals = [
+        //   nodeExternals({
+        //     // default value for `whitelist` is
+        //     // [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i]
+        //     whitelist: [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i, /^typeface-vollkorn/]
+        //   })
+        // ]
       }
     }
   },
