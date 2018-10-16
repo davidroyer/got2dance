@@ -1,12 +1,9 @@
 <template>
-<section class="container">
+<div :class="$route.name">
   <hero heading="Group Dance Classes" :image="require('~/assets/images/hero-classes.jpg')"></hero>
-  <!-- <hero heading="Group Dance Classes" image="/hero-classes.jpg"></hero> -->
-
   <div class="content">
-    <div class="row group-classes__row--flex">
 
-      <div class="group-classes">
+      <div class="group-classes flex-center">
         <h3 class="group-classes__heading">Beginner Classes</h3>
         <img src="https://d33wubrfki0l68.cloudfront.net/3a4e44b7c90326a4fc55590db4e63ee647c1e624/c28f8/img/classes1.jpg" alt="Beginner Group Classes" class="group-classes__image">
         <ul class="group-classes__list">
@@ -18,7 +15,7 @@
         </ul>
       </div>
 
-      <div class="group-classes">
+      <div class="group-classes flex-center">
         <h3 class="group-classes__heading">Intermediate Classes</h3>
         <img src="https://d33wubrfki0l68.cloudfront.net/131a42b1460b8d2821bff315a0bf34095757d13f/e4293/img/classes2.jpg" alt="Intermediate Group Classes" class="group-classes__image">
         <ul class="group-classes__list">
@@ -30,8 +27,7 @@
         </ul>
       </div>
 
-    </div>
-    <div class="row">
+    <section class="flex-center">
       <h2 class="section__heading">Class Info</h2>
       <ul class="info__list">
         <li class="info__item">Do packages expire?<span class="info__answer">If you buy a package, there is no expiration date on using them.</span></li>
@@ -39,9 +35,9 @@
         <li class="info__item">How do I get started?<span class="info__answer">Just contact us and we'll get you set up.</span></li>
       </ul>
       <a href="/contact" class="button--ghost">Contact Us</a>
-    </div>
+    </section>
   </div>
-</section>
+</div>
 </template>
 
 <script>
@@ -50,12 +46,32 @@ import Hero from '@/components/Hero.vue'
 export default {
   components: {
     Hero
+  },
+  head: {
+    title: 'Classes',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Classes description' }
+    ]
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 section.container {
   margin-top: 4.5em;
 }
+.group-classes {
+  &__heading {
+    flex-basis: 100%;
+    text-align: center;
+    @media (min-width: 980px) {
+      font-size: 2rem;
+    }    
+  }
+  &__image {
+    width: 800px;
+  }
+}
+
+
 </style>

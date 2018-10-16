@@ -37,10 +37,10 @@ img {
 }
 p {
   max-width: 36rem;
-  font-size: 16px;
-  margin-bottom: 1em;
-  line-height: 1.7;
-  font-family: 'Open Sans';
+  // font-size: 16px;
+  // margin-bottom: 1em;
+  // line-height: 1.7;
+  // font-family: 'Open Sans';
 }
 footer,
 header {
@@ -74,8 +74,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Vollkorn', sans-serif, arial;
-  font-weight: 400;
+  // font-family: 'Vollkorn', sans-serif, arial;
+  // font-weight: 400;
 }
 
 main {
@@ -106,7 +106,6 @@ main {
 
   .content {
     padding: 2em 1em;
-
     @media (min-width: 980px) {
       padding: 5em 0.75em;
     }
@@ -134,9 +133,14 @@ main {
 }
 
 .section {
+
+  &.flex-center {
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
   &-heading {
     color: #40404c;
-    font-size: 2.5rem;
     text-align: center;
   }
 }
@@ -144,6 +148,7 @@ main {
 .packages {
   display: flex;
   flex-flow: row wrap;
+  width: 100%;
 }
 
 .package {
@@ -179,4 +184,22 @@ main {
 
 .content {
   width: 100%;
+}
+
+.flex-center {
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+
+  .section-heading, .section__heading {
+    text-align: center;
+    flex-basis: 100%;
+  }
+}
+
+.section-heading, .section__heading {
+  @media (min-width: 980px) {
+    font-size: 2rem;
+  }
 }

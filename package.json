@@ -24,6 +24,9 @@
     "node-sass": "^4.5.3",
     "nuxt": "^2.1.0",
     "sass-loader": "^6.0.6",
+    "typeface-open-sans": "^0.0.54",
+    "typeface-vollkorn": "^0.0.54",
+    "typography": "^0.16.17",
     "wpapi-js": "^0.0.4"
   },
   "devDependencies": {

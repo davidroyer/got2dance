@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+<div :class="[$route.name, 'container']">
     <h1 class="page-title">Contact</h1>
     <div class="content">
       <form name="contact" class="pure-form pure-form-stacked" action="/thank-you" netlify-honeypot="bot-field" method="post" netlify>

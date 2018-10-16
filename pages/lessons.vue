@@ -4,7 +4,7 @@
 
     <div class="container">
       <div class="content">
-        <section>
+        <section class="flex-center">
           <h2 class="section-heading">Our Lesson Packages</h2>
 
           <div class="packages">
@@ -16,7 +16,7 @@
         </section>
 
         <section>
-          <div class="row">
+          <div class="row flex-center">
             <h2 class="section-heading">Lesson Info</h2>
             <ul class="info__list">
               <li class="info__item">Do packages expire?<span class="info__answer">If you buy a package, there is no expiration date on using them.</span></li>

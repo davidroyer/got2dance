@@ -1,9 +1,10 @@
 <template>
-<div :class="$route.name">
-  <hero heading="Weddings" :image="require('~/assets/images/hero-weddings.jpg')"></hero>
-  <div class="container content">
+<section class="container">
+  <h1 class="page-title">Weddings</h1>
+
+  <div class="content">
     <section>
-      <div class="row flex-center">
+      <div class="row">
         <h2 class="section__heading">Wedding Info</h2>
         <ul class="info__list">
           <li class="info__item">What about a song?<span class="info__answer">If you have a song picked out great. If not, that's okay too.</span></li>
@@ -15,7 +16,7 @@
       </div>
     </section>
   </div>
-</div>
+</section>
 </template>
 
 <script>
@@ -36,7 +37,7 @@ export default {
 
 <style scoped>
 .siteWrapper .container {
-  /* text-align: left;
-  justify-content: left; */
+  text-align: left;
+  justify-content: left;
 }
 </style>

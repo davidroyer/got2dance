@@ -2,7 +2,7 @@
   <section class="container">
     <h1 class="page-title">Our Dance Instructors</h1>
     <div class="content">
-      <div class="instructors">
+      <div class="instructors flex-center">
         <div class="instructor" v-for="(instructor, index) in positionOrder(instructors)" :key="index">
           <img class="instructor-headshot" :src="instructor.acf.headshot" alt="">
           <div class="instructor-info">

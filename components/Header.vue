@@ -11,10 +11,10 @@
         :aria-expanded="mobileMenuIsActive ? 'true' : 'false'"
         aria-controls="nav-mobile">
       </v-menu-button>
-    <nav class="nav nav--desktop" role="navigation">
-      <ul>
-        <template  v-for="(item, index) in menuItems" >
-          <nuxt-link role="menuitem" :to="handleSlug(item)" :key="index">{{item.title}}</nuxt-link>
+    <nav class="nav desktop-nav" role="navigation">
+      <ul class="desktop-nav-list">
+        <template v-for="(item, index) in menuItems" >
+         <li class="desktop-nav-item"> <nuxt-link role="menuitem" :to="handleSlug(item)" :key="index">{{item.title}}</nuxt-link></li>
           <!-- <nuxt-link :to="item.link" :key="index">{{item.title}}</nuxt-link> -->
         </template>
       </ul>
@@ -58,13 +58,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav--desktop {
-  display: none;
-
+.desktop-nav {
+    display: none;
+  
   @media (min-width: 900px) {
     display: block;
   }
+  &-list {
+    margin-bottom: 0;
+    display: flex;
+  }
+  &-item {
+    list-style-type: none;
+    margin-bottom: 0;
+  }
 }
+
 .drawerToggle {
   -webkit-appearance: none;
   cursor: pointer;
@@ -89,6 +98,7 @@ header {
   padding: 0 1.25em;
   .logo {
     width: 125px;
+    margin: 0;
   }
 }
 

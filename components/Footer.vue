@@ -10,18 +10,16 @@
     </div>
     <div class="flexWrapper">
       <div class="flexItem">
-        <h3>Call Us</h3>
-        <span class="action">502-440-2237</span>
+        <h3 class="flexItem-heading">Call Us</h3>
+        <a href="tel:1-502-440-2237" class="flexItem-link">502-440-2237</a>
       </div>
       <div class="flexItem">
-        <h3>Email Us</h3>
-        <span class="action">info@Got2DanceLouisville.com</span>
-
+        <h3 class="flexItem-heading">Email Us</h3>
+        <a href="mailto:info@Got2DanceLouisville.com?Subject=Hello" target="_top" class="flexItem-link">info@Got2DanceLouisville.com</a>
       </div>
       <div class="flexItem">
-        <h3>Follow Us</h3>
-        <span class="action"></span>
-        <a href="https://facebook.com/got2dancelouisville">Facebook</a>
+        <h3 class="flexItem-heading">Follow Us</h3>
+        <a rel="nofollow" target="_blank" class="flexItem-link" href="https://facebook.com/got2dancelouisville">Facebook</a>
       </div>
     </div>
   </footer>
@@ -33,12 +31,12 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 footer {
-  color: white;
+  // color: white;
 }
 a {
-  color: white;
+  // color: white;
 }
 .flexWrapper {
   display: flex;
@@ -48,8 +46,15 @@ a {
 
 .flexItem {
   flex: 1 1 30%;
-}
-.action {
+
+  &-heading {
+    color: white;
+  }
+  &-link {
   display: block;
+  font-weight: 400;
+  font-size: 16px;
 }
+}
+
 </style>
