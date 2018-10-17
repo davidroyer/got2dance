@@ -50,6 +50,10 @@ label {
   margin-top: 1.5em;
   display: block;
   font-size: 1.3rem;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 label, input, button {
   font-family: 'Vollkorn', sans-serif;

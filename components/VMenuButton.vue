@@ -32,8 +32,11 @@ $menu-button-color: #fff;
   background-color: transparent;
   cursor: pointer;
   outline: none;
-  width: 2rem;
-  height: 1.75rem;
+  // width: 2rem;
+  // height: 1.75rem;
+    left: 10px;
+    width: 50px;
+    height: 50px;  
   line-height: 1;
   -webkit-tap-highlight-color: transparent;
   z-index: 99999;
@@ -46,8 +49,10 @@ $menu-button-color: #fff;
 .v-menu-button:after,
 .v-menu-button:before {
   position: absolute;
-  left: 0;
-  width: 100%;
+  // left: 0;
+  // width: 100%;
+  left: 8px;
+  width: 35px;  
   height: 2px;
   padding: 0;
   margin: 0;

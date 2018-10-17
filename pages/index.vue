@@ -4,7 +4,7 @@
 
   <div class="container">
     <div class="content">
-        <div class="row media__row--flex">
+        <section class="media__row--flex">
           <nuxt-link role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link" class="media__link">
             <div class="media">
               <h3 class="media__heading" v-text="card.title"></h3>
@@ -13,7 +13,8 @@
               <i class="material-icons" style="font-size:24px; color:white;">arrow_forward_ios</i>
             </div>
           </nuxt-link>
-        </div>
+        </section>
+        <hr class="section-seperator">
         <section class="location-section">
           <h3 class="location-heading">Our Location</h3>
           <address class="location-address">107 S. Hurstbourne Pkwy Louisville, KY </address>     

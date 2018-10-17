@@ -3,6 +3,7 @@ $primary: #40526b
 $headings: #40404c
 */
 
+@import '_base.scss';
 @import 'nav.scss';
 
 #__layout {
@@ -23,7 +24,7 @@ pre {
   text-align: center;
 
   @media (min-width: 680px) {
-    margin-top: 1.5em;
+    margin-top: 2.5rem;
   }
 }
 
@@ -106,7 +107,7 @@ main {
   .content {
     padding: 2em 1em;
     @media (min-width: 980px) {
-      padding: 5em 0.75em;
+      padding: 2em 0.75em 5em;
     }
   }
 }
@@ -138,16 +139,45 @@ main {
     display: flex;
     flex-flow: row wrap;
   }
+  &-headings {
+    text-align: center;
+    flex-basis: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
   &-heading {
     color: #40404c;
     text-align: center;
   }
+
+  &-subheading {
+    display: block;
+    margin-top: -1rem;
+  }
+
+  &-seperator {
+    border-bottom: 1px solid hsla(0,0%,0%,0.2);
+    margin: 2rem auto 2.5rem;
+    max-width: 1040px;
+    height: 0;
+    width: 94%;
+
+    @media (min-width: 780px) {
+      margin: 3rem auto 3.5rem;
+    }
+
+    @media (min-width: 980px) {
+      margin: 4rem auto 4.5rem;
+    }
+}  
 }
 
 .packages {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+
+
 }
 
 .package {
@@ -161,6 +191,9 @@ main {
   border: 1px solid gray;
   border-radius: 5px;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
   @media (min-width: 680px) {
     // display: inline-block;
     // width: 32%;
@@ -191,7 +224,7 @@ main {
   flex-flow: row wrap;
   align-items: flex-start;
 
-  .section-heading, .section__heading {
+  .section-heading, .section__heading, .section-subheading {
     text-align: center;
     flex-basis: 100%;
   }

@@ -38,6 +38,14 @@
   .media__row--flex {
     display: flex;
     justify-content: center;
+
+    @media (min-width: 680px) {
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 980px) {
+      margin-top: 2rem;
+    }    
   }
 }
 
@@ -57,6 +65,7 @@
 .media__heading {
   margin: 0;
   display: inline-block;
+  font-size: 1.1rem;
 }
 @media only screen and (min-width: 680px) {
   .media__heading {
@@ -81,7 +90,7 @@
   top: 5px;
   left: 8px;
   border-radius: 50%;
-  width: 55px;
+  width: 50px;
 }
 @media only screen and (min-width: 680px) {
   .media__image {
@@ -105,8 +114,8 @@
   border-radius: 50%;
   top: 15px;
   font-family: 'Material Icons';
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   font-size: 25px;
   display: flex;
   justify-content: center;
