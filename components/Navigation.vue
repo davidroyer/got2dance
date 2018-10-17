@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       mainNav: [
         {
@@ -41,12 +41,12 @@ export default {
     }
   },
   computed: {
-    menuItems() {
+    menuItems () {
       return this.$store.getters.menuItems
     }
   },
   methods: {
-    handleSlug(menuItem) {
+    handleSlug (menuItem) {
       const { url } = menuItem
       const siteUrl = `${this.$store.state.siteData.home}/`
       if (url === this.$store.state.siteData.url) return '/'

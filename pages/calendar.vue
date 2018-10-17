@@ -19,8 +19,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 #calendar {
   max-width: 1200px;
+
 }
+a.fc-event {
+    color: white !important;
+    font-weight: 400;
+}
+
 </style>

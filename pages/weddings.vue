@@ -7,20 +7,22 @@
           <h2 class="section-heading">Our Wedding Packages</h2>
           <span class="section-subheading">All lessons in wedding packages are 25 minute lessons </span>
         </div>
-                    <div class="package">
-                        <spsn class="package__level">Bronze</spsn>
+                    <div class="packages">
+                      <div class="package">
+                        <span class="package__level">Bronze</span>
                         <h3 class="package__heading">2 Lesson Package</h3>
                         <p class="package__price">$80</p>
                     </div>
                     <div class="package">
-                        <spsn class="package__level">Silver</spsn>
+                        <span class="package__level">Silver</span>
                         <h3 class="package__heading">12 Lesson Package</h3>
                         <p class="package__price">$230</p>
                     </div>
                     <div class="package">
-                        <spsn class="package__level">Platinum</spsn>
+                        <span class="package__level">Platinum</span>
                         <h3 class="package__heading">24 Lesson Package</h3>
                         <p class="package__price">$430</p>
+                    </div>                      
                     </div>
 
     </section>
@@ -85,7 +87,7 @@ export default {
 
   &__item {
     flex: 0 1 46%;
-    width: 250px;
+    width: 350px;
     margin: 0 !important;
     padding: 1rem 2rem;
     display: flex;
@@ -106,8 +108,9 @@ export default {
 
     &__answer {
     margin-bottom: 0 !important;
-    margin-top: .5rem;
+    margin-top: .15rem;
     text-align: center;
+    width: 100%;
   }
 }
 </style>
