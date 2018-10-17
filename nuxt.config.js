@@ -35,16 +35,9 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: wpUrl },
-      {
-        rel: 'preload',
-        as: 'style',
-        onload: 'this.rel = "stylesheet"',
-        href:
-          'https://fonts.googleapis.com/css?family=Vollkorn:400|Open+Sans:400,700|Material+Icons'
-      }
-      // { rel: 'preload', href: '/fonts/vollkorn-v8-latin-regular.woff2', as: 'font', type: 'font/woff2' },
-      // { rel: 'preload', href: '/fonts/vollkorn-v8-latin-700.woff2', as: 'font', type: 'font/woff2' },
-      // { rel: 'preload', href: '/fonts/open-sans-v15-latin-regular.woff2', as: 'font', type: 'font/woff2' }
+      { rel: 'preload', href: '/fonts/vollkorn-v8-latin-regular.woff2', as: 'font', type: 'font/woff2' },
+      { rel: 'preload', href: '/fonts/vollkorn-v8-latin-700.woff2', as: 'font', type: 'font/woff2' },
+      { rel: 'preload', href: '/fonts/open-sans-v15-latin-regular.woff2', as: 'font', type: 'font/woff2' }
     ]
   },
 
@@ -69,6 +62,7 @@ module.exports = {
   css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
 
   build: {
+    extractCSS: true,
     /*
     ** Run ESLint on save
     */

@@ -10,6 +10,6 @@ export default {
   fontAwesomeIcons: {
     brands: ['faTwitter', 'faGithub', 'faLinkedinIn'],
     regular: ['faTimesCircle'],
-    solid: ['faChevronRight, faAdjust', 'faSync', 'faUser', 'faStar', 'faTag']
+    solid: ['faChevronRight, faAdjust', 'faSync', 'faUser', 'faStar', 'faTag', 'faAngleRight']
   }
 }

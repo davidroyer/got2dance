@@ -3,6 +3,7 @@ $primary: #40526b
 $headings: #40404c
 */
 
+@import '_fonts.css';
 @import '_base.scss';
 @import 'nav.scss';
 
@@ -274,3 +275,4 @@ main {
   overflow-x: scroll !important;
 }
 
+@typography

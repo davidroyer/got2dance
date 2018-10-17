@@ -12,7 +12,7 @@
 </template>
 
 <script>
-// // import typography from '@/utils/typography'
+// import typography from '@/utils/typography'
 import SiteHeader from '@/components/Header.vue'
 
 export default {

@@ -4,13 +4,17 @@
 
   <div class="container">
     <div class="content">
+         
         <section class="media__row--flex">
           <nuxt-link role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link" class="media__link">
             <div class="media">
               <h3 class="media__heading" v-text="card.title"></h3>
               <img :src="require(`~/assets/images/${card.img}`)" alt="Dance Lessons" class="media__image">
               <h4 class="media__content__cover" v-text="card.text"></h4>
-              <i class="material-icons" style="font-size:24px; color:white;">arrow_forward_ios</i>
+               <div class="media-arrow-icon">
+                  <fa-icon icon="chevron-right"></fa-icon>
+               </div>
+              <!-- <i class="material-icons" style="font-size:24px; color:white;">arrow_forward_ios</i> -->
             </div>
           </nuxt-link>
         </section>
@@ -30,7 +34,13 @@
 <script>
 import Hero from '@/components/Hero.vue'
 import content from '@/content/home.json'
-// import config from '@@/site.config.js's
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faAngleRight,
+  faChevronRight
+} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faChevronRight)
 const MapsApiKey = process.env.MAPS_API_KEY
 
 export default {
@@ -74,21 +84,6 @@ export default {
   }
 }
 
-// .map-wrapper {
-// 	height: 0;
-// 	overflow: hidden;
-// 	padding-bottom: 60%; /* aspect ratio */
-// 	position: relative;
-// }
-
-// .map-iframe {
-// 	border: 0;
-// 	height: 100%;
-// 	left: 0;
-// 	position: absolute;
-// 	top: 0;
-// 	width: 100%;
-// }
 
 </style>
 

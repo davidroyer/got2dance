@@ -8,14 +8,13 @@ function resolve (path) {
 }
 
 module.exports = {
-  '@src': resolve('./src'),
-  '@components': resolve('./src/components'),
-  '@layouts': resolve('./src/layouts'),
-  '@middleware': resolve('./src/middleware'),
-  '@pages': resolve('./src/pages'),
-  '@plugins': resolve('./src/plugins'),
-  '@store': resolve('./src/store'),
-  '@styles': resolve('./src/assets/styles'),
-  '@images': resolve('./src/assets/images')
+  '@src': resolve('./'),
+  '@components': resolve('./components'),
+  '@layouts': resolve('./layouts'),
+  '@middleware': resolve('./middleware'),
+  '@pages': resolve('./pages'),
+  '@plugins': resolve('./plugins'),
+  '@store': resolve('./store'),
+  '@styles': resolve('./assets/styles'),
+  '@images': resolve('./assets/images')
 }
-
