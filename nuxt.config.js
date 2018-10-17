@@ -62,7 +62,7 @@ module.exports = {
   css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
 
   build: {
-    extractCSS: true,
+    // extractCSS: true,
     /*
     ** Run ESLint on save
     */

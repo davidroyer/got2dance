@@ -19,7 +19,7 @@
       </div>
       <div class="flexItem">
         <h3 class="flexItem-heading">Follow Us</h3>
-        <a rel="nofollow" target="_blank" class="flexItem-link" href="https://facebook.com/got2dancelouisville">Facebook</a>
+        <a rel="noopener"` target="_blank" class="flexItem-link" href="https://facebook.com/got2dancelouisville">Facebook</a>
       </div>
     </div>
   </footer>

@@ -4,76 +4,76 @@ importScripts('/_nuxt/workbox.5c678697.js')
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "/_nuxt/06d683f4d4f361adcf5d.js",
-    "revision": "ac805ad1f36f663dba6eef159b19ee59"
+    "url": "/_nuxt/03741885a53c815dd6a2.js",
+    "revision": "6059a9d10046c77480f0cef8802606ce"
   },
   {
-    "url": "/_nuxt/07a77777ab4c75566af5.js",
-    "revision": "487ec33732cd4de087d13a1e64d33285"
+    "url": "/_nuxt/0a0f9ad70b3db872e69f.js",
+    "revision": "6064945d2890d1af53514c1d668ce51f"
   },
   {
-    "url": "/_nuxt/07d30fa7e5a980d5185a.js",
-    "revision": "fb9aabdf72530b8733fc71bd3e12504e"
+    "url": "/_nuxt/1ca30d1797c91d5b6d8e.js",
+    "revision": "f82fbec08681c682c38920ae5bfa7945"
   },
   {
-    "url": "/_nuxt/10db8c82b763a698e07d.js",
-    "revision": "b62783729a7dd0c18a5719c10dbea936"
+    "url": "/_nuxt/1fb373f7487d9bb0f44a.js",
+    "revision": "856560157d85e29ffdf14bbf08659517"
   },
   {
-    "url": "/_nuxt/2e261ff0ca6f9fdfb55e.js",
-    "revision": "c94d05eb9205d67e8442e6564c080e1f"
+    "url": "/_nuxt/20a29dc0940b00bab214.js",
+    "revision": "78df18246be262197a485c4b97f67070"
   },
   {
-    "url": "/_nuxt/42074a075b47e6434be0.js",
-    "revision": "6a0647e1f364a703d1efc16266904159"
+    "url": "/_nuxt/60f22e4d1b43bc7f9e6a.js",
+    "revision": "5035334fe1cd1dff8d79a1cfad4a68a8"
   },
   {
-    "url": "/_nuxt/48666f78cf9cefee8f11.js",
-    "revision": "4a91060473db286d5039b0500ec78e94"
+    "url": "/_nuxt/620ac9dbd05413d0df44.js",
+    "revision": "704231790fab0007a562d12ff573b96d"
   },
   {
-    "url": "/_nuxt/6eb44f3b466b313157cb.js",
-    "revision": "056b0d962f4ddf3de7eaea98263528a0"
+    "url": "/_nuxt/6edf41abdf887dd658b7.js",
+    "revision": "9276878f27cd70b0b18f779e875a77e0"
   },
   {
-    "url": "/_nuxt/7dacb300214efd508b65.js",
-    "revision": "a7370e3d6b8cdaf5d1d498f5bae8e8ea"
+    "url": "/_nuxt/80c267b9bce68d02fac9.js",
+    "revision": "f208f9e54468298b3ea72fc27ada48c4"
   },
   {
-    "url": "/_nuxt/828e495239dc6c5b6fc6.js",
-    "revision": "e0f652f688fb5cc3d4172161ade3b4ed"
+    "url": "/_nuxt/855218e783472b9ad63a.js",
+    "revision": "62fb9ae91b741d2a71aa458028672ff0"
   },
   {
-    "url": "/_nuxt/82c79b489e037e35cdec.js",
-    "revision": "3633c8478f85f4a579abf7f2f7085ad3"
+    "url": "/_nuxt/9bad54ad3f61812f23c8.js",
+    "revision": "978e39239d115316a4f56de19e947f74"
   },
   {
-    "url": "/_nuxt/8a0adf99278db105d724.js",
-    "revision": "2de7594549e6f2edf13f6309e1ad98be"
+    "url": "/_nuxt/b39f57ec81dd702d56a8.js",
+    "revision": "22c3d26d4bb067b72d35f87c1495fcaa"
   },
   {
-    "url": "/_nuxt/9f8af1fe1bf61c8b9456.js",
-    "revision": "517b7a21ccc3fcc1ba6f73fd4c498c0c"
+    "url": "/_nuxt/b63f686b3b82ee3bba3c.js",
+    "revision": "eb3489af787eb577514e43ad1ddc1ecb"
   },
   {
-    "url": "/_nuxt/c898923099626da029d7.js",
-    "revision": "3d69ca7936ba94db42dbb9534ce6d963"
+    "url": "/_nuxt/b7843a7e198da6e749c3.js",
+    "revision": "f3848082a2f288f0622c752ddcae559f"
   },
   {
-    "url": "/_nuxt/d38dcf41f78bd7e1a665.js",
-    "revision": "a69a966f8f572d3dab8465654e73636e"
+    "url": "/_nuxt/c67a0b6660fbaa8a443b.js",
+    "revision": "7d6cb2a5dbe67def87e13d24e92ba85d"
   },
   {
-    "url": "/_nuxt/df0d501022c6f7530025.js",
-    "revision": "632f9b4e01663039c4cdc5ce1ce76149"
+    "url": "/_nuxt/dac1e89c77756e9699b1.js",
+    "revision": "db5646ce72d40ea551fae75b81c663c9"
   },
   {
-    "url": "/_nuxt/e2c7500b2693a7622f0c.js",
-    "revision": "138b464779e128afd4160207518c5921"
+    "url": "/_nuxt/e826436b775584df9c52.js",
+    "revision": "62d5ec6eafab22bee41e209b4286f024"
   },
   {
-    "url": "/_nuxt/f212ed444928078acb21.js",
-    "revision": "101d01e0a3b927552e7e7266f98a9fc5"
+    "url": "/_nuxt/eb0301610d82d4938513.js",
+    "revision": "e9b38771063a55d1010d57d6662cb2f0"
   }
 ], {
   "cacheId": "got2dance",
