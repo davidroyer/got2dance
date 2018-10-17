@@ -1,29 +1,37 @@
-
+import config from './site.config'
+import aliases from './aliases.config'
 require('dotenv').config()
-const nodeExternals = require('webpack-node-externals')
+
 const wpUrl = 'https://got2dance.wpapi.app'
+const SiteUrl = process.env.NODE_ENV === 'production' ? config.url : 'http://localhost:3000'
 
 module.exports = {
-  /*
-  ** Headers of the page
-  */
+
+  /**
+   * Head of the page
+   * @see https://nuxtjs.org/api/configuration-head
+   */
   head: {
-    title: 'Got 2 Dance',
-    env: {
-      GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
-      MAPS_API_KEY: process.env.MAPS_API_KEY
-    },
-    // titleTemplate: '%s - David Royer - Front End Web Developer',
+    titleTemplate: `%s - ${config.title}`,
+    htmlAttrs: { lang: config.lang },
+    bodyAttrs: { itemscope: true, itemtype: 'http://schema.org/WebPage' },
+
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          "Louisville's newest Ballroom Dance Studio. Dance lessons, classes, and dance parties throughout the week so you can have fun and learn to dance every night!"
-      }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
+      { hid: 'description', name: 'description', content: config.description },
+      // { hid: 'robots', name: 'robots', content: config.index === false ? 'noindex,nofollow' : 'index,follow' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: config.title },
+      { hid: 'og:title', property: 'og:title', content: config.title },
+      { hid: 'og:description', property: 'og:description', content: config.description },
+      { hid: 'og:image', property: 'og:image', content: `${SiteUrl}/${config.ogImage}` },
+      { hid: 'twitter:title', name: 'twitter:title', content: config.title },
+      { hid: 'twitter:description', name: 'twitter:description', content: config.description },
+      { hid: 'twitter:image', name: 'twitter:image', content: `${SiteUrl}/${config.ogImage}` }
     ],
+
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: wpUrl },
@@ -32,22 +40,25 @@ module.exports = {
         as: 'style',
         onload: 'this.rel = "stylesheet"',
         href:
-          // 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons'
           'https://fonts.googleapis.com/css?family=Vollkorn:400|Open+Sans:400,700|Material+Icons'
       }
-      // {
-      //   rel: 'preload',
-      //   as: 'style',
-      //   href: 'https://fonts.googleapis.com/css?family=Roboto'
-      // }
+      // { rel: 'preload', href: '/fonts/vollkorn-v8-latin-regular.woff2', as: 'font', type: 'font/woff2' },
+      // { rel: 'preload', href: '/fonts/vollkorn-v8-latin-700.woff2', as: 'font', type: 'font/woff2' },
+      // { rel: 'preload', href: '/fonts/open-sans-v15-latin-regular.woff2', as: 'font', type: 'font/woff2' }
     ]
   },
 
   plugins: [],
 
+  /*
+  ** Environmental variables
+  */
   env: {
-    apiBaseUrl: wpUrl
+    apiBaseUrl: wpUrl,
+    GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+    MAPS_API_KEY: process.env.MAPS_API_KEY
   },
+
   /*
   ** Customize the progress bar color
   */
@@ -56,11 +67,19 @@ module.exports = {
   ** Build configuration
   */
   css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
+
   build: {
     /*
     ** Run ESLint on save
     */
     extend (config, ctx) {
+      /**
+       * Resolve custom aliases
+       */
+      for (const key in aliases) {
+        config.resolve.alias[key] = aliases[key]
+      }
+
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -68,14 +87,6 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-      } else if (ctx.isServer) {
-        // config.externals = [
-        //   nodeExternals({
-        //     // default value for `whitelist` is
-        //     // [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i]
-        //     whitelist: [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i, /^typeface-vollkorn/]
-        //   })
-        // ]
       }
     }
   },
@@ -83,29 +94,39 @@ module.exports = {
     middleware: 'menu'
   },
 
-  // generate: {
-  //   async routes() {
-  //     const pages = await wp.pages();
-  //     const posts = await wp.posts();
-  //
-  //     const pagesRoutes = pages.map(page => {
-  //       return {
-  //         route: page.slug,
-  //         payload: page
-  //       };
-  //     });
-  //
-  //     const postsRoutes = posts.map(post => {
-  //       return {
-  //         route: "/blog/" + post.slug,
-  //         payload: post
-  //       };
-  //     });
-  //
-  //     return [...pagesRoutes, ...postsRoutes];
-  //   }
-  // },
-  //
-  modules: [['@nuxtjs/dotenv', { systemvars: true }], '@nuxtjs/pwa', ['wpapi-js', { url: wpUrl }]]
+  modules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+    'nuxt-fontawesome',
+    '@nuxtjs/google-analytics',
+    ['wpapi-js', { url: wpUrl }],
+    ['@nuxtjs/dotenv', { systemvars: true }]
+  ],
+
+  'google-analytics': {
+    id: config.analyticsID
+  },
+
+  /**
+   * Nuxt fontawesome module
+   * @type {Object}
+   */
+  fontawesome: {
+    component: 'fa-icon',
+    imports: [
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: config.fontAwesomeIcons.brands
+      },
+      {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: config.fontAwesomeIcons.regular
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: config.fontAwesomeIcons.solid
+      }
+    ]
+  }
 
 }
