@@ -1,4 +1,5 @@
 export const state = () => ({
+  isDev: null,
   navigationDrawerOpen: false,
   menuIsActive: false,
   siteData: {},
@@ -20,14 +21,19 @@ export const mutations = {
 
   toggleDrawer (state) {
     state.navigationDrawerOpen = !state.navigationDrawerOpen
+  },
+
+  setDev (state, payload) {
+    state.isDev = payload
   }
 }
 
 export const actions = {
   async nuxtServerInit ({ commit, state }, context) {
-    const { app } = context
+    const { app, isDev } = context
     const siteData = await app.$wp.siteData()
     const menu = await app.$wp.menu('main')
+    commit('setDev', isDev)
     commit('setSiteData', siteData)
     commit('setMenu', menu)
   }

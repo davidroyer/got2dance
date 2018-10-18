@@ -19,7 +19,8 @@
           Message:
         </label>
         <textarea class="form-field pure-input-1-2" rows="6" name="message" id="message"  placeholder="Your Message..." required></textarea>
-        <input class="form-button" type="submit" value="Send message" />
+        <v-button type="submit">Submit</v-button>
+        <!-- <input class="form-button" type="submit" value="Send message" /> -->
       </form>
     </div>
   </div>
@@ -29,13 +30,6 @@
 export default {
   head () {
     return {
-      link: [
-        // {
-        //   rel: 'stylesheet',
-        //   href:
-        //     '//cdn.jsdelivr.net/combine/npm/purecss@1.0.0/build/base-min.css,npm/purecss@1.0.0/build/grids-min.css,npm/purecss@1.0.0/build/forms-min.css'
-        // }
-      ]
     }
   }
 }
@@ -86,33 +80,44 @@ input:not([type="submit"]), input:not([name="bot-field"]), textarea {
   background-color: rgba(220, 220, 220, 0.5);
 }
 
-input[type=submit], .form-button {
-  /* height: 100% !important; */
-  min-height: 50px;
-  display: block;
-  margin-top: 1.5em;
-  padding: .5em 1em;
-  width: 100% !important;
-  display: block;
-  border: none;
-  // margin: 0;
-  text-decoration: none;
-  background: #40526b;
-  color: #ffffff;
-  cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out, 
-              transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-      font-size: 1.4em !important;
-    padding: 0 !important;
-    min-width: 140px;
-    width: 100% !important;
-    max-width: 300px;
-    margin-left: auto;
-    display: block;
+.v-button {
+  color: #40526b;
+  border-color: #40526b;
+  @apply block mt-2 ml-auto;
+
+  &:hover,
+  &:focus {
+    background-color: #40526b;
+    @apply .text-white shadow-md;
+  }  
 }
+// input[type=submit], .form-button {
+//   /* height: 100% !important; */
+//   min-height: 50px;
+//   display: block;
+//   margin-top: 1.5em;
+//   padding: .5em 1em;
+//   width: 100% !important;
+//   display: block;
+//   border: none;
+//   // margin: 0;
+//   text-decoration: none;
+//   background: #40526b;
+//   color: #ffffff;
+//   cursor: pointer;
+//   text-align: center;
+//   transition: background 250ms ease-in-out, 
+//               transform 150ms ease;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//       font-size: 1.4em !important;
+//     padding: 0 !important;
+//     min-width: 140px;
+//     width: 100% !important;
+//     max-width: 300px;
+//     margin-left: auto;
+//     display: block;
+// }
 .content {
   width: 500px;
   padding-top: 0;

@@ -1,9 +1,27 @@
+
+import PurgecssPlugin from 'purgecss-webpack-plugin'
 import config from './site.config'
 import aliases from './aliases.config'
 require('dotenv').config()
 
 const wpUrl = 'https://got2dance.wpapi.app'
 const SiteUrl = process.env.NODE_ENV === 'production' ? config.url : 'http://localhost:3000'
+const purgecssWhitelistPatterns = [
+  /^__/,
+  /^fa-/,
+  /^v-/,
+  /^page-/,
+  /^nuxt/,
+  /^scale/,
+  /^slide/,
+  /^enter/,
+  /^leave/
+]
+class TailwindExtractor {
+  static extract (content) {
+    return content.match(/[A-z0-9-:/]+/g) || []
+  }
+}
 
 module.exports = {
 
@@ -41,7 +59,11 @@ module.exports = {
     ]
   },
 
-  plugins: [],
+  /**
+   * Custom Nuxt plugins
+   * @see https://nuxtjs.org/guide/plugins
+   */
+  plugins: ['~/plugins/global-components'],
 
   /*
   ** Environmental variables
@@ -72,6 +94,34 @@ module.exports = {
        */
       for (const key in aliases) {
         config.resolve.alias[key] = aliases[key]
+      }
+
+      /**
+       * PurgeCSS
+       */
+      if (!ctx.isDev) {
+        config.plugins.push(
+          /**
+           * PurgeCSS
+           * @see https://github.com/FullHuman/purgecss
+           */
+          new PurgecssPlugin({
+            keyframes: false,
+            paths: glob.sync([
+              path.join(__dirname, './src/pages/**/*.vue'),
+              path.join(__dirname, './src/layouts/**/*.vue'),
+              path.join(__dirname, './src/components/**/*.vue')
+            ]),
+            extractors: [
+              {
+                extractor: TailwindExtractor,
+                extensions: ['html', 'js', 'vue', 'css', 'scss']
+              }
+            ],
+            whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'svg-inline--fa'],
+            whitelistPatterns: purgecssWhitelistPatterns
+          })
+        )
       }
 
       if (ctx.dev && ctx.isClient) {

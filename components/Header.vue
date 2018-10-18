@@ -14,9 +14,13 @@
     <nav class="nav desktop-nav" role="navigation">
       <ul class="desktop-nav-list">
         <template v-for="(item, index) in menuItems" >
-         <li class="desktop-nav-item"> <nuxt-link role="menuitem" :to="handleSlug(item)" :key="index">{{item.title}}</nuxt-link></li>
-          <!-- <nuxt-link :to="item.link" :key="index">{{item.title}}</nuxt-link> -->
+         <li class="desktop-nav-item" :key="index">
+           <nuxt-link role="menuitem" :to="handleSlug(item)">{{item.title}}</nuxt-link>
+          </li>
         </template>
+         <li v-if="$store.state.isDev" key="examples" class="desktop-nav-item">
+          <nuxt-link to="/examples">Examples</nuxt-link>
+        </li>
       </ul>
     </nav>
   </header>
