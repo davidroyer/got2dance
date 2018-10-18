@@ -1,4 +1,3 @@
-import fse from 'fs-extra'
 import path from 'path'
 import FS from 'fs-extra'
 
