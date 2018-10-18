@@ -1,5 +1,6 @@
 <template>
     <div class="examples p-6 container mx-auto">
+        <v-button @click="handleClick">Do Something</v-button>
         <hr class="section-seperator">
         <v-card>
             <v-card-header>
