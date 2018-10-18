@@ -1,7 +1,8 @@
-
-import PurgecssPlugin from 'purgecss-webpack-plugin'
+import path from 'path'
+import glob from 'glob-all'
 import config from './site.config'
 import aliases from './aliases.config'
+import PurgecssPlugin from 'purgecss-webpack-plugin'
 require('dotenv').config()
 
 const wpUrl = 'https://got2dance.wpapi.app'
