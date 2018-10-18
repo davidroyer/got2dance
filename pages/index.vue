@@ -8,10 +8,10 @@
         <section class="media__row--flex">
           <nuxt-link role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link" class="media__link">
             <div class="media">
-              <h3 class="media__heading" v-text="card.title"></h3>
               <img :src="require(`~/assets/images/${card.img}`)" alt="Dance Lessons" class="media__image">
+              <h3 class="media__heading" v-text="card.title"></h3>
               <h4 class="media__content__cover" v-text="card.text"></h4>
-               <div class="media-arrow-icon">
+               <div class="media-arrow-icon media-action">
                   <fa-icon icon="chevron-right"></fa-icon>
                </div>
               <!-- <i class="material-icons" style="font-size:24px; color:white;">arrow_forward_ios</i> -->
@@ -83,6 +83,32 @@ export default {
       text-align: center;
   }
 }
+
+// .media {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: .25rem;
+    
+//     &-image {
+//       width: 50px;
+//     }
+//     &-action {
+//       box-shadow: 2px 2px 2px 0 rgba(40, 31, 31, .26), 0 2px 2px 0 rgba(32, 32, 32, .14);
+//       border-radius: 50%;
+//       top: 15px;
+//       width: 35px;
+//       height: 35px;
+//       font-size: 25px;
+//       background-color: #40526b;
+//       color: white;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       padding-left: 4px;
+//       margin-right: 10px;
+//   }
+// }
 
 
 </style>
