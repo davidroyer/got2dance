@@ -7,14 +7,18 @@
 import Vue from 'vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import path from 'path'
 
-// Register all Vue components in the sub folder `global`
-const requireComponent = require.context('../components/global', true, /.vue$/)
+const cwd = process.cwd()
+const globalComponentsPath = `${cwd}/components/global`
+const modulePluginPath = `${cwd}/modules`
+const requireContextPath = path.relative(modulePluginPath, globalComponentsPath)
+console.log('requireContextPath: ', requireContextPath)
+
+const requireComponent = require.context('../components/global', true, /\.vue$/)
 
 requireComponent.keys().forEach(fileName => {
   const componentConfig = requireComponent(fileName)
-  // PascalCase name without file extension
-  // console.log(componentConfig)
   const componentName = componentConfig.default.name
     ? componentConfig.default.name
     : upperFirst(camelCase(fileName.replace(/\.\w+$/, '')))
