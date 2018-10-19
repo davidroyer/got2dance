@@ -31,5 +31,3 @@ module.exports = {
     require('css-mqpacker')({ sort: true })
   ]
 }
-require('tailwindcss')('./tailwind.config.js'),
-require('autoprefixer')({ grid: true }),
