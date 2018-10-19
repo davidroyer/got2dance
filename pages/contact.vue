@@ -43,15 +43,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 input,
 textarea {
   min-width: 300px;
 }
 label {
-  // margin-top: 1.5em;
-  // display: block;
-  // font-size: 1.3rem;
-
   &:first-of-type {
     margin-top: 0;
   }

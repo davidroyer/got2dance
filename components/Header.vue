@@ -1,6 +1,6 @@
 <template lang="html">
   <header>
-    <nuxt-link to="/">
+    <nuxt-link class="logo-link" to="/">
       <img class="logo" src="~/assets/images/logo-white.png" alt="Got2Dance Logo">
     </nuxt-link>
     <!-- <button class="drawerToggle" @click="$store.commit('toggleDrawer')">Menu</button> -->
@@ -64,7 +64,7 @@ export default {
 <style lang="scss" scoped>
 .desktop-nav {
     display: none;
-  
+
   @media (min-width: 900px) {
     display: block;
   }
@@ -103,6 +103,10 @@ header {
   .logo {
     width: 125px;
     margin: 0;
+
+    &-link {
+      flex: 1 0 125px;
+    }
   }
 }
 

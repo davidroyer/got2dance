@@ -32,11 +32,19 @@
     <section class="flex-center">
       <h2 class="section__heading">Class Info</h2>
       <ul class="info__list">
-        <li class="info__item">Do packages expire?<span class="info__answer">If you buy a package, there is no expiration date on using them.</span></li>
-        <li class="info__item">Length of lesson?<span class="info__answer">These lessons are all are 50 minutes.</span></li>
-        <li class="info__item">How do I get started?<span class="info__answer">Just contact us and we'll get you set up.</span></li>
+        <li class="info__item">
+          <span class="info__question">Do packages expire?</span>
+          <span class="info__answer">If you buy a package, there is no expiration date on using them.</span>
+        </li>
+        <li class="info__item">
+          <span class="info__question">How long are the classes?</span>
+          <span class="info__answer">The classes range from 45 to 60 minutes.</span>
+        </li>
+        <li class="info__item">
+          <span class="info__question">How do I get started?</span>
+          <span class="info__answer">Just <nuxt-link to="/contact">contact us</nuxt-link> and we'll get you set up.</span></span>
+        </li>
       </ul>
-      <a href="/contact" class="button--ghost">Contact Us</a>
     </section>
   </div>
 </div>

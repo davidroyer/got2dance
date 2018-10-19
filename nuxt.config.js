@@ -141,7 +141,6 @@ module.exports = {
   },
 
   modules: [
-    // '~/modules/simple',
     '~/modules/global-components',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
