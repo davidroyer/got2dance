@@ -4,7 +4,8 @@
 
   <div class="container">
     <div class="content">
-      <div class="card-group flex flex-wrap -m-3">   
+
+      <!-- <div class="card-group flex flex-wrap -m-3">   
         <nuxt-link class="card shadow-md flex w-full sm:w-1/2 md:w-1/3 flex flex-col p-3" role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link">
             <img :src="require(`~/assets/images/${card.img}`)" alt="Dance Lessons" class="media__image">
             <h3 class="card-heading" v-text="card.title"></h3>
@@ -13,7 +14,7 @@
               <fa-icon icon="chevron-right"></fa-icon>
             </div>
         </nuxt-link>
-      </div>
+      </div> -->
 
 
         <section class="media__row--flex">

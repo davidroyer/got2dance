@@ -40,7 +40,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
       { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
       { hid: 'description', name: 'description', content: config.description },
-      // { hid: 'robots', name: 'robots', content: config.index === false ? 'noindex,nofollow' : 'index,follow' },
+      { hid: 'robots', name: 'robots', content: config.index === false ? 'noindex,nofollow' : 'index,follow' },
       { property: 'og:type', content: 'website' },
       { property: 'og:site_name', content: config.title },
       { hid: 'og:title', property: 'og:title', content: config.title },
