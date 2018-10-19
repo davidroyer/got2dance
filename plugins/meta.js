@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Meta from '@/data/meta.js'
-// What a monster :O
+
 Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
   return Object.entries(Meta[slug])
     .reduce((acc, [key, actualValue]) => {
@@ -12,10 +12,10 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
       let description = Meta[slug].description
 
       const defaultMetaArray = [
-        {
-          name: 'og:url',
-          content: `${process.env.baseUrl}${this.$route.path.substr(1)}`
-        },
+        // {
+        //   name: 'og:url',
+        //   content: `${process.env.baseUrl}${this.$route.path.substr(1)}`
+        // },
         {
           name: 'og:title',
           content: title
