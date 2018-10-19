@@ -43,7 +43,7 @@
 
 <script>
 import Hero from '@/components/Hero.vue'
-import content from '@/content/home.json'
+import content from '@/data/home.json'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faAngleRight,
@@ -54,6 +54,9 @@ library.add(faChevronRight)
 const MapsApiKey = process.env.MAPS_API_KEY
 
 export default {
+  head () {
+    return this.$createSeo('index')
+  },
   asyncData () {
     return {
       content,

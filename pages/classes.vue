@@ -49,15 +49,8 @@ export default {
   components: {
     Hero
   },
-  head: {
-    title: 'Dance Classes',
-    meta: [
-      { hid: 'description', name: 'description', content: 'Classes description' },
-      { hid: 'og:title', property: 'og:title', content: 'Dance Classes' },
-      { hid: 'og:description', property: 'og:description', content: 'Classes description' },   
-      { hid: 'twitter:title', name: 'twitter:title', content: 'Dance Classes' },
-      { hid: 'twitter:description', name: 'twitter:description', content: 'Classes description' }
-    ]
+  head () {
+    return this.$createSeo('classes')
   }
 }
 </script>
@@ -109,3 +102,6 @@ section {
 }
 
 </style>
+
+<style lang="scss" src="@/assets/styles/components/info-list.scss"></style>
+ 

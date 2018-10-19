@@ -64,7 +64,7 @@ module.exports = {
    * Custom Nuxt plugins
    * @see https://nuxtjs.org/guide/plugins
    */
-  // plugins: ['~/plugins/global-components'],
+  plugins: ['~/plugins/meta'],
 
   /*
   ** Environmental variables

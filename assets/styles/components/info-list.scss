@@ -1,0 +1,40 @@
+.info {
+    &__list {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      flex-direction: column;
+      
+      @media (min-width: 680px) {
+        flex-flow: row wrap;
+      }
+    }
+    &__item {
+      flex: 0 1 49%;
+      padding: 3rem;
+      flex: 0 1 46%;
+      width: 350px;
+      margin: 0 !important;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      text-align: left;
+      align-content: baseline;       
+    }
+    &__question, &__answer {
+      display: block;
+    }
+  
+    &__question {
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+  
+      &__answer {
+      margin-bottom: 0 !important;
+      margin-top: .15rem;
+      text-align: center;
+    }  
+  }

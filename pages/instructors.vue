@@ -19,6 +19,9 @@
 import Hero from '@/components/Hero.vue'
 
 export default {
+  head () {
+    return this.$createSeo('instructors')
+  },
   async asyncData ({ app, payload, params }) {
     const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
     return {

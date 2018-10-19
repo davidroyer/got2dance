@@ -44,6 +44,9 @@
 import Hero from '@/components/Hero.vue'
 
 export default {
+  head () {
+    return this.$createSeo('lessons')
+  },
   async asyncData ({ app }) {
     const page = await app.$wp.page('lessons')
     return {

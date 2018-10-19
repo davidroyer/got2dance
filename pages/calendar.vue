@@ -12,6 +12,9 @@ import Hero from '@/components/Hero.vue'
 import Calendar from '@/components/Calendar'
 
 export default {
+  head () {
+    return this.$createSeo('calendar')
+  },
   components: {
     Calendar,
     Hero
