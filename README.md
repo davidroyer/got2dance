@@ -1,6 +1,4 @@
-# nuxt-starter-2
-
-> Nuxt.js project
+# Got2Dance Website
 
 ## Build Setup
 
@@ -20,3 +18,8 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+
+## Email Setup
+- Need to set outgoing port to 465
+- Set SSL to on
+- Make sure hostname for outgoing is smtpout.secureserver.net

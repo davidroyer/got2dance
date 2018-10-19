@@ -10,6 +10,7 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
 
       let title = Meta[slug].title
       let description = Meta[slug].description
+
       const defaultMetaArray = [
         {
           name: 'og:url',

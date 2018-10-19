@@ -4,6 +4,7 @@ export default {
   },
   classes: {
     title: 'Dance Classes',
+    description: 'Dance Classes Information',
     meta: [{
       name: ['description'],
       content: 'Dance Classes Information'
@@ -11,6 +12,7 @@ export default {
   },
   lessons: {
     title: 'Dance Lessons',
+    description: 'Dance Lessons Information',
     meta: [{
       name: ['description'],
       content: 'Dance Lessons Information'
@@ -18,6 +20,7 @@ export default {
   },
   weddings: {
     title: 'Wedding Lessons',
+    description: 'Wedding Lessons Information',
     meta: [{
       name: ['description'],
       content: 'Wedding Lessons Information'
@@ -25,6 +28,7 @@ export default {
   },
   instructors: {
     title: 'Dance Instructors',
+    description: 'Dance Instructors Information',
     meta: [{
       name: ['description'],
       content: 'Dance Instructors Information'
@@ -32,6 +36,7 @@ export default {
   },
   calendar: {
     title: 'Dance Calendar',
+    description: 'Dance Calendar Information',
     meta: [{
       name: ['description'],
       content: 'Dance Calendar Information'
@@ -39,6 +44,7 @@ export default {
   },
   contact: {
     title: 'Contact Us',
+    description: 'Contact Us Information',
     meta: [{
       name: ['description'],
       content: 'Contact Us Information'
