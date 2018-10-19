@@ -4,7 +4,18 @@
 
   <div class="container">
     <div class="content">
-         
+      <div class="card-group flex flex-wrap -m-3">   
+        <nuxt-link class="card shadow-md flex w-full sm:w-1/2 md:w-1/3 flex flex-col p-3" role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link">
+            <img :src="require(`~/assets/images/${card.img}`)" alt="Dance Lessons" class="media__image">
+            <h3 class="card-heading" v-text="card.title"></h3>
+            <h4 class="hidden md:block card-content" v-text="card.text"></h4>
+            <div class="md:hidden card-action media-action">
+              <fa-icon icon="chevron-right"></fa-icon>
+            </div>
+        </nuxt-link>
+      </div>
+
+
         <section class="media__row--flex">
           <nuxt-link role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link" class="media__link">
             <div class="media">
@@ -14,7 +25,6 @@
                <div class="media-arrow-icon media-action">
                   <fa-icon icon="chevron-right"></fa-icon>
                </div>
-              <!-- <i class="material-icons" style="font-size:24px; color:white;">arrow_forward_ios</i> -->
             </div>
           </nuxt-link>
         </section>
@@ -62,6 +72,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// .card {
+
+//     @media (max-width: 767px) {
+//       width: 100%;
+//       margin-left: auto;
+//       margin-right: auto;
+//       text-align: center;
+//       display: block;
+//       margin-bottom: 20px;
+//       position: relative;
+//       box-shadow: 0 2px 5px 0 rgba(40, 31, 31, .56), 0 2px 10px 0 rgba(32, 32, 32, .52);
+//       border-radius: 3px;
+//       padding: 15px 20px;
+//       transition: all .3s ease-in-out;  
+//     }
+// }
 .location {
     &-section {
       margin-top: 3.5em;
