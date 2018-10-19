@@ -24,8 +24,12 @@ module.exports = {
     // https://github.com/csstools/postcss-preset-env
     require('postcss-preset-env')(),
     // https://github.com/postcss/autoprefixer
-    require('autoprefixer')(),
+    require('autoprefixer')({ grid: true }),
+
+    require('postcss-flexbugs-fixes'),
     // https://github.com/hail2u/node-css-mqpacker
     require('css-mqpacker')({ sort: true })
   ]
 }
+require('tailwindcss')('./tailwind.config.js'),
+require('autoprefixer')({ grid: true }),
