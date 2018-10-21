@@ -6,7 +6,8 @@
       <section class="group-classes flex-apart">
         <div class="group-classes group-level flex-center">
           <h3 class="group-classes__heading">Beginner Classes</h3>
-          <img src="https://d33wubrfki0l68.cloudfront.net/3a4e44b7c90326a4fc55590db4e63ee647c1e624/c28f8/img/classes1.jpg" alt="Beginner Group Classes" class="group-classes__image">
+          
+          <img  src="~/assets/images/classes1.jpg" alt="Beginner Group Classes" class="group-classes__image">
           <ul class="group-classes__list">
             <li class="group-classes__list-item">These classes are designed with the absolute beginner dancer in mind so no need to worry if you have never danced before.</li>
             <li class="group-classes__list-item">Our goals for Beginner classes are to have fun and learn in a comfortable environment.</li>
@@ -18,7 +19,7 @@
 
         <div class="group-classes group-level flex-center">
           <h3 class="group-classes__heading">Intermediate Classes</h3>
-          <img src="https://d33wubrfki0l68.cloudfront.net/131a42b1460b8d2821bff315a0bf34095757d13f/e4293/img/classes2.jpg" alt="Intermediate Group Classes" class="group-classes__image">
+          <img  src="~/assets/images/classes2.jpg" alt="Intermediate Group Classes" class="group-classes__image">
           <ul class="group-classes__list">
             <li class="group-classes__list-item">These classes are designed for the dancer who has a solid foundation of the basics of whichever style of dance is being taught for that particular class.</li>
             <li class="group-classes__list-item">You will get to fine-tune your technique.</li>
