@@ -104,7 +104,7 @@ module.exports = {
     //   },
     //   preset: { autoprefixer: { grid: true } }
     // },
-    extractCSS: true,
+    // extractCSS: true,
     /*
     ** Run ESLint on save
     */
