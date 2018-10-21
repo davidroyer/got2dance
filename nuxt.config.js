@@ -86,6 +86,19 @@ module.exports = {
   css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
 
   build: {
+    // postcss: {
+    //   plugins: {
+    //     tailwindcss: path.resolve('./tailwind.js')
+    //       // Disable `postcss-url`
+    //     'postcss-url': false,
+    //     // Add some plugins
+    //     'postcss-nested': {},
+    //     'postcss-responsive-type': {},
+    //     'postcss-hexrgba': {},
+
+    //   },
+    //   preset: { autoprefixer: { grid: true } }
+    // },
     // extractCSS: true,
     /*
     ** Run ESLint on save
