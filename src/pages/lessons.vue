@@ -29,7 +29,7 @@
               </li>
               <li class="info__item">
                 <span class="info__question">How do I get started?</span>
-                <span class="info__answer">Just <nuxt-link to="/contact">contact us</nuxt-link> and we'll get you set up.</span></span>
+                <span class="info__answer">Just <nuxt-link to="/contact">contact us</nuxt-link> and we'll get you set up</span>
               </li>              
             </ul>
           </div>
