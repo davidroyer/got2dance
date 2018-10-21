@@ -10,6 +10,7 @@ const purgecssWhitelistPatterns = [
   /^__/,
   /^fa-/,
   /^v-/,
+  /^fc-/,
   /^page-/,
   /^nuxt/,
   /^scale/,
@@ -57,8 +58,8 @@ module.exports = {
 
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: wpUrl },
-      { rel: 'dns-prefetch', href: wpUrl }
+      { rel: 'preconnect', href: wpUrl }
+      // { rel: 'dns-prefetch', href: wpUrl }
       // { rel: 'preload', href: '/fonts/vollkorn-v8-latin-regular.woff2', as: 'font', type: 'font/woff2' },
       // { rel: 'preload', href: '/fonts/vollkorn-v8-latin-700.woff2', as: 'font', type: 'font/woff2' },
       // { rel: 'preload', href: '/fonts/open-sans-v15-latin-regular.woff2', as: 'font', type: 'font/woff2' }
@@ -103,7 +104,7 @@ module.exports = {
     //   },
     //   preset: { autoprefixer: { grid: true } }
     // },
-    // extractCSS: true,
+    extractCSS: true,
     /*
     ** Run ESLint on save
     */
