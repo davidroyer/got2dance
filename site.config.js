@@ -6,7 +6,8 @@ export default {
   description: "Louisville's newest Ballroom Dance Studio. Dance lessons, classes, and dance parties throughout the week so you can have fun and learn to dance every night!",
   ogImage: 'share.png',
   lang: 'en',
-  url: 'https://got2dance.netlify.com',
+  url: 'https://www.got2dancelouisville.com',
+  // url: 'https://got2dance.netlify.com',
   fontAwesomeIcons: {
     brands: ['faTwitter', 'faGithub', 'faLinkedinIn'],
     regular: ['faTimesCircle'],

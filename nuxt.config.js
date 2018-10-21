@@ -1,7 +1,7 @@
 import path from 'path'
 import glob from 'glob-all'
 import config from './site.config'
-import aliases from './aliases.config'
+// import config from './configs/site'
 import PurgecssPlugin from 'purgecss-webpack-plugin'
 require('dotenv').config()
 
@@ -30,7 +30,7 @@ module.exports = {
   /**
    * The watch property lets you watch custom files for restarting the server.
    */
-  // watch: ['~/configs/'],
+  watch: ['~/configs/*.js'],
   /**
    * Head of the page
    * @see https://nuxtjs.org/api/configuration-head
@@ -109,13 +109,6 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, ctx) {
-      /**
-       * Resolve custom aliases
-       */
-      for (const key in aliases) {
-        config.resolve.alias[key] = aliases[key]
-      }
-
       /**
        * PurgeCSS
        */

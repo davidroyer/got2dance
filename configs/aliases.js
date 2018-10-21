@@ -6,7 +6,7 @@
 function resolve (path) {
   return require('path').join(__dirname, path)
 }
-
+// hi
 module.exports = {
   '@src': resolve('./'),
   '@components': resolve('./components'),
