@@ -4,10 +4,6 @@ import Meta from '@/data/meta.js'
 Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
   return Object.entries(Meta[slug])
     .reduce((acc, [key, actualValue]) => {
-      console.log('acc: ', acc)
-      console.log('key: ', key)
-      console.log('actualValue: ', actualValue)
-
       let title = Meta[slug].title
       let description = Meta[slug].description
 
