@@ -1,7 +1,6 @@
 import path from 'path'
 import glob from 'glob-all'
-import config from './site.config'
-// import config from './configs/site'
+import config from './config/site'
 import PurgecssPlugin from 'purgecss-webpack-plugin'
 require('dotenv').config()
 
@@ -30,7 +29,7 @@ module.exports = {
   /**
    * The watch property lets you watch custom files for restarting the server.
    */
-  watch: ['~/configs/*.js'],
+  watch: ['@@/config/*.js'],
   /**
    * Head of the page
    * @see https://nuxtjs.org/api/configuration-head
