@@ -1,4 +1,5 @@
 export default {
+  new: 'hi',
   analyticsID: 'UA-57714938-1',
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "/portfolio"
   title: 'Got2Dance - Louisville, KY - Ballroom Dance Studio', // Navigation and Site Title

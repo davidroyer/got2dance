@@ -27,6 +27,10 @@ class TailwindExtractor {
 module.exports = {
 
   /**
+   * The watch property lets you watch custom files for restarting the server.
+   */
+  watch: ['~/configs/'],
+  /**
    * Head of the page
    * @see https://nuxtjs.org/api/configuration-head
    */
