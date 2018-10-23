@@ -132,7 +132,7 @@ module.exports = {
                 extensions: ['html', 'js', 'vue', 'css', 'scss']
               }
             ],
-            whitelist: ['html', 'body', 'nuxt-progress', 'svg'],
+            whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'table', 'td'],
             whitelistPatterns: purgecssWhitelistPatterns
           })
         )
