@@ -58,11 +58,8 @@ module.exports = {
 
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: wpUrl }
-      // { rel: 'dns-prefetch', href: wpUrl }
-      // { rel: 'preload', href: '/fonts/vollkorn-v8-latin-regular.woff2', as: 'font', type: 'font/woff2' },
-      // { rel: 'preload', href: '/fonts/vollkorn-v8-latin-700.woff2', as: 'font', type: 'font/woff2' },
-      // { rel: 'preload', href: '/fonts/open-sans-v15-latin-regular.woff2', as: 'font', type: 'font/woff2' }
+      { rel: 'preconnect', href: wpUrl },
+      { rel: 'dns-prefetch', href: wpUrl }
     ]
   },
 
@@ -77,19 +74,21 @@ module.exports = {
   */
   env: {
     apiBaseUrl: wpUrl
-    // GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
-    // MAPS_API_KEY: process.env.MAPS_API_KEY
   },
 
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
   /*
-  ** Build configuration
+  ** Global CSS
   */
   css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
 
+  /*
+  ** Build configuration
+  */
   build: {
     // postcss: {
     //   plugins: {

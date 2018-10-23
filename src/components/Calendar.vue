@@ -6,7 +6,6 @@
 </template>
 
 <script>
-// const ApiKey = process.env.GOOGLE_API_KEY
 const EventsId = '5hgkoqu9stlv78k7tguskqpdsc@group.calendar.google.com'
 let Calendar
 let Gcal
@@ -46,7 +45,7 @@ export default {
       },
 
       googleCalendarApiKey: this.apiKey,
-      // US Holidays
+
       events: EventsId,
       eventClick: function (arg) {
         // opens events in a popup window
