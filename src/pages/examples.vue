@@ -7,6 +7,9 @@
                 Card Header
             </v-card-header>
             <v-card-body>
+                <fa-icon icon="coffee" />
+                <fa-icon icon="star" size="lg" />
+                <fa-icon icon="headphones" size="4x" />
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur culpa quibusdam laudantium fugiat autem cumque voluptate. Numquam in repellat, delectus.</p>
             </v-card-body>
         </v-card>

@@ -8,11 +8,9 @@
 <script>
 const EventsId = '5hgkoqu9stlv78k7tguskqpdsc@group.calendar.google.com'
 let Calendar
-let Gcal
 
 if (process.browser) {
   Calendar = require('fullcalendar').Calendar
-  require('fullcalendar/dist/fullcalendar.min.css')
   require('fullcalendar/dist/plugins/gcal.js')
 }
 
@@ -56,7 +54,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "fullcalendar/dist/fullcalendar.css";
 #calendar {
   min-width: 100%;
   min-height: 300px;

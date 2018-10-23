@@ -14,9 +14,7 @@
               <fa-icon icon="chevron-right"></fa-icon>
             </div>
         </nuxt-link>
-      </div> -->
-
-
+      </div> --> 
         <section class="media__row--flex">
           <nuxt-link role="link" tag="div" v-for="(card, index) in cards" :key="index" :to="card.link" class="media__link">
             <div class="media">
@@ -46,13 +44,6 @@
 <script>
 import Hero from '@/components/Hero.vue'
 import content from '@/data/home.json'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-  faAngleRight,
-  faChevronRight
-} from '@fortawesome/free-solid-svg-icons'
-
-library.add(faChevronRight)
 
 export default {
   head () {

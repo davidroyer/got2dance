@@ -8,7 +8,7 @@ const wpUrl = 'https://got2dance.wpapi.app'
 const SiteUrl = process.env.NODE_ENV === 'production' ? config.url : 'http://localhost:3000'
 const purgecssWhitelistPatterns = [
   /^__/,
-  // /^fa-/,
+  /^fa-/,
   /^v-/,
   /^fc-/,
   /^page-/,
@@ -57,9 +57,9 @@ module.exports = {
     ],
 
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       // { rel: 'preconnect', href: wpUrl },
-      // { rel: 'dns-prefetch', href: wpUrl }
+      { rel: 'stylesheet', href: '/fullcalendar.min.css' }
     ]
   },
 
@@ -67,7 +67,7 @@ module.exports = {
    * Custom Nuxt plugins
    * @see https://nuxtjs.org/guide/plugins
    */
-  plugins: ['~/plugins/meta'],
+  plugins: ['~/plugins/meta', '~/plugins/fa-icon'],
 
   /*
   ** Environmental variables
@@ -86,7 +86,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
+  css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }, 'fullcalendar/dist/fullcalendar.css'],
 
   /*
   ** Build configuration
@@ -105,7 +105,7 @@ module.exports = {
     //   },
     //   preset: { autoprefixer: { grid: true } }
     // },
-    // extractCSS: true,
+    extractCSS: true,
     /*
     ** Run ESLint on save
     */
@@ -124,7 +124,8 @@ module.exports = {
             paths: glob.sync([
               path.join(__dirname, './src/pages/**/*.vue'),
               path.join(__dirname, './src/layouts/**/*.vue'),
-              path.join(__dirname, './src/components/**/*.vue')
+              path.join(__dirname, './src/components/**/*.vue'),
+              path.join(__dirname, './src/plugins/**/*.js')
             ]),
             extractors: [
               {
@@ -132,7 +133,7 @@ module.exports = {
                 extensions: ['html', 'js', 'vue', 'css', 'scss']
               }
             ],
-            whitelist: ['html', 'body', 'nuxt-progress', 'svg'],
+            whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'table', 'thead', 'td', 'tr', 'svg-inline--fa'],
             whitelistPatterns: purgecssWhitelistPatterns
           })
         )
@@ -164,27 +165,27 @@ module.exports = {
 
   'google-analytics': {
     id: config.analyticsID
-  },
+  }
 
   /**
    * Nuxt fontawesome module
    * @type {Object}
    */
-  fontawesome: {
-    component: 'fa-icon',
-    imports: [
-      {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: config.fontAwesomeIcons.brands
-      },
-      {
-        set: '@fortawesome/free-regular-svg-icons',
-        icons: config.fontAwesomeIcons.regular
-      },
-      {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: config.fontAwesomeIcons.solid
-      }
-    ]
-  }
+  // fontawesome: {
+  //   component: 'fa-icon',
+  //   imports: [
+  //     {
+  //       set: '@fortawesome/free-brands-svg-icons',
+  //       icons: config.fontAwesomeIcons.brands
+  //     },
+  //     {
+  //       set: '@fortawesome/free-regular-svg-icons',
+  //       icons: config.fontAwesomeIcons.regular
+  //     },
+  //     {
+  //       set: '@fortawesome/free-solid-svg-icons',
+  //       icons: config.fontAwesomeIcons.solid
+  //     }
+  //   ]
+  // }
 }
