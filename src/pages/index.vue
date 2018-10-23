@@ -52,7 +52,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faChevronRight)
-const MapsApiKey = process.env.MAPS_API_KEY
 
 export default {
   head () {
@@ -62,7 +61,7 @@ export default {
     return {
       content,
       cards: content.cards,
-      key: MapsApiKey,
+      key: process.env.MAPS_API_KEY,
       mapWidth: '100%'
     }
   },

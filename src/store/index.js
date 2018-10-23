@@ -1,9 +1,13 @@
+// require('dotenv').config()
+
 export const state = () => ({
   isDev: null,
   navigationDrawerOpen: false,
   menuIsActive: false,
   siteData: {},
-  menu: {}
+  menu: {},
+  mapsApiKey: process.env.MAPS_API_KEY,
+  googleApiKey: process.env.GOOGLE_API_KEY
 })
 
 export const mutations = {

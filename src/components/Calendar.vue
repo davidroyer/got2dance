@@ -6,7 +6,7 @@
 </template>
 
 <script>
-const ApiKey = process.env.GOOGLE_API_KEY
+// const ApiKey = process.env.GOOGLE_API_KEY
 const EventsId = '5hgkoqu9stlv78k7tguskqpdsc@group.calendar.google.com'
 let Calendar
 let Gcal
@@ -40,7 +40,7 @@ export default {
         right: 'month,listWeek'
       },
 
-      googleCalendarApiKey: ApiKey,
+      googleCalendarApiKey: process.env.GOOGLE_API_KEY,
       // US Holidays
       events: EventsId,
       eventClick: function (arg) {
@@ -61,10 +61,10 @@ export default {
 <style>
 #calendar {
   min-width: 100%;
-  min-height: 300px;  
+  min-height: 300px;
 }
 .fc-scroller {
-    min-width: 92% !important;
-    min-height: 300px !important;
+  min-width: 92% !important;
+  min-height: 300px !important;
 }
 </style>
