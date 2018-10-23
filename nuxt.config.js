@@ -76,9 +76,9 @@ module.exports = {
   ** Environmental variables
   */
   env: {
-    apiBaseUrl: wpUrl,
-    GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
-    MAPS_API_KEY: process.env.MAPS_API_KEY
+    apiBaseUrl: wpUrl
+    // GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+    // MAPS_API_KEY: process.env.MAPS_API_KEY
   },
 
   /*
