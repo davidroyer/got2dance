@@ -17,13 +17,14 @@
 
 <script>
 import Hero from '@/components/Hero.vue'
+import instructors from '@/data/instructors.json'
 
 export default {
   head () {
     return this.$createSeo('instructors')
   },
   async asyncData ({ app, payload, params }) {
-    const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
+    // const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
     return {
       instructors
     }

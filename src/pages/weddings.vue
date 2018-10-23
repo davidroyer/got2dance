@@ -63,9 +63,9 @@ export default {
     return this.$createSeo('weddings')
   },
   async asyncData ({ app }) {
-    const page = await app.$wp.page('weddings')
+    // const page = await app.$wp.page('weddings')
     return {
-      page
+      // page
     }
   },
   components: {

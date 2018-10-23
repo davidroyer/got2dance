@@ -1,11 +1,12 @@
-// require('dotenv').config()
+import menu from '@/data/menu.json'
+import siteData from '@/data/site-data.json'
 
 export const state = () => ({
   isDev: null,
   navigationDrawerOpen: false,
   menuIsActive: false,
-  siteData: {},
-  menu: {},
+  menu,
+  siteData,
   googleApiKey: process.env.GOOGLE_API_KEY,
   mapsApiKey: process.env.MAPS_API_KEY
 })
@@ -34,12 +35,12 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit ({ commit, state }, context) {
-    const { app, isDev } = context
-    const siteData = await app.$wp.siteData()
-    const menu = await app.$wp.menu('main')
+    const { isDev } = context
+    // const siteData = await app.$wp.siteData()
+    // const menu = await app.$wp.menu('main')
     commit('setDev', isDev)
-    commit('setSiteData', siteData)
-    commit('setMenu', menu)
+    // commit('setSiteData', siteData)
+    // commit('setMenu', menu)
   }
 }
 

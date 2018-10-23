@@ -1,0 +1,45 @@
+[{
+    "id": 42,
+    "title": {
+      "rendered": "Jonah Grimes"
+    },
+    "acf": {
+      "headshot": "https://got2dance.wpapi.app/wp-content/uploads/sites/15/2018/10/Jonah.jpg",
+      "bio": "<p>Always fascinated by dance, but afraid to try it, Jonah finally experienced partner dancing while involved in a church community group. Expecting it to be a one-time thing, he instead found a passion and affinity for it, and began taking regular lessons and classes to learn and expand his skills. Social dancing ballroom dance styles for many years, he began competition in the American Smooth and International Standard Styles before discovering and falling in love with West Coast Swing. Currently, he travels several weekends per month to compete and social dance on the West Coast Swing circuit.</p> ",
+      "order": "4"
+    }
+  },
+  {
+    "id": 41,
+    "title": {
+      "rendered": "Melissa Pylant"
+    },
+    "acf": {
+      "headshot": "https://got2dance.wpapi.app/wp-content/uploads/sites/15/2018/10/Melissa.jpg",
+      "bio": "<p>Melissa has always loved to dance. She started as a child in ballet and then transitioning to jazz. In December 2006, a friend at her church convinced her to take a ballroom class and that was all it took for her to fall in love with ballroom and Latin dances. Melissa has traveled across the United States, competing as an amateur competitor in American Smooth, International Standard, American Rhythm and International Latin styles. Currently she enjoys traveling, social dancing and competing in the Advanced level in the West Coast Swing Circuit. Melissa found dance to be a powerful tool to help people discover and express different parts of themselves. She feels very blessed to be able to share her love for dancing with her students.</p> ",
+      "order": "3"
+    }
+  },
+  {
+    "id": 34,
+    "title": {
+      "rendered": "David Royer"
+    },
+    "acf": {
+      "headshot": "https://got2dance.wpapi.app/wp-content/uploads/sites/15/2018/10/David.jpg",
+      "bio": "<p>David got his start in dance through musical theater which led to dancing Hip Hop. After teaching Hip Hop for a short time he was introduced to Salsa, Swing, and Ballroom. He began teaching these partner dances in 2008 and has since traveled throughout the midwest and country dancing, teaching, performing, and competing</p> <p>A few of his awards include being the 2012 Tristate Salsa Champion, the 2012 Tristate Bachata Champion Runner-up, and the 2012 Chicago Dancesport Challenge Open Rhythm Champion.</p> ",
+      "order": "2"
+    }
+  },
+  {
+    "id": 32,
+    "title": {
+      "rendered": "Jessica Bryant"
+    },
+    "acf": {
+      "headshot": "https://got2dance.wpapi.app/wp-content/uploads/sites/15/2018/10/Jessica.jpg",
+      "bio": "<p>Jessica loves to share her love of dance and watch people learn. You will find her to be a very patient, knowledgable and enthusiastic teacher with over 22 years of experience. She is extensively trained in all the Ballroom, Swing, Salsa and Country Dance styles. Therefore, regardless of what you would like to learn (Waltz, Cha Cha, Swing or Two Step), Jessica can guide from the very beginning all the way through the advanced level.</p> <p>She is a retired competitor and holds many dance titles in many different styles. If you want to Social Dance, she can make sure that the Lead and Follow both know and understand their part. If you want to competitive dance, Jessica is your girl to get you on the dance floor. She holds several National Titles in American Smooth Ballroom as well as a World Title in Country Dancing.</p> <p>Jessica has spent 14 years studying Ballroom, Country and Swing dancing. However, she is not a one dimensional dancer. She is extensively trained in many styles of dance. As a child and teenager she spent 10 years studying Tap, Jazz and Ballet. She is the former Coach of the Bellarmine University’s Dance Team, the Holy Cross High School’s Dance Team and a former University of Louisville LadyBird.</p> ",
+      "order": "1"
+    }
+  }
+]

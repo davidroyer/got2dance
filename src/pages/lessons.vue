@@ -42,15 +42,16 @@
 
 <script>
 import Hero from '@/components/Hero.vue'
+import content from '@/data/lessons.json'
 
 export default {
   head () {
     return this.$createSeo('lessons')
   },
   async asyncData ({ app }) {
-    const page = await app.$wp.page('lessons')
+    // const page = await app.$wp.page('lessons')
     return {
-      page
+      page: content
     }
   },
   components: {

@@ -57,9 +57,9 @@ module.exports = {
     ],
 
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: wpUrl },
-      { rel: 'dns-prefetch', href: wpUrl }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // { rel: 'preconnect', href: wpUrl },
+      // { rel: 'dns-prefetch', href: wpUrl }
     ]
   },
 
@@ -158,7 +158,7 @@ module.exports = {
     '@nuxtjs/sitemap',
     'nuxt-fontawesome',
     '@nuxtjs/google-analytics',
-    ['wpapi-js', { url: wpUrl }],
+    // ['wpapi-js', { url: wpUrl }],
     ['@nuxtjs/dotenv', { systemvars: true }]
   ],
 

@@ -1,0 +1,81 @@
+{
+  "id": 4,
+  "date": "2018-09-29T11:02:11",
+  "date_gmt": "2018-09-29T11:02:11",
+  "guid": {
+    "rendered": "http://got2dance.wpapi.app/?page_id=4"
+  },
+  "modified": "2018-10-02T03:50:37",
+  "modified_gmt": "2018-10-02T03:50:37",
+  "slug": "lessons",
+  "status": "publish",
+  "type": "page",
+  "link": "https://got2dance.wpapi.app/lessons/",
+  "title": {
+    "rendered": "Lessons"
+  },
+  "content": {
+    "rendered": "<p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> ",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>&nbsp; &nbsp; &nbsp;</p> ",
+    "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": [],
+  "acf": {
+    "packages": [{
+        "name": "Single Lesson",
+        "amount": "75"
+      },
+      {
+        "name": "5 Lesson Package",
+        "amount": "70"
+      },
+      {
+        "name": "10 Lesson Package",
+        "amount": "65"
+      }
+    ],
+    "page_title": "Private Dance Lessons"
+  },
+  "yoast_meta": {
+    "yoast_wpseo_title": "Lessons - Got 2 Dance",
+    "yoast_wpseo_metadesc": "",
+    "yoast_wpseo_canonical": "https://got2dance.wpapi.app/lessons/"
+  },
+  "_links": {
+    "self": [{
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/pages/4"
+    }],
+    "collection": [{
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/pages"
+    }],
+    "about": [{
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/types/page"
+    }],
+    "author": [{
+      "embeddable": true,
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/users/1"
+    }],
+    "replies": [{
+      "embeddable": true,
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/comments?post=4"
+    }],
+    "version - history": [{
+      "count": 6,
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/pages/4/revisions"
+    }],
+    "predecessor - version": [{
+      "id": 76,
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/pages/4/revisions/76"
+    }]
+  }
+}

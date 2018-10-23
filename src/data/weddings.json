@@ -1,0 +1,80 @@
+{
+  "id": 10,
+  "date": "2018-09-29T11:03:12",
+  "date_gmt": "2018-09-29T11:03:12",
+  "guid": {
+    "rendered": "http://got2dance.wpapi.app/?page_id=10"
+  },
+  "modified": "2018-10-02T03:38:56",
+  "modified_gmt": "2018-10-02T03:38:56",
+  "slug": "weddings",
+  "status": "publish",
+  "type": "page",
+  "link": "https://got2dance.wpapi.app/weddings/",
+  "title": {
+    "rendered": "Weddings"
+  },
+  "content": {
+    "rendered": "",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "",
+    "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": [],
+  "acf": {
+    "packages": [{
+        "level": "Bronze",
+        "name": "2 Lesson Package",
+        "amount": "80"
+      },
+      {
+        "level": "Silver",
+        "name": "12 Lesson Package",
+        "amount": "230"
+      },
+      {
+        "level": "Platinum",
+        "name": "24 Lesson Package",
+        "amount": "430"
+      }
+    ]
+  },
+  "yoast_meta": {
+    "yoast_wpseo_title": "Weddings - Got 2 Dance",
+    "yoast_wpseo_metadesc": "",
+    "yoast_wpseo_canonical": "https://got2dance.wpapi.app/weddings/"
+  },
+  "_links": {
+    "self": [{
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/pages/10"
+    }],
+    "collection": [{
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/pages"
+    }],
+    "about": [{
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/types/page"
+    }],
+    "author": [{
+      "embeddable": true,
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/users/1"
+    }],
+    "replies": [{
+      "embeddable": true,
+      "href": "https://got2dance.wpapi.app/wp-json/wp/v2/comments?post=10"
+    }],
+    "curies": [{
+      "name": "wp",
+      "href": "https://api.w.org/{rel}",
+      "templated": true
+    }]
+  }
+}

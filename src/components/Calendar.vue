@@ -38,9 +38,7 @@ export default {
         center: 'title',
         right: 'month,listWeek'
       },
-
       googleCalendarApiKey: process.env.GOOGLE_API_KEY,
-      // googleCalendarApiKey: this.$store.state.googleApiKey,
 
       events: EventsId,
       eventClick: function (arg) {
