@@ -5,7 +5,9 @@ export const state = () => ({
   navigationDrawerOpen: false,
   menuIsActive: false,
   siteData: {},
-  menu: {}
+  menu: {},
+  googleApiKey: process.env.GOOGLE_API_KEY,
+  mapsApiKey: process.env.MAPS_API_KEY
 })
 
 export const mutations = {

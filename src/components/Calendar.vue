@@ -17,11 +17,6 @@ if (process.browser) {
 }
 
 export default {
-  props: {
-    apiKey: {
-      type: String
-    }
-  },
   name: 'Calendar',
   data: () => ({
     calendarLoaded: false
@@ -44,7 +39,8 @@ export default {
         right: 'month,listWeek'
       },
 
-      googleCalendarApiKey: this.apiKey,
+      googleCalendarApiKey: process.env.GOOGLE_API_KEY,
+      // googleCalendarApiKey: this.$store.state.googleApiKey,
 
       events: EventsId,
       eventClick: function (arg) {

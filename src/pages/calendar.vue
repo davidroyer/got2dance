@@ -2,7 +2,7 @@
   <section class="container">
     <h1 class="page-title">Our Studio Calendar</h1>
     <div class="content">
-        <Calendar :apiKey="mapsApiKey"></Calendar>
+        <Calendar/>
     </div>
   </section>
 </template>
@@ -14,11 +14,6 @@ import Calendar from '@/components/Calendar'
 export default {
   head () {
     return this.$createSeo('calendar')
-  },
-  asyncData () {
-    return {
-      mapsApiKey: process.env.GOOGLE_API_KEY
-    }
   },
   components: {
     Calendar,
