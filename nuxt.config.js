@@ -105,7 +105,7 @@ module.exports = {
     //   },
     //   preset: { autoprefixer: { grid: true } }
     // },
-    extractCSS: true,
+    // extractCSS: true,
     /*
     ** Run ESLint on save
     */
@@ -120,7 +120,7 @@ module.exports = {
            * @see https://github.com/FullHuman/purgecss
            */
           new PurgecssPlugin({
-            // keyframes: false,
+            keyframes: false,
             paths: glob.sync([
               path.join(__dirname, './src/pages/**/*.vue'),
               path.join(__dirname, './src/layouts/**/*.vue'),
@@ -132,7 +132,7 @@ module.exports = {
                 extensions: ['html', 'js', 'vue', 'css', 'scss']
               }
             ],
-            whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'table', 'td'],
+            whitelist: ['html', 'body', 'nuxt-progress', 'svg'],
             whitelistPatterns: purgecssWhitelistPatterns
           })
         )
