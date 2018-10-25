@@ -1,6 +1,7 @@
 /* vollkorn-regular - latin */
 @font-face {
   font-family: 'Vollkorn';
+  font-display: auto;
   font-style: normal;
   font-weight: 400;
   src: url('/fonts/vollkorn-v8-latin-regular.eot'); /* IE9 Compat Modes */
@@ -14,6 +15,7 @@
 /* vollkorn-700 - latin */
 @font-face {
   font-family: 'Vollkorn';
+  font-display: auto;
   font-style: normal;
   font-weight: 700;
   src: url('/fonts/vollkorn-v8-latin-700.eot'); /* IE9 Compat Modes */
@@ -28,6 +30,7 @@
 /* open-sans-regular - latin */
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   font-style: normal;
   font-weight: 400;
   src: url('/fonts/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
@@ -41,6 +44,7 @@
 /* open-sans-700 - latin */
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   font-style: normal;
   font-weight: 700;
   src: url('/fonts/open-sans-v15-latin-700.eot'); /* IE9 Compat Modes */
