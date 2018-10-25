@@ -1,18 +1,24 @@
-.footer {
-    .flexItem {
-        flex: 1 1 30%;
-        min-width: 400px;
-        margin-bottom: .75rem;
-        margin-top: .75rem;
-        // max-width: 100%;
-        &-heading {
-          color: white;
-          margin-bottom: .15rem;
-        }
-        &-link {
-          display: block;
-          font-weight: 400;
-          font-size: 16px;
-        }
-      }    
+footer {
+  .flexWrapper {
+    @apply flex flex-row justify-around flex-wrap;
+  }
+
+  .flexItem {
+    flex: 1 1 30%;
+    min-width: 400px;
+    margin-bottom: .75rem;
+    margin-top: .75rem;
+
+    // max-width: 100%;
+    &-heading {
+      color: white;
+      margin-bottom: .15rem;
+    }
+
+    &-link {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
 }

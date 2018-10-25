@@ -30,13 +30,3 @@ export default {
   name: 'SiteFooter'
 }
 </script>
-
-<style lang="scss" scoped>
-
-.flexWrapper {
-  @apply flex flex-row justify-around flex-wrap;
-  // display: flex;
-  // flex-flow: row wrap;
-  // justify-content: space-around;
-}
-</style>
