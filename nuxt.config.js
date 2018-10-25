@@ -114,9 +114,9 @@ module.exports = {
       /**
        * Resolve custom aliases
        */
-      for (const key in aliases) {
-        config.resolve.alias[key] = aliases[key]
-      }
+      // for (const key in aliases) {
+      //   config.resolve.alias[key] = aliases[key]
+      // }
 
       // config.module.rules.push({
       //   test: /\.postcss$/,
@@ -175,7 +175,7 @@ module.exports = {
     '~/modules/global-components',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
-    'nuxt-fontawesome',
+    // 'nuxt-fontawesome',
     '@nuxtjs/google-analytics',
     // ['wpapi-js', { url: wpUrl }],
     ['@nuxtjs/dotenv', { systemvars: true }]
