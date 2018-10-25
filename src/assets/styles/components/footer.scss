@@ -1,7 +1,7 @@
 footer {
-  // .flexWrapper {
-  //   @apply flex flex-row justify-around flex-wrap;
-  // }
+  .flexWrapper {
+    @apply flex flex-row justify-around flex-wrap;
+  }
 
   .flexItem {
     flex: 1 1 30%;
