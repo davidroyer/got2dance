@@ -1,5 +1,6 @@
 import path from 'path'
 import glob from 'glob-all'
+import aliases from './aliases.config'
 import config from './config/site'
 import PurgecssPlugin from 'purgecss-webpack-plugin'
 require('dotenv').config()
@@ -110,6 +111,23 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, ctx) {
+      /**
+       * Resolve custom aliases
+       */
+      for (const key in aliases) {
+        config.resolve.alias[key] = aliases[key]
+      }
+
+      config.module.rules.push({
+        test: /\.postcss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader'
+          }
+        ]
+      })
       /**
        * PurgeCSS
        */
