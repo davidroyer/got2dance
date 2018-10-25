@@ -59,8 +59,6 @@ module.exports = {
 
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      // { rel: 'preconnect', href: wpUrl },
-      // { rel: 'stylesheet', href: '/fullcalendar.min.css' }
     ]
   },
 
@@ -93,41 +91,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    // postcss: {
-    //   plugins: {
-    //     tailwindcss: path.resolve('./tailwind.js')
-    //       // Disable `postcss-url`
-    //     'postcss-url': false,
-    //     // Add some plugins
-    //     'postcss-nested': {},
-    //     'postcss-responsive-type': {},
-    //     'postcss-hexrgba': {},
-
-    //   },
-    //   preset: { autoprefixer: { grid: true } }
-    // },
     extractCSS: true,
     /*
     ** Run ESLint on save
     */
     extend (config, ctx) {
-      /**
-       * Resolve custom aliases
-       */
-      // for (const key in aliases) {
-      //   config.resolve.alias[key] = aliases[key]
-      // }
-
-      // config.module.rules.push({
-      //   test: /\.postcss$/,
-      //   use: [
-      //     'vue-style-loader',
-      //     'css-loader',
-      //     {
-      //       loader: 'postcss-loader'
-      //     }
-      //   ]
-      // })
       /**
        * PurgeCSS
        */
@@ -175,7 +143,6 @@ module.exports = {
     '~/modules/global-components',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
-    // 'nuxt-fontawesome',
     '@nuxtjs/google-analytics',
     // ['wpapi-js', { url: wpUrl }],
     ['@nuxtjs/dotenv', { systemvars: true }]
@@ -184,12 +151,4 @@ module.exports = {
   'google-analytics': {
     id: config.analyticsID
   }
-
-  // render: {
-  //   bundleRenderer: {
-  //     shouldPreload: (file, type) => {
-  //       return ['script', 'style', 'font'].includes(type)
-  //     }
-  //   }
-  // }
 }

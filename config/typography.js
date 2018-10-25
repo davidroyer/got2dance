@@ -1,7 +1,7 @@
 const theme = require('./theme')
 
 module.exports = {
-  includeNormalize: true,
+  includeNormalize: false,
   headerFontFamily: [`Vollkorn`, `sans-serif`],
   bodyFontFamily: [`Open Sans`, `sans-serif`],
   headerWeight: 400,
