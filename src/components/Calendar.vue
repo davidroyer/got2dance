@@ -55,7 +55,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "fullcalendar/dist/fullcalendar.css";
 #calendar {
   min-width: 100%;
   min-height: 300px;

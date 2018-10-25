@@ -87,7 +87,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }, 'fullcalendar/dist/fullcalendar.css'],
+  css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
 
   /*
   ** Build configuration
@@ -118,16 +118,16 @@ module.exports = {
         config.resolve.alias[key] = aliases[key]
       }
 
-      config.module.rules.push({
-        test: /\.postcss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader'
-          }
-        ]
-      })
+      // config.module.rules.push({
+      //   test: /\.postcss$/,
+      //   use: [
+      //     'vue-style-loader',
+      //     'css-loader',
+      //     {
+      //       loader: 'postcss-loader'
+      //     }
+      //   ]
+      // })
       /**
        * PurgeCSS
        */
@@ -185,11 +185,11 @@ module.exports = {
     id: config.analyticsID
   }
 
-  render: {
-    bundleRenderer: {
-      shouldPreload: (file, type) => {
-        return ['script', 'style', 'font'].includes(type)
-      }
-    }
-  }
+  // render: {
+  //   bundleRenderer: {
+  //     shouldPreload: (file, type) => {
+  //       return ['script', 'style', 'font'].includes(type)
+  //     }
+  //   }
+  // }
 }
