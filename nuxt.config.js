@@ -9,7 +9,7 @@ const wpUrl = 'https://got2dance.wpapi.app'
 const SiteUrl = process.env.NODE_ENV === 'production' ? config.url : 'http://localhost:3000'
 const purgecssWhitelistPatterns = [
   /^__/,
-  /^fa-/,
+  /^fa/,
   /^v-/,
   /^fc-/,
   /^page-/,
@@ -152,7 +152,19 @@ module.exports = {
               }
             ],
             whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'table', 'thead', 'td', 'tr', 'svg-inline--fa'],
-            whitelistPatterns: purgecssWhitelistPatterns
+            whitelistPatterns: [
+              /^__/,
+              /^fa-/,
+              /^fa/,
+              /^v-/,
+              /^fc-/,
+              /^page-/,
+              /^nuxt/,
+              /^scale/,
+              /^slide/,
+              /^enter/,
+              /^leave/
+            ]
           })
         )
       }
