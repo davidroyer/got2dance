@@ -111,6 +111,3 @@ section {
 }
 
 </style>
-
-<style lang="scss" src="@/assets/styles/components/info-list.scss"></style>
- 

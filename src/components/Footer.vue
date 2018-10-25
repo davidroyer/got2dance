@@ -32,35 +32,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-footer {
-  .flexWrapper {
-    
-  }
-}
-a {
-  // color: white;
-}
+
 .flexWrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  @apply flex flex-row justify-around flex-wrap;
+  // display: flex;
+  // flex-flow: row wrap;
+  // justify-content: space-around;
 }
-
-.flexItem {
-  flex: 1 1 30%;
-  min-width: 400px;
-  margin-bottom: .75rem;
-  margin-top: .75rem;
-  // max-width: 100%;
-  &-heading {
-    color: white;
-    margin-bottom: .15rem;
-  }
-  &-link {
-  display: block;
-  font-weight: 400;
-  font-size: 16px;
-}
-}
-
 </style>

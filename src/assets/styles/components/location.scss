@@ -1,0 +1,21 @@
+.location {
+    &-section {
+      margin-top: 3.5em;
+      margin-bottom: 3.5em;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  &-heading {
+    font-size: 2em;
+  }
+  &-address {
+      margin-top: -.5em;
+      margin-bottom: 1.5em;
+      font-size: 1.25em;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+}

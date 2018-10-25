@@ -18,8 +18,12 @@
  @import '_fonts.css';
  @import '_base';
 
+ @import 'media';
  @import 'need-to-organize';
  @import 'nav';
+ @import 'components/info-list';
+ @import 'components/location';
+ @import 'components/footer';
 //  .media-arrow-icon svg {
 //    width: 30px;
 //    height: 30px;
