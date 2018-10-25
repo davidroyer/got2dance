@@ -55,6 +55,9 @@ export default {
 </script>
 
 <style lang="scss">
+/* purgecss start ignore */
+@import "fullcalendar/dist/fullcalendar.css";
+/* purgecss end ignore */
 #calendar {
   min-width: 100%;
   min-height: 300px;

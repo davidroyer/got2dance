@@ -11,7 +11,7 @@ const purgecssWhitelistPatterns = [
   /^__/,
   /^fa/,
   /^v-/,
-  /^fc-/,
+  /^fc/,
   /^page-/,
   /^nuxt/,
   /^scale/,
@@ -58,9 +58,9 @@ module.exports = {
     ],
 
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       // { rel: 'preconnect', href: wpUrl },
-      { rel: 'stylesheet', href: '/fullcalendar.min.css' }
+      // { rel: 'stylesheet', href: '/fullcalendar.min.css' }
     ]
   },
 
@@ -106,7 +106,7 @@ module.exports = {
     //   },
     //   preset: { autoprefixer: { grid: true } }
     // },
-    // extractCSS: fal,
+    extractCSS: true,
     /*
     ** Run ESLint on save
     */
@@ -152,19 +152,7 @@ module.exports = {
               }
             ],
             whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'table', 'thead', 'td', 'tr', 'svg-inline--fa'],
-            whitelistPatterns: [
-              /^__/,
-              /^fa-/,
-              /^fa/,
-              /^v-/,
-              /^fc-/,
-              /^page-/,
-              /^nuxt/,
-              /^scale/,
-              /^slide/,
-              /^enter/,
-              /^leave/
-            ]
+            whitelistPatterns: purgecssWhitelistPatterns
           })
         )
       }
