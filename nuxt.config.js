@@ -185,25 +185,11 @@ module.exports = {
     id: config.analyticsID
   }
 
-  /**
-   * Nuxt fontawesome module
-   * @type {Object}
-   */
-  // fontawesome: {
-  //   component: 'fa-icon',
-  //   imports: [
-  //     {
-  //       set: '@fortawesome/free-brands-svg-icons',
-  //       icons: config.fontAwesomeIcons.brands
-  //     },
-  //     {
-  //       set: '@fortawesome/free-regular-svg-icons',
-  //       icons: config.fontAwesomeIcons.regular
-  //     },
-  //     {
-  //       set: '@fortawesome/free-solid-svg-icons',
-  //       icons: config.fontAwesomeIcons.solid
-  //     }
-  //   ]
-  // }
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['script', 'style', 'font'].includes(type)
+      }
+    }
+  }
 }
