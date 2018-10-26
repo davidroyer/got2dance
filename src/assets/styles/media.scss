@@ -94,6 +94,10 @@
     left: 8px;
     border-radius: 50%;
     width: 50px;
+
+    &.normal {
+      display: none;
+    }
   }
   @media only screen and (min-width: 680px) {
     .media__image {
@@ -101,6 +105,14 @@
       border-radius: 50%;
       width: 300px;
       margin-top: 1em;
+
+      &.avatar {
+        display: none;
+      }
+
+      &.normal {
+        display: block;
+      }
     }
   }
   .media-arrow-icon {

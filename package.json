@@ -36,6 +36,7 @@
     "fullcalendar": "^4.0.0-alpha.2",
     "nuxt": "^2.1.0",
     "nuxt-fontawesome": "^0.3.0",
+    "nuxt-mq": "^1.1.2",
     "postcss-typography": "^1.0.0",
     "typography": "^0.16.17",
     "vue-fontawesome": "^0.0.2",

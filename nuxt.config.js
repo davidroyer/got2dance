@@ -142,6 +142,7 @@ module.exports = {
   modules: [
     '~/modules/global-components',
     '@nuxtjs/pwa',
+    'nuxt-mq',
     '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics',
     // ['wpapi-js', { url: wpUrl }],
@@ -150,5 +151,14 @@ module.exports = {
 
   'google-analytics': {
     id: config.analyticsID
+  },
+
+  'mq': {
+    defaultBreakpoint: 'default',
+    breakpoints: {
+      sm: 680,
+      md: 980,
+      lg: Infinity
+    }
   }
 }

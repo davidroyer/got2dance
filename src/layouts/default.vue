@@ -1,5 +1,6 @@
 <template>
   <div class="siteWrapper">
+    
     <site-header></site-header>
     <transition name="slide">
       <navigation-drawer v-if="$store.state.navigationDrawerOpen"></navigation-drawer>
@@ -7,6 +8,7 @@
     <main>
       <nuxt/>
     </main>
+    
     <site-footer></site-footer>
   </div>
 </template>
