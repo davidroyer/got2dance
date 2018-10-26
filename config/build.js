@@ -23,10 +23,10 @@ class TailwindExtractor {
 export const purgecss = {
   keyframes: false,
   paths: glob.sync([
-    path.join(__dirname, './src/pages/**/*.vue'),
-    path.join(__dirname, './src/layouts/**/*.vue'),
-    path.join(__dirname, './src/components/**/*.vue'),
-    path.join(__dirname, './src/plugins/**/*.js')
+    path.join(__dirname, '../src/pages/**/*.vue'),
+    path.join(__dirname, '../src/layouts/**/*.vue'),
+    path.join(__dirname, '../src/components/**/*.vue'),
+    path.join(__dirname, '../src/plugins/**/*.js')
   ]),
   extractors: [
     {
