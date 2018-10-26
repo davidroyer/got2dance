@@ -1,6 +1,35 @@
 # Got2Dance Website
 
+
+## Modules
+
+## Plugins
+
+## Services
+
+## Data
+
+## Configs
+This folder consists of several configs to help extract away some settings that will change for each project such as with `site.js` and `theme.js` as well as configs that could remain mostly the same. 
+
 ## Build Setup
+
+
+# Notes
+
+## `meta.js`
+
+This plugin helps to easily create the meta for pages. Used in conjunction with `routes-meta.js` 
+
+## Environmental Variables
+The key to getting this to work at runtime using Netlify builds was seting `{systemvars: true;}`
+
+## Things I learned
+
+PurgeCSS doesn't work unless you set `extractCss: true`
+
+
+
 
 ``` bash
 # install dependencies

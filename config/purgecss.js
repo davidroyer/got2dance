@@ -3,7 +3,7 @@ import path from 'path'
 
 const purgecssWhitelistPatterns = [
   /^__/,
-  /^fa/,
+  // /^fa/,
   /^v-/,
   /^fc/,
   /^page-/,
@@ -20,7 +20,7 @@ class TailwindExtractor {
   }
 }
 
-export const purgecss = {
+export default {
   keyframes: false,
   paths: glob.sync([
     path.join(__dirname, '../src/pages/**/*.vue'),
@@ -34,6 +34,7 @@ export const purgecss = {
       extensions: ['html', 'js', 'vue', 'css', 'scss']
     }
   ],
-  whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'table', 'thead', 'td', 'tr', 'svg-inline--fa'],
+  whitelist: ['html', 'body', 'nuxt-progress'],
+  // whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'table', 'thead', 'td', 'tr', 'svg-inline--fa'],
   whitelistPatterns: purgecssWhitelistPatterns
 }

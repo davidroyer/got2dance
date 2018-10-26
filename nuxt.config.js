@@ -1,5 +1,5 @@
 import config from './config/site'
-import * as BuildConfig from './config/build'
+import purgecssConfig from './config/purgecss'
 import PurgecssPlugin from 'purgecss-webpack-plugin'
 require('dotenv').config()
 
@@ -31,8 +31,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: config.description },
       { hid: 'robots', name: 'robots', content: config.index === false ? 'noindex,nofollow' : 'index,follow' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: config.title },
-      { hid: 'og:title', property: 'og:title', content: config.title },
+      { property: 'og:site_name', content: siteConfigtitle },
+      { hid: 'og:title', property: 'og:title', content: Site.title },
       { hid: 'og:description', property: 'og:description', content: config.description },
       { hid: 'og:image', property: 'og:image', content: `${SiteUrl}/${config.ogImage}` },
       { hid: 'twitter:title', name: 'twitter:title', content: config.title },
@@ -90,7 +90,7 @@ module.exports = {
            * PurgeCSS
            * @see https://github.com/FullHuman/purgecss
            */
-          new PurgecssPlugin(BuildConfig.purgecss)
+          new PurgecssPlugin(purgecssConfig)
         )
       }
 
@@ -109,11 +109,11 @@ module.exports = {
   },
 
   modules: [
+    // ['wpapi-js', { url: wpUrl }],
     '@/modules/global-components',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics',
-    // ['wpapi-js', { url: wpUrl }],
     ['@nuxtjs/dotenv', { systemvars: true }]
   ],
 

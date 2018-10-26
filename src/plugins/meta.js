@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Meta from '@/data/meta.js'
+import Meta from '@/data/routes-meta.js'
 
 Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
   return Object.entries(Meta[slug])
