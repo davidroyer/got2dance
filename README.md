@@ -5,6 +5,9 @@
 
 ## Plugins
 
+### `fa-icon.js`
+Went this route because when using the nuxt module version, styles were getting extrated by PurgeCSS.
+
 ## Services
 
 ## Data
