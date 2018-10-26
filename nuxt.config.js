@@ -109,7 +109,7 @@ module.exports = {
   },
 
   modules: [
-    '~/modules/global-components',
+    '@/modules/global-components',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics',

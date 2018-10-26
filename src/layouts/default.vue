@@ -14,14 +14,13 @@
 </template>
 
 <script>
-// import typography from '@/utils/typography'
 import SiteHeader from '@/components/Header.vue'
 
 export default {
   components: {
     SiteHeader,
-    SiteFooter: () => import('~/components/Footer'),
-    NavigationDrawer: () => import('~/components/NavigationDrawer')
+    SiteFooter: () => import('@/components/Footer'),
+    NavigationDrawer: () => import('@/components/NavigationDrawer')
   }
 }
 </script>
