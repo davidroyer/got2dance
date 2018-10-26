@@ -1,37 +1,20 @@
-import path from 'path'
-import glob from 'glob-all'
-import aliases from './aliases.config'
 import config from './config/site'
+import * as BuildConfig from './config/build'
 import PurgecssPlugin from 'purgecss-webpack-plugin'
 require('dotenv').config()
 
 const wpUrl = 'https://got2dance.wpapi.app'
 const SiteUrl = process.env.NODE_ENV === 'production' ? config.url : 'http://localhost:3000'
-const purgecssWhitelistPatterns = [
-  /^__/,
-  /^fa/,
-  /^v-/,
-  /^fc/,
-  /^page-/,
-  /^nuxt/,
-  /^scale/,
-  /^slide/,
-  /^enter/,
-  /^leave/
-]
-class TailwindExtractor {
-  static extract (content) {
-    return content.match(/[A-z0-9-:/]+/g) || []
-  }
-}
 
 module.exports = {
 
   srcDir: './src',
+
   /**
    * The watch property lets you watch custom files for restarting the server.
    */
   watch: ['@@/config/*.js'],
+
   /**
    * Head of the page
    * @see https://nuxtjs.org/api/configuration-head
@@ -92,6 +75,7 @@ module.exports = {
   */
   build: {
     extractCSS: true,
+
     /*
     ** Run ESLint on save
     */
@@ -101,27 +85,12 @@ module.exports = {
        */
       if (!ctx.isDev) {
         config.plugins.push(
+
           /**
            * PurgeCSS
            * @see https://github.com/FullHuman/purgecss
            */
-          new PurgecssPlugin({
-            keyframes: false,
-            paths: glob.sync([
-              path.join(__dirname, './src/pages/**/*.vue'),
-              path.join(__dirname, './src/layouts/**/*.vue'),
-              path.join(__dirname, './src/components/**/*.vue'),
-              path.join(__dirname, './src/plugins/**/*.js')
-            ]),
-            extractors: [
-              {
-                extractor: TailwindExtractor,
-                extensions: ['html', 'js', 'vue', 'css', 'scss']
-              }
-            ],
-            whitelist: ['html', 'body', 'nuxt-progress', 'svg', 'table', 'thead', 'td', 'tr', 'svg-inline--fa'],
-            whitelistPatterns: purgecssWhitelistPatterns
-          })
+          new PurgecssPlugin(BuildConfig.purgecss)
         )
       }
 
@@ -142,7 +111,6 @@ module.exports = {
   modules: [
     '~/modules/global-components',
     '@nuxtjs/pwa',
-    // 'nuxt-mq',
     '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics',
     // ['wpapi-js', { url: wpUrl }],

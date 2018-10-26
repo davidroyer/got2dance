@@ -19,6 +19,7 @@
 
 <script>
 import MockContent from '@/components/MockContent'
+
 export default {
   components: { MockContent },
 
