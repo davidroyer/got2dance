@@ -10,13 +10,12 @@ import {
   faStar
 } from '@fortawesome/free-solid-svg-icons'
 
-let FaIcons = [
+library.add(
   faCoffee,
   faAngleRight,
   faChevronRight,
   faHeadphones,
   faStar
-]
-library.add(...FaIcons)
+)
 
 Vue.component('fa-icon', FontAwesomeIcon)
