@@ -35,7 +35,8 @@
     "nuxt-fontawesome": "^0.3.0",
     "postcss-typography": "^1.0.0",
     "typography": "^0.16.17",
-    "vue-fontawesome": "^0.0.2"
+    "vue-fontawesome": "^0.0.2",
+    "wpapi-js": "^0.0.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^3.0.5",

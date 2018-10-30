@@ -9160,6 +9160,12 @@ worker-farm@^1.5.2:
   dependencies:
     errno "~0.1.7"
 
+wpapi-js@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/wpapi-js/-/wpapi-js-0.0.4.tgz#4b89a2516217a1a5c636cc15d2f1cdf9d087d351"
+  dependencies:
+    axios "^0.18.0"
+
 wrap-ansi@^2.0.0:
   version "2.1.0"
   resolved "http://registry.npmjs.org/wrap-ansi/-/wrap-ansi-2.1.0.tgz#d8fc3d284dd05794fe84973caecdd1cf824fdd85"
