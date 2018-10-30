@@ -24,11 +24,15 @@ export default {
     return this.$createSeo('instructors')
   },
   async asyncData ({ app, payload, params }) {
-    // const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
-    return {
-      instructors
-    }
+    if (payload) return { instructors: payload }
+    else return { instructors }
   },
+  // async asyncData ({ app, payload, params }) {
+  //   const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
+  //   return {
+  //     instructors
+  //   }
+  // },
   components: {
     Hero
   },

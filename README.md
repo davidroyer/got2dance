@@ -29,7 +29,7 @@ The key to getting this to work at runtime using Netlify builds was seting `{sys
 
 ## Things I learned
 
-PurgeCSS doesn't work unless you set `extractCss: true`
+PurgeCSS doesn't work unless you set `extractCSS: true`
 
 
 

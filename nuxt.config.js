@@ -109,7 +109,7 @@ module.exports = {
   },
 
   modules: [
-    // ['wpapi-js', { url: wpUrl }],
+    ['wpapi-js', { url: wpUrl }],
     '@/modules/global-components',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
