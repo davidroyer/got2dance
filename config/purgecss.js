@@ -3,7 +3,8 @@ import path from 'path'
 
 const purgecssWhitelistPatterns = [
   /^__/,
-  // /^fa/,
+  /^fa-/,
+  /^svg-/,
   /^v-/,
   /^fc/,
   /^page-/,
