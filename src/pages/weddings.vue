@@ -16,12 +16,12 @@
           <div class="package">
             <span class="package__level">Silver</span>
             <h3 class="package__heading">12 Lesson Package</h3>
-            <p class="package__price">$230</p>
+            <p class="package__price">$420</p>
           </div>
           <div class="package">
             <span class="package__level">Platinum</span>
             <h3 class="package__heading">24 Lesson Package</h3>
-            <p class="package__price">$430</p>
+            <p class="package__price">$780</p>
           </div>
         </div>
 
