@@ -10,6 +10,18 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
+      - label: "Lessons Page"
+        name: "lessons"
+        file: "_CMS/content/lessons.yml"
+        fields:
+          # - {label: Title, name: title, widget: string}
+          - label: Packages
+            name: packages
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Amount, name: amount, widget: string}
+
       - label: "About Page"
         name: "about"
         file: "_CMS/content/about.yml"
@@ -23,6 +35,7 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Position, name: position, widget: string}
               - {label: Photo, name: photo, widget: image}
+
       - label: "Locations Page"
         name: "locations"
         file: "_CMS/content/locations.yml"
@@ -35,3 +48,20 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Address, name: address, widget: string}
+
+
+
+- label: "Testimonials"
+  name: "testimonials"
+  widget: "list"
+  fields:
+    - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+    - label: Author
+      name: author
+      widget: object
+      fields:
+        - {label: Name, name: name, widget: string, default: "Emmet"}
+        - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}              
+
+
+        
