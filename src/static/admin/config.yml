@@ -3,7 +3,7 @@ backend:
   # repo: "davidroyer/got2dance"
   branch: netlifycms
 
-media_folder: static/cms-uploads
+media_folder: src/static/cms-uploads
 public_folder: '/cms-uploads'
 
 collections:
