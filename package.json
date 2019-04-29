@@ -31,6 +31,7 @@
     "dotenv-webpack": "^1.5.7",
     "fs-extra": "^7.0.0",
     "fullcalendar": "^4.0.0-alpha.2",
+    "netlify-identity-widget": "^1.5.2",
     "nuxt": "^2.6.3",
     "nuxt-fontawesome": "^0.3.0",
     "postcss-typography": "^1.0.0",
