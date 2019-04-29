@@ -110,6 +110,7 @@ module.exports = {
 
   modules: [
     ['wpapi-js', { url: wpUrl }],
+    'nuxt-netlify-cms',
     '@/modules/global-components',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
