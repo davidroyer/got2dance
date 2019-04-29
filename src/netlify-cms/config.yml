@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: "davidroyer/got2dance"
   branch: netlifycms
 
 media_folder: static/cms-uploads
