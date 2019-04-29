@@ -1,0 +1,6 @@
+title: About Page Title
+intro: This is the about page content
+team:
+  - name: Kenneth Smith
+    photo: /cms-uploads/png-image.png
+    position: Instructor
