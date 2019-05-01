@@ -1,3 +1,7 @@
 packages:
   - amount: '75'
     name: Single Lesson
+  - amount: '70'
+    name: 5 Lessons
+  - amount: '65'
+    name: 10 Lessons
