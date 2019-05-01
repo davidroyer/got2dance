@@ -48,3 +48,15 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Address, name: address, widget: string}
+              
+      - label: "Weddings Page"
+        name: "weddings"
+        file: "_CMS/content/weddings.json"
+        fields:
+          - label: Packages
+            name: packages
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Level, name: level, widget: string}
+              - {label: Amount, name: amount, widget: string}                
