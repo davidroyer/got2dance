@@ -1,19 +1,19 @@
 {
   "packages": [
     {
-      "level": "Bronze",
       "name": "2 Lesson Package",
+      "level": "Bronze",
       "amount": "80"
     },
     {
-      "level": "Silver",
       "name": "12 Lesson Package",
-      "amount": "230"
+      "level": "Silver",
+      "amount": "420"
     },
     {
-      "level": "Platinum",
       "name": "24 Lesson Package",
-      "amount": "430"
+      "level": "Platinum",
+      "amount": "780"
     }
   ]
 }
