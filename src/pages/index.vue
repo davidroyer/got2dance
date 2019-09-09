@@ -47,9 +47,9 @@ export default {
     return this.$createSeo('index')
   },
   async asyncData ({app}) {
-    const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
+    // const instructors = await app.$wp.instructors({ fields: 'id,title,acf' })
     return {
-      instructors,
+      // instructors,
       content,
       cards: content.cards,
       mapWidth: '100%'
