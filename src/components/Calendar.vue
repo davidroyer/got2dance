@@ -50,6 +50,12 @@ export default {
     })
 
     calendar.render()
+    console.log(calendar)
+
+    // Use this to update the view on mobile
+    // setTimeout(() => {
+    //   calendar.changeView('listWeek')
+    // }, 1500)
   }
 }
 </script>
