@@ -11,7 +11,7 @@
     <div class="flexWrapper">
       <div class="flexItem">
         <h3 class="flexItem-heading">Call Us</h3>
-        <a href="tel:1-502-440-2237" class="flexItem-link">502-440-2237</a>
+        <a href="tel:1-502-387-7475" class="flexItem-link">502-387-7475</a>
       </div>
       <div class="flexItem">
         <h3 class="flexItem-heading">Email Us</h3>
