@@ -9,6 +9,8 @@ public_folder: '/cms-uploads'
 collections:
   - label: "Pages"
     name: "pages"
+    editor:
+      preview: false    
     files:
       - label: "Lessons Page"
         name: "lessons"
