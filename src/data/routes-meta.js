@@ -34,14 +34,14 @@ export default {
       content: 'Dance Instructors Information'
     }]
   },
-  calendar: {
-    title: 'Dance Calendar',
-    description: 'Dance Calendar Information',
-    meta: [{
-      name: ['description'],
-      content: 'Dance Calendar Information'
-    }]
-  },
+  // calendar: {
+  //   title: 'Dance Calendar',
+  //   description: 'Dance Calendar Information',
+  //   meta: [{
+  //     name: ['description'],
+  //     content: 'Dance Calendar Information'
+  //   }]
+  // },
   contact: {
     title: 'Contact Us',
     description: 'Contact Us Information',

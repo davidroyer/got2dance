@@ -11,3 +11,4 @@ npm-debug.log
 # Nuxt generate
 dist
 .env
+.BACKUP

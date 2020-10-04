@@ -29,10 +29,10 @@ export default {
           name: 'Instructors',
           link: '/instructors'
         },
-        {
-          name: 'Calendar',
-          link: '/calendar'
-        },
+        // {
+        //   name: 'Calendar',
+        //   link: '/calendar'
+        // },
         {
           name: 'Contact',
           link: '/contact'

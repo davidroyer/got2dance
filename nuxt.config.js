@@ -1,6 +1,6 @@
-import config from './config/site'
-import purgecssConfig from './config/purgecss'
 import PurgecssPlugin from 'purgecss-webpack-plugin'
+import purgecssConfig from './config/purgecss'
+import config from './config/site'
 require('dotenv').config()
 
 const wpUrl = 'https://got2dance.wpapi.app'
@@ -117,7 +117,16 @@ module.exports = {
     ['@nuxtjs/dotenv', { systemvars: true }]
   ],
 
+  buildModules: ['@nuxtjs/sanity'],
+
   'google-analytics': {
     id: config.analyticsID
+  },
+
+  sanity: {
+    projectId: 'jyioe45g',
+    dataset: 'production',
+    useCdn: false,
+    withCredentials: true
   }
 }
