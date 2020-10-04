@@ -8,7 +8,7 @@ const SiteUrl = process.env.NODE_ENV === 'production' ? config.url : 'http://loc
 
 module.exports = {
 
-  srcDir: './src',
+  srcDir: 'src/',
 
   /**
    * The watch property lets you watch custom files for restarting the server.
@@ -127,6 +127,7 @@ module.exports = {
     projectId: 'jyioe45g',
     dataset: 'production',
     useCdn: false,
-    withCredentials: true
+    withCredentials: true,
+    minimal: true
   }
 }
