@@ -1,7 +1,7 @@
 <template>
   <div class="calendar-page">
     <h3 v-if="!calendarLoaded" id="loading">Loading</h3>
-    <div ref="calendar" id="calendar"></div>
+    <div id="calendar" ref="calendar"></div>
   </div>
 </template>
 
@@ -17,36 +17,36 @@ if (process.browser) {
 export default {
   name: 'Calendar',
   data: () => ({
-    calendarLoaded: false
+    calendarLoaded: false,
   }),
 
-  mounted () {
+  mounted() {
     const self = this
     const calendarEl = this.$refs.calendar
-    var calendar = new Calendar(calendarEl, {
+    const calendar = new Calendar(calendarEl, {
       defaultView: 'month',
 
       views: {
         month: { buttonText: 'Month' },
-        listWeek: { buttonText: 'List' }
+        listWeek: { buttonText: 'List' },
       },
 
       header: {
         left: 'prev,next',
         center: 'title',
-        right: 'month,listWeek'
+        right: 'month,listWeek',
       },
       googleCalendarApiKey: process.env.GOOGLE_API_KEY,
 
       events: EventsId,
-      eventClick: function (arg) {
+      eventClick(arg) {
         // opens events in a popup window
         window.open(arg.event.url, 'gcalevent', 'width=700,height=600')
         arg.jsEvent.preventDefault() // don't navigate in main tab
       },
-      loading: function (bool) {
+      loading(bool) {
         self.calendarLoaded = true
-      }
+      },
     })
 
     calendar.render()
@@ -56,13 +56,13 @@ export default {
     // setTimeout(() => {
     //   calendar.changeView('listWeek')
     // }, 1500)
-  }
+  },
 }
 </script>
 
 <style lang="scss">
 /* purgecss start ignore */
-@import "fullcalendar/dist/fullcalendar.css";
+@import 'fullcalendar/dist/fullcalendar.css';
 /* purgecss end ignore */
 #calendar {
   min-width: 100%;
