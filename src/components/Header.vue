@@ -23,6 +23,7 @@
         </li>
       </ul>
     </nav>
+    <div class="covid-banner"><nuxt-link to="/covid-update">View Covid-19 Updates & Information</nuxt-link></div>
   </header>
 </template>
 
@@ -62,58 +63,83 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.desktop-nav {
+  .desktop-nav {
     display: none;
 
-  @media (min-width: 900px) {
-    display: block;
-  }
-  &-list {
-    margin-bottom: 0;
-    display: flex;
-  }
-  &-item {
-    list-style-type: none;
-    margin-bottom: 0;
-  }
-}
+    @media (min-width: 900px) {
+      display: block;
+    }
 
-.drawerToggle {
-  -webkit-appearance: none;
-  cursor: pointer;
-  background: white;
-  border: none;
-  font-size: 1em;
-  font-weight: 400;
-  font-family: Vollkorn, sans-serif;
-  position: relative;
-  z-index: 9;
-}
+    &-list {
+      margin-bottom: 0;
+      display: flex;
+    }
+
+    &-item {
+      list-style-type: none;
+      margin-bottom: 0;
+    }
+  }
+
+  .drawerToggle {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: white;
+    border: none;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: Vollkorn, sans-serif;
+    position: relative;
+    z-index: 9;
+  }
   @media (min-width: 900px) {
-    .drawerToggle, .v-menu-button {
+    .drawerToggle,
+    .v-menu-button {
       display: none;
     }
   }
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  justify-content: space-between;
-  padding: 0 1.25em;
-  .logo {
-    width: 125px;
-    margin: 0;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 1.25em;
+    .logo {
+      width: 125px;
+      margin: 0;
 
-    &-link {
-      flex: 1 0 125px;
+      &-link {
+        flex: 1 0 125px;
+      }
     }
   }
-}
 
-nav {
-  a {
-    color: white;
-    margin: 0.25em 0.75em;
+  nav {
+    a {
+      color: white;
+      margin: 0.25em 0.75em;
+    }
   }
-}
+
+  .desktop-nav-item a {
+    @media (min-width: 900px) and (max-width: 1279px) {
+      font-size: 18px !important;
+      margin: 0.25em 0.5em;
+    }
+  }
+
+  .covid-banner {
+    position: absolute;
+    top: 100%;
+    background: #2d2d2d;
+    padding: 0.5em .5em .75em;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    a {
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
 </style>

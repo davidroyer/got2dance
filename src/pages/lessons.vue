@@ -5,14 +5,13 @@
     <div class="container">
       <div class="content">
         <section class="flex-center">
-          <h2 class="section-heading">Our Lesson Packages</h2>
+          <!-- <h2 class="section-heading">Our Lesson Packages</h2> -->
 
-          <div class="packages">
-            <div class="package" v-for="(lessonPackage) in lessonPackages" :key="lessonPackage._id">
-              <h3 class="package-heading" v-html="lessonPackage.name"></h3>
-              <div>{{lessonPackage.price}}</div>
+            <div class="package" style="border:none;">
+              <h3 class="package-heading">All Private Lessons Are:</h3>
+              <div><strong>Cost: </strong>$75</div>
+              <div><strong>Length: </strong>55 minutes</div>
             </div>
-          </div>
         </section>
         <hr class="section-seperator" />
         <section>
