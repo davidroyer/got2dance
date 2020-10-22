@@ -142,7 +142,8 @@ nav {
   top: 100%;
   // background: #2d2d2d;
   // background-color: #272727f0;
-  background-color: #13161ef7;
+  // background-color: #13161ef7;
+  background-color: #171c2af7;
   padding: 0.65em 0.5em 0.85em;
   left: 0;
   right: 0;
