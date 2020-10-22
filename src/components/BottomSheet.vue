@@ -1,45 +1,40 @@
 <template>
-  <div class="test">
-    <button class="px-4 py-2 bg-indigo text-white rounded" @click="toggle">
-      Toggle
-    </button>
-    <transition-slide-up :duration="300">
-      <div
-        v-show="showBottomSheet"
-        class="bottom-sheet z-20 fixed pin-b pin-x p-6 text-white text-center"
-      >
-        <div class="bottom-sheet-wrapper">
-          <div class="bottom-sheet-header">
-            <!-- <fa-icon
+  <transition-slide-up :duration="300">
+    <div
+      v-show="showBottomSheet"
+      class="bottom-sheet z-20 fixed pin-b pin-x p-6 text-white text-center"
+    >
+      <div class="bottom-sheet-wrapper">
+        <div class="bottom-sheet-header">
+          <!-- <fa-icon
               class="bottom-sheet-close-btn fa-2x"
               icon="times-circle"
               @click="toggle"
             /> -->
 
-            <h3>Covid-19 Studio Information</h3>
-          </div>
-          <div class="bottom-sheet-content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eum
-              magnam dicta sunt quam pariatur minima, minus culpa eius maxime?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dicta
-              nihil eveniet cumque vel fugiat iure fugit. Culpa, ducimus
-              consequatur.
-            </p>
-          </div>
-
-          <v-button
-            class="bottom-sheet-close-btn"
-            @click="$store.commit('toggleBottomSheet')"
-          >
-            Close
-          </v-button>
+          <h3>Covid-19 Studio Information</h3>
         </div>
+        <div class="bottom-sheet-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eum
+            magnam dicta sunt quam pariatur minima, minus culpa eius maxime?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dicta
+            nihil eveniet cumque vel fugiat iure fugit. Culpa, ducimus
+            consequatur.
+          </p>
+        </div>
+
+        <v-button
+          class="bottom-sheet-close-btn"
+          @click="$store.commit('toggleBottomSheet')"
+        >
+          Close
+        </v-button>
       </div>
-    </transition-slide-up>
-  </div>
+    </div>
+  </transition-slide-up>
 </template>
 
 <script>
