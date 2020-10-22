@@ -11,42 +11,46 @@ const settingsQuerys = groq`*[_type == "siteSettings"][0] {
 export const state = () => ({
   isDev: null,
   navigationDrawerOpen: false,
+  bottomSheetOpen: false,
   menuIsActive: false,
   menu,
   siteData,
   googleApiKey: process.env.GOOGLE_API_KEY,
   mapsApiKey: process.env.MAPS_API_KEY
-
 })
 
 export const mutations = {
-  setCurrentPost (state, post) {
+  setCurrentPost(state, post) {
     state.post = post
   },
 
-  setSiteData (state, payload) {
+  setSiteData(state, payload) {
     state.siteData = payload
   },
 
-  setMenu (state, payload) {
+  setMenu(state, payload) {
     state.menu = payload
   },
 
-  toggleDrawer (state) {
+  toggleDrawer(state) {
     state.navigationDrawerOpen = !state.navigationDrawerOpen
   },
 
-  setDev (state, payload) {
+  toggleBottomSheet(state) {
+    state.bottomSheetOpen = !state.bottomSheetOpen
+  },
+
+  setDev(state, payload) {
     state.isDev = payload
   },
 
-  setSiteSettings (state, settings) {
+  setSiteSettings(state, settings) {
     state.siteSettings = settings
   }
 }
 
 export const actions = {
-  async nuxtServerInit ({ commit, state }, {isDev, $sanity}) {
+  async nuxtServerInit({ commit, state }, { isDev, $sanity }) {
     commit('setDev', isDev)
 
     const siteSettings = await $sanity
@@ -58,11 +62,11 @@ export const actions = {
 }
 
 export const getters = {
-  currentPost: state => state.post,
-  menuItems: state => state.menu.items,
-  siteData: state => state.siteData,
-  siteHome: state => state.siteData.home,
-  siteTitle: state => state.siteData.name,
-  siteDescription: state => state.siteData.description,
-  navigationDrawerOpen: state => state.navigationDrawerOpen
+  currentPost: (state) => state.post,
+  menuItems: (state) => state.menu.items,
+  siteData: (state) => state.siteData,
+  siteHome: (state) => state.siteData.home,
+  siteTitle: (state) => state.siteData.name,
+  siteDescription: (state) => state.siteData.description,
+  navigationDrawerOpen: (state) => state.navigationDrawerOpen
 }

@@ -31,20 +31,20 @@
       </ul>
     </nav>
     <div class="covid-banner">
-      <nuxt-link to="/covid-update">Covid-19 Updates & Information</nuxt-link>
+      <a @click="$store.commit('toggleBottomSheet')">
+        Covid-19 Updates & Information
+      </a>
     </div>
   </header>
 </template>
 
 <script>
-import Hero from '@/components/Hero.vue'
 import VMenuButton from '@/components/VMenuButton.vue'
 
 export default {
   name: 'SiteHeader',
   components: {
-    Hero,
-    VMenuButton,
+    VMenuButton
   },
 
   computed: {
@@ -58,7 +58,7 @@ export default {
 
     mobileMenuIsActive() {
       return this.$store.getters.navigationDrawerOpen
-    },
+    }
   },
   methods: {
     handleSlug(menuItem) {
@@ -66,8 +66,8 @@ export default {
       const siteUrl = `${this.$store.state.siteData.home}/`
       if (url === this.$store.state.siteData.url) return '/'
       else return url.replace(siteUrl, '/')
-    },
-  },
+    }
+  }
 }
 </script>
 
@@ -141,20 +141,22 @@ nav {
   position: absolute;
   top: 100%;
   // background: #2d2d2d;
-  background-color: #272727f0;
-  padding: 0.5em 0.5em 0.75em;
+  // background-color: #272727f0;
+  background-color: #13161ef7;
+  padding: 0.65em 0.5em 0.85em;
   left: 0;
   right: 0;
   text-align: center;
 
   a {
-    font-weight: 600;
+    // font-weight: 600;
     text-decoration: underline;
     font-size: 17px;
     color: #04bc95;
+    cursor: pointer;
 
     @media (min-width: 980px) {
-      font-size: 18px;
+      font-size: 19px;
     }
   }
 }

@@ -2,30 +2,48 @@
   <div :class="[$route.name, 'container']">
     <h1 class="page-title">Contact</h1>
     <div class="content">
-      <form name="contact" class="pure-form pure-form-stacked" action="/thank-you" netlify-honeypot="bot-field" method="post" netlify>
+      <form
+        name="contact"
+        class="pure-form pure-form-stacked"
+        action="/thank-you"
+        netlify-honeypot="bot-field"
+        method="post"
+        netlify
+      >
         <input type="hidden" name="form-name" value="contact" />
         <p class="hidden">
-          <label>Don’t fill this out: <input name="bot-field"></label>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
         </p>
 
         <div class="mb-4">
-          <label class="form-label" for="name">
-            Name:
-          </label>
-          <input class="form-field focus:shadow-outline" name="name" id="name" required />
+          <label class="form-label" for="name"> Name: </label>
+          <input
+            id="name"
+            class="form-field focus:shadow-outline"
+            name="name"
+            required
+          />
         </div>
         <div class="mb-4">
-          <label class="form-label" for="email">
-            Email:
-          </label>
-          <input class="form-field focus:shadow-outline" name="email" id="email" required />
+          <label class="form-label" for="email"> Email: </label>
+          <input
+            id="email"
+            class="form-field focus:shadow-outline"
+            name="email"
+            required
+          />
         </div>
 
         <div class="mb-4">
-          <label class="form-label" for="message">
-            Message:
-          </label>
-          <textarea class="form-field focus:shadow-outline" rows="6" name="message" id="message" placeholder="Your Message..." required></textarea>
+          <label class="form-label" for="message"> Message: </label>
+          <textarea
+            id="message"
+            class="form-field focus:shadow-outline"
+            rows="6"
+            name="message"
+            placeholder="Your Message..."
+            required
+          ></textarea>
         </div>
 
         <v-button type="submit">Submit</v-button>
@@ -36,14 +54,13 @@
 
 <script>
 export default {
-  head () {
+  head() {
     return this.$createSeo('contact')
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
 input,
 textarea {
   min-width: 300px;
@@ -57,7 +74,7 @@ label,
 input,
 textarea,
 button {
-  font-family: "Vollkorn", sans-serif;
+  font-family: 'Vollkorn', sans-serif;
 }
 
 .form-button {

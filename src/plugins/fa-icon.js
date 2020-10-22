@@ -1,14 +1,15 @@
-import Vue from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { library, config } from '@fortawesome/fontawesome-svg-core'
-
+import { config, library } from '@fortawesome/fontawesome-svg-core'
 import {
-  faCoffee,
   faAngleRight,
   faChevronRight,
+  faCoffee,
   faHeadphones,
-  faStar
+  faStar,
+  faTimesCircle,
+  faWindowClose
 } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Vue from 'vue'
 
 config.autoAddCss = false
 
@@ -17,7 +18,9 @@ library.add(
   faAngleRight,
   faChevronRight,
   faHeadphones,
-  faStar
+  faStar,
+  faTimesCircle,
+  faWindowClose
 )
 
 Vue.component('fa-icon', FontAwesomeIcon)
