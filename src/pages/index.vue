@@ -44,15 +44,23 @@
         </section>
         <hr class="section-seperator" />
         <section class="location-section">
-          <h3 class="location-heading">Our Locations</h3>
-          <h4>360 Dance</h4>
-          <address class="location-address">
-            11401 Plantside Drive Louisville, KY 40299
-          </address>
-          <h4>Soiree</h4>
-          <address class="location-address">
-            6208 Crestwood Station, Crestwood, KY 40014
-          </address>
+          <h3 class="location-heading mb-6">Our Locations</h3>
+          <div
+            class="address-wrapper md:flex flex-row flex-wrap justify-around w-full"
+          >
+            <div class="address flex-1">
+              <h4 class="location-heading text-2xl text-center">360 Dance</h4>
+              <address class="location-address">
+                11401 Plantside Drive Louisville, KY 40299
+              </address>
+            </div>
+            <div class="address flex-1">
+              <h4 class="location-heading text-2xl text-center">Soiree</h4>
+              <address class="location-address">
+                6208 Crestwood Station, Crestwood, KY 40014
+              </address>
+            </div>
+          </div>
           <!-- <div class="map-wrapper">
             <iframe title="Map of Got 2 Dance's Location" class="map-iframe" :width="mapWidth" height="450" frameborder="0" style="border:0" :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJt4KeH5KfaYgRHuLYoPAAkLU&key=${mapsApiKey}`" allowfullscreen></iframe>
           </div>-->

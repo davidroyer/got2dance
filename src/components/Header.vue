@@ -31,9 +31,10 @@
       </ul>
     </nav>
     <div class="covid-banner">
-      <a @click="$store.commit('toggleBottomSheet')">
+      <!-- <a @click="$store.commit('toggleBottomSheet')">
         Covid-19 Updates & Information
-      </a>
+      </a> -->
+      <nuxt-link to="/covid-update">Covid-19 Updates & Information</nuxt-link>
     </div>
   </header>
 </template>
