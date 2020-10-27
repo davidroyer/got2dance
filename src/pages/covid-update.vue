@@ -1,16 +1,32 @@
 <template>
   <div :class="[$route.name, 'container']">
-    <h1 class="page-title">Covid</h1>
-
+    <h1 class="page-title">Covid-19 Updates & Information</h1>
+    <div class="content max-w-md">
+      <h2 id="studio-location-update">Studio Location Update</h2>
+      <p>
+        In March, we moved out of the studio that was our home for the past
+        several years. We are now available for lessons at 2 different locations
+        which can be found on the home page towards the bottom.
+      </p>
+      <h2 id="covid-related-information">Covid Related Information</h2>
+      <ul>
+        <li>
+          Currently no group classes are available but private groups are
+          available.
+        </li>
+        <li>Wearing a mask is optional.</li>
+        <li>Payment as cash or check accepted.</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
-<style>
-
+<style lang="pcss">
+h2 {
+  @apply mb-0 mt-8;
+}
 </style>

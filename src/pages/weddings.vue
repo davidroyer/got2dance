@@ -1,54 +1,61 @@
 <template>
   <div :class="$route.name">
-    <hero heading="Weddings" :image="require('~/assets/images/hero-weddings.jpg')"></hero>
+    <hero
+      heading="Weddings"
+      :image="require('~/assets/images/hero-weddings.jpg')"
+    ></hero>
     <div class="container content">
       <section class="flex-center">
-        <div class="section-headings">
-          <h2 class="section-heading">Our Wedding Packages</h2>
-          <span class="section-subheading">All lessons in wedding packages are 25 minute lessons </span>
+        <div class="package" style="border: none">
+          <h2 class="package-heading mt-0">All Wedding Lessons Are:</h2>
+          <div><strong>55 minutes for $75</strong></div>
         </div>
-        <div class="packages">
-          <div class="package">
-            <span class="package__level">Bronze</span>
-            <h3 class="package__heading">2 Lesson Package</h3>
-            <p class="package__price">$80</p>
-          </div>
-          <div class="package">
-            <span class="package__level">Silver</span>
-            <h3 class="package__heading">12 Lesson Package</h3>
-            <p class="package__price">$420</p>
-          </div>
-          <div class="package">
-            <span class="package__level">Platinum</span>
-            <h3 class="package__heading">24 Lesson Package</h3>
-            <p class="package__price">$780</p>
-          </div>
-        </div>
-
       </section>
-      <hr class="section-seperator">
+
+      <hr class="section-seperator" />
       <section>
         <div class="row flex-center">
           <h2 class="section-heading">Wedding Info</h2>
           <ul class="info__list">
             <li class="info__item">
+              <span class="info__question">Do you offer any packages?</span>
+              <span class="info__answer">
+                We currently do not offer packages. This could change in the
+                near future though so please check back in with us.
+              </span>
+            </li>
+            <li class="info__item">
               <span class="info__question">What about a song?</span>
-              <span class="info__answer">If you have a song picked out great. If not, that's okay too.</span>
+              <span class="info__answer"
+                >If you have a song picked out great. If not, that's okay
+                too.</span
+              >
             </li>
             <li class="info__item">
               <span class="info__question">Just want a couple moves?</span>
-              <span class="info__answer">You'll want the bronze or silver package.</span>
+              <span class="info__answer">
+                That's totally fine. We will always adapt to what you you're
+                wanting. We're just here to help make your first dance the best
+                and most enjoyable it can be.
+              </span>
             </li>
             <li class="info__item">
               <span class="info__question">Want a choreography?</span>
-              <span class="info__answer">You'll want the silver or platinum package.</span>
+              <span class="info__answer">
+                Fantastic. We love to choreograph wedding dances.
+              </span>
             </li>
             <li class="info__item">
               <span class="info__question">Want to get started?</span>
-              <span class="info__answer">Fantastic! <nuxt-link to="/contact" class="button--ghost">Contact Us</nuxt-link> us to get started!</span>
+              <span class="info__answer"
+                >Fantastic!
+                <nuxt-link to="/contact" class="button--ghost"
+                  >Contact Us</nuxt-link
+                >
+                us to get started!</span
+              >
             </li>
           </ul>
-
         </div>
       </section>
     </div>
@@ -59,17 +66,17 @@
 import Hero from '@/components/Hero.vue'
 
 export default {
-  head () {
-    return this.$createSeo('weddings')
+  components: {
+    Hero
   },
-  async asyncData ({ app }) {
+  async asyncData({ app }) {
     // const page = await app.$wp.page('weddings')
     return {
       // page
     }
   },
-  components: {
-    Hero
+  head() {
+    return this.$createSeo('weddings')
   }
 }
 </script>
