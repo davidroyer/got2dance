@@ -80,28 +80,10 @@ button {
 .form-button {
   margin-top: 2em;
   font-size: 1.4em !important;
-  // font-weight: 500;
 }
 .hidden {
   display: none;
 }
-// input:not([type="submit"]), input:not([name="bot-field"]), textarea {
-//   font-size: 16px;
-//   line-height: normal;
-//   font-weight: 500;
-//   background: #fff;
-//   // color: #1c3e69;
-//   border: 0;
-//   display: block;
-//   width: 100%;
-//   height: auto;
-//   padding: 10px;
-//   // padding-right: 90px;
-//   -webkit-box-sizing: border-box;
-//   -moz-box-sizing: border-box;
-//   box-sizing: border-box;
-//   background-color: rgba(220, 220, 220, 0.5);
-// }
 
 .v-button {
   color: #40526b;
@@ -124,9 +106,5 @@ button {
 }
 .form-field {
   @apply shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight;
-
-  // &:focus {
-  //   @apply outline-none;
-  // }
 }
 </style>
