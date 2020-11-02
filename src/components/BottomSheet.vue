@@ -138,7 +138,7 @@ export default {
 }
 </script>
 
-<style lang="pcss">
+<style lang="postcss">
 .bottom-sheet {
   background-color: #e6e6e6;
   color: #40526b;
@@ -156,6 +156,5 @@ export default {
   &-close-btn {
     @apply absolute mb-4 pin-b;
   }
-
 }
 </style>

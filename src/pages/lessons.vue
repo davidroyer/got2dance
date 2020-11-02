@@ -30,8 +30,8 @@
               <li class="info__item">
                 <span class="info__question">Length of lesson?</span>
                 <span class="info__answer">
-                  All lessons are all are 55 minutes. We currently don't offer
-                  any other options for length of time.
+                  All lessons are 55 minutes. We currently don't offer any other
+                  options for length of time.
                 </span>
               </li>
               <li class="info__item">

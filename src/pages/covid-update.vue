@@ -1,6 +1,6 @@
 <template>
   <div :class="[$route.name, 'container']">
-    <h1 class="page-title">Covid-19 Updates & Information</h1>
+    <h1 class="page-title mb-0">Covid-19 Updates & Information</h1>
     <div class="content max-w-md">
       <h2 id="studio-location-update">Studio Location Update</h2>
       <p>
@@ -25,7 +25,7 @@
 export default {}
 </script>
 
-<style lang="pcss">
+<style lang="postcss">
 h2 {
   @apply mb-0 mt-8;
 }

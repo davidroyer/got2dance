@@ -69,12 +69,7 @@ export default {
   components: {
     Hero
   },
-  async asyncData({ app }) {
-    // const page = await app.$wp.page('weddings')
-    return {
-      // page
-    }
-  },
+
   head() {
     return this.$createSeo('weddings')
   }
