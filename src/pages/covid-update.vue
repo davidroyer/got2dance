@@ -16,6 +16,13 @@
         </li>
         <li>Wearing a mask is optional.</li>
         <li>Payment as cash or check accepted.</li>
+        <li>Hand sanitizer if available.</li>
+        <li>Cleaning takes place frequently.</li>
+        <li>Temperatures are taken prior to lessons.</li>
+        <li>
+          You must fill short questionnaire about any possible symptoms you have
+          experienced.
+        </li>
       </ul>
     </div>
   </div>

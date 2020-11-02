@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 input,
 textarea {
   min-width: 300px;

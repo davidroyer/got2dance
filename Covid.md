@@ -9,5 +9,10 @@ found on the home page towards the bottom.
 ## Covid Related Information
 
 - Currently no group classes are available but private groups are available.
-- Wearing a mask is optional.
+- Wearing a mask is optional. Also, masks will be worn by all instructors when
+  working a student who wants them worn.
 - Payment as cash or check accepted.
+- Hand sanitizer if available.
+- Cleaning takes place frequently.
+- Temperatures are taken prior to lessons.
+- You must fill short questionnaire about any possible symptoms you have experienced.
