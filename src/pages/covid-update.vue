@@ -14,7 +14,8 @@
           Currently no group classes are available but private groups are
           available.
         </li>
-        <li>Wearing a mask is optional.</li>
+        <li>Wearing a mask is optional for students.</li>
+        <li>A mask is will always be worn by the instructor.</li>
         <li>Payment as cash or check accepted.</li>
         <li>Hand sanitizer if available.</li>
         <li>Cleaning takes place frequently.</li>
